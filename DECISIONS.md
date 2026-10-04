@@ -128,3 +128,80 @@ Parties has recall@5 0.23 with hybrid, because the question's words ("parties", 
 appear in nearly every chunk. Yet the answer overlaps the contract's **first chunk in 40/40**
 contracts (Agreement Date: 29/36). M3 will test always including the first chunk in the
 model's context, and keep it only if it measurably helps.
+
+---
+
+## M3: cited answers, verification, confidence gate
+
+### D11. The model never produces offsets; code computes them, and a verifier re-checks
+- **Chosen:** the model returns `{chunk_id, quote}`. `resolve_quote` finds the quote inside the
+  excerpts the model was shown and computes `start`/`end`. `verify_citation` then independently
+  checks every final citation: document in scope, offsets in range, `text[start:end] ==
+  quoted_text`, and inside the shown context.
+- **Alternatives:** ask the model for character offsets (models are unreliable at character
+  arithmetic), or the Claude API's built-in document citations (incompatible with structured
+  output, and Anthropic-only, while M5 needs the same pipeline for every provider).
+- **Why two layers:** construction makes citations correct by design; verification catches bugs
+  in construction and checks citations from any other source. Adversarial unit tests cover
+  paraphrases, shifted offsets, forged document ids, out-of-scope documents and text outside
+  the shown context. A property test checks that every resolved quote verifies.
+
+### D12. Whitespace-tolerant quote matching, storing the exact source slice
+- CUAD text has double spaces and hard line breaks that models tend to collapse. A quote that
+  matches only after treating any whitespace run as equal is accepted, but the citation stores
+  the **source** slice, so `quoted_text` is still verbatim. A changed word still fails.
+- **Status:** each result records `whitespace_matches`; the smoke run will measure how often
+  this rescues a citation. If it is rare, it gets removed (simplest design that works).
+
+### D13. One invalid citation rejects the whole answer
+- **Alternative:** drop the bad citation and keep the rest. Rejected because a claim whose
+  supporting quote is fabricated is exactly the "confidently wrong" failure this project targets.
+  A rejected answer is withheld (`answer: null`) and logged to `audit_log` with its reasons.
+  "Answered" with no citations is also rejected: an uncited answer can't be verified.
+
+### D14. Context: 6 chunks with each document's first chunk reserved
+- **Evidence** (`uv run cqa-eval context-eval`, 2026-10-04, 375 answerable questions; context
+  recall = a gold span overlaps some chunk the model sees):
+
+  | context | recall (95% CI) |
+  |---|---|
+  | top-5 | 0.752 [0.709, 0.797] |
+  | top-6 | 0.768 [0.725, 0.813] |
+  | **top-6, first chunk reserved** | **0.864 [0.829, 0.901]** |
+
+  Reserved − top-6: +0.096 [+0.064, +0.131], at the same token budget. Parties 0.25 → 1.00,
+  Agreement Date 0.69 → 0.97. Cost: one fewer ranked chunk, which lost one question each in
+  Non-Compete, Post-Termination Services, Anti-Assignment and Expiration Date.
+
+### D15. Confidence gate on top `ts_rank`, calibrated on a dev split
+- **Method:** dev = every pair in the 20 categories except the 120 eval questions (285
+  answerable, 395 absent); test = the 120 eval questions. Threshold = the highest value that
+  blocks at most 2% of answerable dev questions (`uv run cqa-eval gate-calibrate`, 2026-10-04).
+
+  | signal | AUC dev | AUC test | absent caught (dev / test) | answerable blocked (dev / test) |
+  |---|---|---|---|---|
+  | top cosine | 0.708 | 0.657 | 8.4% / 6.7% | 1.8% / 0.0% |
+  | **top ts_rank** | **0.845** | **0.725** | **22.3% / 13.3%** | **1.8% / 0.0%** |
+
+- **Why ts_rank:** when a clause is absent, its distinctive words usually don't occur in the
+  contract, so full-text finds little; embeddings always find something semantically nearby.
+- **Limits:** the drop from dev to test AUC shows the dev numbers are optimistic (the test set has
+  only 30 absent questions). The gate is a cheap first filter; most abstention has to come from
+  the model. M5 measures abstention with and without the gate.
+- **Why not RRF scores:** RRF encodes rank only, so its top score is roughly constant whatever the
+  match quality. Hence `Retriever.hybrid` returns the raw signals.
+
+### D16. Structured outputs; no refusal fallbacks
+- JSON comes from `output_config.format` (JSON schema), not forced tool use, which returns 400 on
+  Claude Opus 5.5 and Sonnet 5.5. A malformed response is still possible in principle and
+  is rejected as `invalid_json`.
+- The Claude API can re-run a refused request on a fallback model. That is off, because in a
+  model comparison it would silently score a different model's answer. Refusals are recorded
+  as their own rejection reason.
+
+### D17. Cost controls
+- Every model response is cached on disk under `sha256(model, settings, system, prompt, schema)`.
+  `--offline` refuses uncached calls, so re-runs are reproducible and CI cannot spend money.
+- `answer-eval` plans first: it counts gated and cached questions, estimates the rest (1 token
+  per 3.5 characters, deliberately high, plus `--est-output-tokens`), and refuses to run above
+  `--max-cost` (default $2).

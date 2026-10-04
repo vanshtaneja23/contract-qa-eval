@@ -12,7 +12,7 @@ and know which frontier model does this most reliably.
 
 - [x] **M1** Repo, schema, ingestion with offset-exact chunking
 - [x] **M2** Retrieval (BM25 / vector / hybrid) and retrieval eval
-- [ ] M3 Cited answers and citation verifier
+- [x] **M3** Cited answers, citation verifier, confidence gate (real-model smoke run pending an API key)
 - [ ] M4 Row-level security, PII redaction, audit log
 - [ ] M5 Multi-model evaluation
 - [ ] M6 API and TypeScript frontend
@@ -69,6 +69,21 @@ section-aware chunker was built, measured, and removed because it didn't help. W
 Parties (0.23), whose answer is in the contract's first chunk 40/40 times; M3 tests a fix.
 Full tables: [eval/results/retrieval.md](eval/results/retrieval.md). Reasoning:
 [DECISIONS.md](DECISIONS.md).
+
+## Cited answers (M3)
+
+The model returns `{chunk_id, quote}`; code locates the quote in the excerpts the model saw and
+computes the offsets, then an independent verifier checks every citation against the source.
+One invalid citation rejects the whole answer, which is withheld and logged to `audit_log`.
+
+| design choice | evidence (2026-10-04) |
+|---|---|
+| 6-chunk context with the first chunk reserved | context recall 0.864 vs 0.768 for top-6 (+0.096, 95% CI [+0.064, +0.131]); Parties 0.25 → 1.00 |
+| confidence gate on top `ts_rank` | AUC 0.845 dev / 0.725 held-out; on the 120 eval questions it skips 4 of 30 absent-clause questions and 0 of 90 answerable |
+
+Commands: `uv run cqa-eval context-eval`, `uv run cqa-eval gate-calibrate`,
+`uv run cqa-eval answer-eval --model claude-haiku-4-5 --limit 20 --dry-run`.
+Details: [DECISIONS.md](DECISIONS.md) D11-D17.
 
 ## Data
 
