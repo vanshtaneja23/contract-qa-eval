@@ -1,0 +1,46 @@
+{
+ "date": "2026-10-04",
+ "command": "uv run cqa-eval gate-calibrate",
+ "git_commit": "a397b44",
+ "max_false_abstain": 0.02,
+ "dev": {
+  "n_answerable": 285,
+  "n_absent": 395
+ },
+ "test": {
+  "n_answerable": 90,
+  "n_absent": 30
+ },
+ "signals": {
+  "top_cosine": {
+   "auc_dev": 0.7080435265378636,
+   "auc_test": 0.6570370370370371,
+   "threshold": 0.5814332615474913,
+   "dev": {
+    "answerable_blocked": 0.017543859649122806,
+    "absent_caught": 0.08354430379746836
+   },
+   "test": {
+    "answerable_blocked": 0.0,
+    "absent_caught": 0.06666666666666667
+   }
+  },
+  "top_ts_rank": {
+   "auc_dev": 0.8446990894958917,
+   "auc_test": 0.7251851851851852,
+   "threshold": 0.02507458,
+   "dev": {
+    "answerable_blocked": 0.017543859649122806,
+    "absent_caught": 0.22278481012658227
+   },
+   "test": {
+    "answerable_blocked": 0.0,
+    "absent_caught": 0.13333333333333333
+   }
+  }
+ },
+ "chosen": {
+  "signal": "top_ts_rank",
+  "threshold": 0.02507458
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "date": "2026-10-04",
+ "command": "uv run cqa-eval context-eval",
+ "git_commit": "a397b44",
+ "n": 375,
+ "configs": {
+  "top-5": {
+   "context_recall": 0.752,
+   "ci": [
+    0.7093333333333334,
+    0.7973333333333333
+   ]
+  },
+  "top-6": {
+   "context_recall": 0.768,
+   "ci": [
+    0.7253333333333334,
+    0.8133333333333334
+   ]
+  },
+  "top-6, first chunk reserved": {
+   "context_recall": 0.864,
+   "ci": [
+    0.8293333333333334,
+    0.9013333333333333
+   ]
+  }
+ },
+ "diffs": {
+  "top-6 - top-5": [
+   0.016,
+   0.005333333333333333,
+   0.029333333333333333
+  ],
+  "top-6, first chunk reserved - top-6": [
+   0.096,
+   0.064,
+   0.13066666666666665
+  ]
+ },
+ "by_category": {
+  "Agreement Date": {
+   "n": 36,
+   "top-5": 0.6666666666666666,
+   "top-6": 0.6944444444444444,
+   "top-6, first chunk reserved": 0.9722222222222222
+  },
+  "Anti-Assignment": {
+   "n": 30,
+   "top-5": 0.9333333333333333,
+   "top-6": 0.9666666666666667,
+   "top-6, first chunk reserved": 0.9333333333333333
+  },
+  "Audit Rights": {
+   "n": 18,
+   "top-5": 0.6666666666666666,
+   "top-6": 0.6666666666666666,
+   "top-6, first chunk reserved": 0.6666666666666666
+  },
+  "Cap On Liability": {
+   "n": 19,
+   "top-5": 0.9473684210526315,
+   "top-6": 0.9473684210526315,
+   "top-6, first chunk reserved": 0.9473684210526315
+  },
+  "Change Of Control": {
+   "n": 12,
+   "top-5": 0.9166666666666666,
+   "top-6": 0.9166666666666666,
+   "top-6, first chunk reserved": 0.9166666666666666
+  },
+  "Exclusivity": {
+   "n": 15,
+   "top-5": 0.6666666666666666,
+   "top-6": 0.6666666666666666,
+   "top-6, first chunk reserved": 0.6666666666666666
+  },
+  "Expiration Date": {
+   "n": 32,
+   "top-5": 0.84375,
+   "top-6": 0.875,
+   "top-6, first chunk reserved": 0.84375
+  },
+  "Governing Law": {
+   "n": 34,
+   "top-5": 0.9411764705882353,
+   "top-6": 0.9411764705882353,
+   "top-6, first chunk reserved": 0.9411764705882353
+  },
+  "Insurance": {
+   "n": 15,
+   "top-5": 0.8666666666666667,
+   "top-6": 0.8666666666666667,
+   "top-6, first chunk reserved": 0.8666666666666667
+  },
+  "Ip Ownership Assignment": {
+   "n": 9,
+   "top-5": 0.6666666666666666,
+   "top-6": 0.6666666666666666,
+   "top-6, first chunk reserved": 0.6666666666666666
+  },
+  "License Grant": {
+   "n": 16,
+   "top-5": 1.0,
+   "top-6": 1.0,
+   "top-6, first chunk reserved": 1.0
+  },
+  "Liquidated Damages": {
+   "n": 5,
+   "top-5": 0.6,
+   "top-6": 0.6,
+   "top-6, first chunk reserved": 0.6
+  },
+  "Minimum Commitment": {
+   "n": 13,
+   "top-5": 0.9230769230769231,
+   "top-6": 0.9230769230769231,
+   "top-6, first chunk reserved": 0.9230769230769231
+  },
+  "Non-Compete": {
+   "n": 10,
+   "top-5": 0.6,
+   "top-6": 0.7,
+   "top-6, first chunk reserved": 0.6
+  },
+  "Notice Period To Terminate Renewal": {
+   "n": 10,
+   "top-5": 0.9,
+   "top-6": 0.9,
+   "top-6, first chunk reserved": 0.9
+  },
+  "Parties": {
+   "n": 40,
+   "top-5": 0.225,
+   "top-6": 0.25,
+   "top-6, first chunk reserved": 1.0
+  },
+  "Post-Termination Services": {
+   "n": 17,
+   "top-5": 0.6470588235294118,
+   "top-6": 0.7058823529411765,
+   "top-6, first chunk reserved": 0.6470588235294118
+  },
+  "Renewal Term": {
+   "n": 14,
+   "top-5": 1.0,
+   "top-6": 1.0,
+   "top-6, first chunk reserved": 1.0
+  },
+  "Revenue/Profit Sharing": {
+   "n": 11,
+   "top-5": 0.7272727272727273,
+   "top-6": 0.7272727272727273,
+   "top-6, first chunk reserved": 0.7272727272727273
+  },
+  "Termination For Convenience": {
+   "n": 19,
+   "top-5": 0.6842105263157895,
+   "top-6": 0.6842105263157895,
+   "top-6, first chunk reserved": 0.6842105263157895
+  }
+ }
+}
