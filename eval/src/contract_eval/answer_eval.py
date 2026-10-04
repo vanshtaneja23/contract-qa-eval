@@ -194,7 +194,7 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
     random.Random(0).shuffle(questions)  # so --limit takes a mix of contracts and categories
     questions = questions[: args.limit] if args.limit else questions
     config = AnswerConfig(
-        k=args.k, include_first_chunk=args.first_chunk, gate=None if args.no_gate else load_gate()
+        k=args.k, include_first_chunk=not args.no_first_chunk, gate=None if args.no_gate else load_gate()
     )
     client = CachedClient(AnthropicClient(args.model), CACHE_DIR, offline=args.offline)
     label = args.label or f"{args.model}"
@@ -321,8 +321,8 @@ def add_commands(sub: Any) -> None:
     p.add_argument(
         "--est-output-tokens", type=int, default=1000, help="per-call output estimate for --dry-run"
     )
-    p.add_argument("--k", type=int, default=5)
-    p.add_argument("--first-chunk", action="store_true")
+    p.add_argument("--k", type=int, default=6)
+    p.add_argument("--no-first-chunk", action="store_true")
     p.add_argument("--no-gate", action="store_true")
     p.add_argument("--label")
     p.set_defaults(func=cmd_answer_eval)

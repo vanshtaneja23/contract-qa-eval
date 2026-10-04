@@ -87,9 +87,20 @@ class GateConfig:
 
 @dataclass(frozen=True, slots=True)
 class AnswerConfig:
-    k: int = 5  # total chunks shown to the model
-    include_first_chunk: bool = False  # reserve slots for each document's first chunk
+    # 6 chunks with each document's first chunk reserved: context recall 0.864 vs
+    # 0.768 for plain top-6 (paired diff +0.096, 95% CI [+0.064, +0.131]), mostly
+    # Parties and Agreement Date, which live in the preamble. eval/results/context.json
+    k: int = 6
+    include_first_chunk: bool = True
     gate: GateConfig | None = None
+
+
+# Calibrated in eval/results/gate.json: top ts_rank separates "clause present"
+# from "absent" better than top cosine (dev AUC 0.845 vs 0.708). This threshold
+# blocks 1.8% of answerable dev questions and catches 22% of absent ones
+# (held-out eval set: 0% blocked, 13% caught).
+DEFAULT_GATE = GateConfig("top_ts_rank", 0.02507458)
+DEFAULT_CONFIG = AnswerConfig(gate=DEFAULT_GATE)
 
 
 @dataclass(frozen=True, slots=True)
