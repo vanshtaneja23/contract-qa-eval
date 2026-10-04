@@ -83,11 +83,13 @@ def chunk_document(
     max_words: int = 200,
     overlap_words: int = 40,
     min_section_words: int = 25,
+    use_headings: bool = True,
 ) -> list[Chunk]:
+    """use_headings=False gives plain overlapping windows (the M2 baseline)."""
     if not 0 <= overlap_words < max_words:
         raise ValueError("need 0 <= overlap_words < max_words")
 
-    headings = find_headings(text)
+    headings = find_headings(text) if use_headings else []
     if len(headings) < MIN_HEADINGS:
         return _windows(text, 0, len(text), max_words, overlap_words)
 

@@ -107,6 +107,13 @@ def test_handles_unicode_and_crlf_offsets() -> None:
     assert_covers_all_words(text, chunks)
 
 
+def test_use_headings_false_gives_plain_windows() -> None:
+    chunks = chunk_document(CONTRACT, max_words=30, overlap_words=5, use_headings=False)
+    assert {c.kind for c in chunks} == {"window"}
+    assert_round_trip(CONTRACT, chunks)
+    assert_covers_all_words(CONTRACT, chunks)
+
+
 @pytest.mark.parametrize("text", ["", "   \n\t  "])
 def test_empty_and_whitespace_documents(text: str) -> None:
     assert chunk_document(text) == []
