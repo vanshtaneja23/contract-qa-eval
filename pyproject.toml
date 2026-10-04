@@ -1,0 +1,32 @@
+# uv workspace root. Members: api (the product), eval (CUAD + benchmarks).
+# One lockfile (uv.lock) pins every Python dependency for both.
+[tool.uv.workspace]
+members = ["api", "eval"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "hypothesis>=6.112",
+    "ruff>=0.7",
+    "mypy>=1.13",
+    "testcontainers[postgres]>=4.8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["scripts", "api/tests", "eval/tests"]
+pythonpath = ["scripts"]
+markers = ["integration: needs Docker (Testcontainers Postgres+pgvector)"]
+addopts = "-ra --import-mode=importlib"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+exclude = ["migrations/"]

@@ -1,0 +1,19 @@
+[project]
+name = "contract-qa-eval-harness"
+version = "0.1.0"
+description = "CUAD loading, ingestion and benchmarks for contract-qa"
+requires-python = ">=3.12,<3.13"
+dependencies = ["contract-qa-api"]
+
+[project.scripts]
+cqa-eval = "contract_eval.cli:main"
+
+[tool.uv.sources]
+contract-qa-api = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/contract_eval"]
