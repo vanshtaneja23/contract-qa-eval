@@ -1,0 +1,209 @@
+{
+  "source_url": "https://github.com/TheAtticusProject/cuad/raw/main/data.zip",
+  "zip_sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+  "license": "CC BY 4.0, The Atticus Project",
+  "seed": 42,
+  "n": 40,
+  "contracts": [
+    {
+      "title": "ACCURAYINC_09_01_2010-EX-10.31-DISTRIBUTOR AGREEMENT",
+      "sha256": "14932c769a7ac61cb1a4d639aa2bdc3c85a88037f54b478d117d62cbc49e8321",
+      "chars": 89484
+    },
+    {
+      "title": "AIRTECHINTERNATIONALGROUPINC_05_08_2000-EX-10.4-FRANCHISE AGREEMENT",
+      "sha256": "c9a4d1006bce3890bb04151d0bf1f791b43012e7322ac550813e855461ba3da8",
+      "chars": 73869
+    },
+    {
+      "title": "ALAMOGORDOFINANCIALCORP_12_16_1999-EX-1-AGENCY AGREEMENT",
+      "sha256": "3c70a981a2107097efddcf6fdba26d5d4b3d7eb458d826a10002d5dcc767fad7",
+      "chars": 143307
+    },
+    {
+      "title": "ALLIANCEBANCORPINCOFPENNSYLVANIA_10_18_2006-EX-1.2-AGENCY AGREEMENT",
+      "sha256": "d22c5d084ff7502d7c26a83a243846a710547c26b117ec82d3a0ec60f2f896c7",
+      "chars": 130256
+    },
+    {
+      "title": "ALLISONTRANSMISSIONHOLDINGSINC_12_15_2014-EX-99.1-COOPERATION AGREEMENT",
+      "sha256": "cf7ccac86b58129ea6ba73b08f2482e87c61e9c228dd64b05291e3ee3601c104",
+      "chars": 32826
+    },
+    {
+      "title": "AzulSa_20170303_F-1A_EX-10.3_9943903_EX-10.3_Maintenance Agreement1",
+      "sha256": "ae387a12fe0b3198004076f49e1991600b5993c656a4de3866786d3f7ec2a1df",
+      "chars": 233248
+    },
+    {
+      "title": "BANGIINC_05_25_2005-EX-10-Premium Managed Hosting Agreement",
+      "sha256": "b4b49f7ad4add8c7688611909be42b428ebaa305d9bb5b3a425313a1d318fd10",
+      "chars": 2010
+    },
+    {
+      "title": "BEYONDCOMCORP_08_03_2000-EX-10.2-CO-HOSTING AGREEMENT",
+      "sha256": "366791ae1ac1b2c163c069d3afed275ba3129a65574609fba9e94e56e66de9e4",
+      "chars": 58300
+    },
+    {
+      "title": "BIOFRONTERAAG_04_29_2019-EX-4.17-SUPPLY AGREEMENT",
+      "sha256": "28136e794bf344a5eedc4259213930d0c08b528d6ae8252addcac168d3f2e859",
+      "chars": 63723
+    },
+    {
+      "title": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1",
+      "sha256": "282c8f55337dd7866bdbad178bcefe679017c2be4e1ae80a37fef98acf995e44",
+      "chars": 42473
+    },
+    {
+      "title": "CCAINDUSTRIESINC_04_14_2014-EX-10.1-OUTSOURCING AGREEMENT",
+      "sha256": "9620281e798e7635c9b6a3397ca210d00c9f57ca344ae62dc9af356163cddef4",
+      "chars": 31914
+    },
+    {
+      "title": "CerenceInc_20191002_8-K_EX-10.4_11827494_EX-10.4_Intellectual Property Agreement",
+      "sha256": "cae1021a576e7472db500d0d43f6a15a43625b0825bece22c1ed18e959dd578f",
+      "chars": 62170
+    },
+    {
+      "title": "CytodynInc_20200109_10-Q_EX-10.5_11941634_EX-10.5_License Agreement",
+      "sha256": "b0260f5f7048eabdee209987eb7a20c10aaf0a4b9503552e7c1bad2d7d784c3b",
+      "chars": 159488
+    },
+    {
+      "title": "DIVERSINETCORP_03_01_2012-EX-4-RESELLER AGREEMENT",
+      "sha256": "9c9e0d0d527428ea1b596e604397e2ad78a3e2cab07bb32e3015600c594b4163",
+      "chars": 75389
+    },
+    {
+      "title": "DRAGONSYSTEMSINC_01_08_1999-EX-10.17-OUTSOURCING AGREEMENT",
+      "sha256": "8d8020e5c0bcaafac609fe53a2e7edbe2ecbf15541dc846ed25ac63ec822b37e",
+      "chars": 8599
+    },
+    {
+      "title": "DYNTEKINC_07_30_1999-EX-10-ONLINE HOSTING AGREEMENT",
+      "sha256": "75cb8dce69c94723ec13f9414fc50d7712a20574ea077674d359447edb709a14",
+      "chars": 25214
+    },
+    {
+      "title": "ELECTRAMECCANICA VEHICLES CORP. - Manufacturing Agreement",
+      "sha256": "edaae9dbe93477b73c5bf8edbe2fe2f7775af5198cad21d7c9ed5b971b561f4a",
+      "chars": 47889
+    },
+    {
+      "title": "ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement",
+      "sha256": "bc76571a2b5ae91953575dd7deaee58a11d55ce9a891fa9335e7c2aff05cb9c4",
+      "chars": 60618
+    },
+    {
+      "title": "EmeraldHealthBioceuticalsInc_20200218_1-A_EX1A-6 MAT CTRCT_11987205_EX1A-6 MAT CTRCT_Development Agreement",
+      "sha256": "bf50af4e34a26a48208d580e6398c2ec1b5eae043e6d024563f5b1efb681ca11",
+      "chars": 16459
+    },
+    {
+      "title": "INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE HOSTING AGREEMENT",
+      "sha256": "820cfe8bb69728583765fbaeb586194a485ebebe5375d5a166812a6938e41d0f",
+      "chars": 70664
+    },
+    {
+      "title": "INTELLIGENTHIGHWAYSOLUTIONS,INC_01_18_2018-EX-10.1-Strategic Alliance Agreement",
+      "sha256": "b3a2f969a3debf4ba466a2cde59c0f21a744a41f95e4715cec354084dd43164b",
+      "chars": 8288
+    },
+    {
+      "title": "InmodeLtd_20190729_F-1A_EX-10.9_11743243_EX-10.9_Manufacturing Agreement",
+      "sha256": "93e278dfb01b1994b76f58b0c46d679979030e7ed3149e212ecc502b50ac7c10",
+      "chars": 39588
+    },
+    {
+      "title": "LejuHoldingsLtd_20140121_DRS (on F-1)_EX-10.26_8473102_EX-10.26_Content License Agreement1",
+      "sha256": "edb50810e93b97e83365e7e66f2bf583cfee3981ea1ffdbbcb9f0783d9050e2e",
+      "chars": 46696
+    },
+    {
+      "title": "MOELIS_CO_03_24_2014-EX-10.19-STRATEGIC ALLIANCE AGREEMENT",
+      "sha256": "64370af7f18a571fc8f2ce6df7ba2d95aa17466d19db2fa44eebe03f9ea15bce",
+      "chars": 122054
+    },
+    {
+      "title": "MetLife, Inc. - Remarketing Agreement",
+      "sha256": "b3c627873c35bf0ca94050cb1ac9f463c31193f81376ea4f3cb921e0bad3a37a",
+      "chars": 111249
+    },
+    {
+      "title": "NETGEAR,INC_04_21_2003-EX-10.16- AMENDMENT #2 TO THE DISTRIBUTION AGREEMENT",
+      "sha256": "40b9a08eaf9a9a4cb8062d44af4289e0cb7732b2fe464b083505594978f1b776",
+      "chars": 4567
+    },
+    {
+      "title": "NETGEAR,INC_04_21_2003-EX-10.16-AMENDMENT TO THE DISTRIBUTOR AGREEMENT BETWEEN INGRAM MICRO AND NETGEAR",
+      "sha256": "a26d0a46ae672963f96e729745f458b9684cbee0ac2b723045a6fe227cbd1fd7",
+      "chars": 8113
+    },
+    {
+      "title": "NOVOINTEGRATEDSCIENCES,INC_12_23_2019-EX-10.1-JOINT VENTURE AGREEMENT",
+      "sha256": "ed8ec45674420e7e9d118f9141a3d0ad67b283c76ff1e2a703d339f731d65c2b",
+      "chars": 21955
+    },
+    {
+      "title": "ORBSATCORP_08_17_2007-EX-7.3-STRATEGIC ALLIANCE AGREEMENT",
+      "sha256": "bd707d51c1651939248b235e4a8903ad603134d00ab10d4dd8caf5473c81c6f3",
+      "chars": 18445
+    },
+    {
+      "title": "PAXMEDICA,INC_07_02_2020-EX-10.12-Master Service Agreement",
+      "sha256": "874eb07ae3632c67eb5eacb3f51e5927d112f8d6e7e0ba3c1a39d9614fb14f45",
+      "chars": 16792
+    },
+    {
+      "title": "ParatekPharmaceuticalsInc_20170505_10-KA_EX-10.29_10323872_EX-10.29_Outsourcing Agreement",
+      "sha256": "dcd5345df0e45ae2954d2601ceacb0eec003128ec081ff4a8888ad9025f449d3",
+      "chars": 114893
+    },
+    {
+      "title": "PhoenixNewMediaLtd_20110421_F-1_EX-10.17_6958322_EX-10.17_Content License Agreement",
+      "sha256": "db39d6c284788dfdaa94423b779f5a3f188093bf5398790407de2db4a98d618e",
+      "chars": 25060
+    },
+    {
+      "title": "QBIOMEDINC_04_08_2020-EX-99.1-JOINT FILING AGREEMENT",
+      "sha256": "dd57e29b914eaf534f0f05b48b98394d61cd8925cde25a5cf9b72f43e2c40e95",
+      "chars": 2732
+    },
+    {
+      "title": "RandWorldwideInc_20010402_8-KA_EX-10.2_2102464_EX-10.2_Co-Branding Agreement",
+      "sha256": "d74ebaf7b1969b0cf8eb44f7a0384e3083e9d99b08f38c593fc6fe626c1cc7c4",
+      "chars": 48159
+    },
+    {
+      "title": "RareElementResourcesLtd_20171019_SC 13D_EX-99.4_10897534_EX-99.4_Intellectual Property Agreement",
+      "sha256": "c8366d11f3a251c8b0341a4c703e8285cef642b2a11a443870ef3cf6d9fa947b",
+      "chars": 34461
+    },
+    {
+      "title": "SANDRIDGEENERGYINC_08_06_2009-EX-10.6-OPERATIONS AND MAINTENANCE AGREEMENT",
+      "sha256": "264aba6daf987e09c103aef01f08d38a75cac25738a949a26a6d3fad1ed148c7",
+      "chars": 73119
+    },
+    {
+      "title": "SUMMAFOURINC_06_19_1998-EX-10.3-SOFTWARE LICENSE AND MAINTENANCE AGREEMENT",
+      "sha256": "3281881ac4a95c90e9359a9b9533640c0e9bb0e4b0b699021d42ac85fa8c7db7",
+      "chars": 117803
+    },
+    {
+      "title": "SYKESHEALTHPLANSERVICESINC_04_24_1998-EX-10.14-OUTSOURCING AGREEMENT",
+      "sha256": "0188ca707e39631156e62f71ee99a8a49a2183ca562eb0e35a2945167ecb1750",
+      "chars": 12852
+    },
+    {
+      "title": "TUNIUCORP_03_06_2014-EX-10-COOPERATION AGREEMENT",
+      "sha256": "de64f561a87663b8a6fb9d4be477fd0c0eba01695499870e754f108474440e8d",
+      "chars": 17917
+    },
+    {
+      "title": "URSCORPNEW_03_17_2014-EX-99-COOPERATION AGREEMENT",
+      "sha256": "07848e3706709597a01cdad14d2ad9269a5840e7364fb8ff62dc03ba75d9203f",
+      "chars": 37211
+    }
+  ]
+}
