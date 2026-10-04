@@ -1,3 +1,4 @@
+import os
 from collections.abc import Iterator
 from pathlib import Path
 
@@ -21,6 +22,12 @@ def alembic_config(url: str) -> Config:
 
 @pytest.fixture(scope="session")
 def pg_url() -> Iterator[str]:
+    """CI provides a fresh pgvector service container via TEST_DATABASE_URL;
+    locally, Testcontainers starts a throwaway one."""
+    if url := os.environ.get("TEST_DATABASE_URL"):
+        command.upgrade(alembic_config(url), "head")
+        yield url
+        return
     with PostgresContainer(PG_IMAGE, driver="psycopg") as pg:
         url = pg.get_connection_url()
         command.upgrade(alembic_config(url), "head")
