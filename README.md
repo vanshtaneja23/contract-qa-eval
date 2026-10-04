@@ -1,5 +1,7 @@
 # contract-qa-eval
 
+[![CI](https://github.com/vanshtaneja23/contract-qa-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/vanshtaneja23/contract-qa-eval/actions/workflows/ci.yml)
+
 Ask a question about a contract → get an answer with citations to the exact clause text →
 and know which frontier model does this most reliably.
 
