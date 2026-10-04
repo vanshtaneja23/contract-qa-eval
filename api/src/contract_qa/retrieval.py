@@ -113,26 +113,44 @@ def rrf_fuse(rankings: Sequence[Sequence[Hit]], k: int = 10, c: int = 60) -> lis
     return [replace(first_seen[cid], score=scores[cid], rank=i) for i, cid in enumerate(ordered, 1)]
 
 
+@dataclass(frozen=True, slots=True)
+class Signals:
+    """Raw (pre-fusion) scores of the best hit from each method. RRF scores only
+    encode rank, so they say nothing about how good the best match actually is;
+    the confidence gate uses these instead."""
+
+    top_cosine: float  # best vector similarity, 0 if no hits
+    top_ts_rank: float  # best Postgres ts_rank, 0 if no lexical match
+
+
 class Retriever:
     def __init__(self, session: Session, embedder: Embedder | None = None, candidates: int = 50) -> None:
         self.session = session
         self.embedder = embedder
         self.candidates = candidates  # per-method depth fed into fusion
 
+    def hybrid(
+        self, question: str, document_ids: Sequence[uuid.UUID], k: int = 10
+    ) -> tuple[list[Hit], Signals]:
+        if self.embedder is None:
+            raise ValueError("hybrid search needs an embedder")
+        qvec = self.embedder.embed_query(question)
+        lexical = lexical_search(self.session, question, document_ids, self.candidates)
+        vector = vector_search(self.session, qvec, self.embedder.key, document_ids, self.candidates)
+        signals = Signals(
+            top_cosine=vector[0].score if vector else 0.0,
+            top_ts_rank=lexical[0].score if lexical else 0.0,
+        )
+        return rrf_fuse([lexical, vector], k=k), signals
+
     def search(
         self, question: str, document_ids: Sequence[uuid.UUID], method: Method, k: int = 10
     ) -> list[Hit]:
         if method == "lexical":
             return lexical_search(self.session, question, document_ids, k)
+        if method == "hybrid":
+            return self.hybrid(question, document_ids, k)[0]
         if self.embedder is None:
             raise ValueError(f"method {method!r} needs an embedder")
         qvec = self.embedder.embed_query(question)
-        if method == "vector":
-            return vector_search(self.session, qvec, self.embedder.key, document_ids, k)
-        return rrf_fuse(
-            [
-                lexical_search(self.session, question, document_ids, self.candidates),
-                vector_search(self.session, qvec, self.embedder.key, document_ids, self.candidates),
-            ],
-            k=k,
-        )
+        return vector_search(self.session, qvec, self.embedder.key, document_ids, k)

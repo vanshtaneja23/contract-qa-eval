@@ -115,3 +115,14 @@ def test_hybrid_through_retriever(session: Session, two_docs: Docs) -> None:
         assert hits, method
         assert "England" in _section(session, hits[0].chunk_id), method
         assert [h.rank for h in hits] == list(range(1, len(hits) + 1))
+
+
+def test_hybrid_returns_raw_signals(session: Session, two_docs: Docs) -> None:
+    a, _ = two_docs
+    emb = FakeEmbedder()
+    embed_chunks(session, emb)
+    r = Retriever(session, emb)
+    hits, signals = r.hybrid("governed by the laws", [a], k=3)
+    assert hits and 0 < signals.top_cosine <= 1.0 and signals.top_ts_rank > 0
+    _, none = r.hybrid("is there a", [a], k=3)  # stopwords only: no lexical match
+    assert none.top_ts_rank == 0.0
