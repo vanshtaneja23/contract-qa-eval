@@ -1,0 +1,5 @@
+html,
+body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.5;
+}
