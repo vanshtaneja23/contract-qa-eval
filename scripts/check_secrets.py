@@ -103,8 +103,11 @@ def main(argv: list[str]) -> int:
         print("secret scan FAILED:", file=sys.stderr)
         for p in problems:
             print("  " + p, file=sys.stderr)
-        print("Move the value to .env (gitignored). For a false positive, add a "
-              "'secret-scan: allow' comment on that line.", file=sys.stderr)
+        print(
+            "Move the value to .env (gitignored). For a false positive, add a "
+            "'secret-scan: allow' comment on that line.",
+            file=sys.stderr,
+        )
         return 1
     return 0
 

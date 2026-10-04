@@ -1,5 +1,7 @@
 # Fake keys are assembled at runtime so this file itself never contains a
 # string the scanner (or GitHub push protection) would flag.
+from pathlib import Path
+
 import check_secrets as cs
 
 
@@ -16,17 +18,19 @@ def test_detects_openai_project_key() -> None:
 
 
 def test_detects_aws_and_github_and_private_key() -> None:
-    text = "\n".join([
-        "AKIA" + "ABCDEFGHIJKLMNOP",
-        "ghp_" + "a" * 36,
-        "-----BEGIN RSA " + "PRIVATE KEY-----",
-    ])
+    text = "\n".join(
+        [
+            "AKIA" + "ABCDEFGHIJKLMNOP",
+            "ghp_" + "a" * 36,
+            "-----BEGIN RSA " + "PRIVATE KEY-----",
+        ]
+    )
     assert {"aws_access_key", "github_token", "private_key"} <= _names(text)
 
 
 def test_generic_assignment_detected_but_placeholders_pass() -> None:
     assert "generic_secret" in _names('api_key = "' + "q8Zt" * 8 + '"')
-    assert _names(open(".env.example").read()) == set()
+    assert _names(Path(".env.example").read_text()) == set()
 
 
 def test_allow_comment_suppresses() -> None:
@@ -41,5 +45,5 @@ def test_env_file_is_forbidden_by_name_but_example_is_not() -> None:
 
 def test_output_masks_the_secret() -> None:
     key = "sk-ant-" + "c" * 40
-    (_, _, masked), = cs.scan_text(key)
+    ((_, _, masked),) = cs.scan_text(key)
     assert key not in masked
