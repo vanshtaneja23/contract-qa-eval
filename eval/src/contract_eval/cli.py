@@ -1,4 +1,4 @@
-"""cqa-eval: command line for data ingestion (and, later, benchmarks)."""
+"""cqa-eval: data ingestion, retrieval eval, and answer eval commands."""
 
 from __future__ import annotations
 
@@ -16,23 +16,15 @@ from sqlalchemy import select
 from sqlalchemy.engine import make_url
 from sqlalchemy.orm import Session
 
-from contract_eval.cuad import (
-    REPO_ROOT,
-    SUBSET_PATH,
-    CuadContract,
-    apply_manifest,
-    build_manifest,
-    download_cuad,
-    load_cuad,
-    select_subset,
-)
+from contract_eval.answer_eval import add_commands as add_answer_commands
+from contract_eval.common import QUESTIONS_PATH, RESULTS_DIR, git_commit, load_subset
+from contract_eval.cuad import CuadContract
 from contract_eval.questions import all_pairs, build_question_set, read_questions, write_questions
 from contract_qa.db import make_engine
 from contract_qa.ingest import ingest_document
 from contract_qa.models import Chunk, Document, Matter
 
-QUESTIONS_PATH = REPO_ROOT / "eval" / "questions.jsonl"
-RETRIEVAL_RESULTS = REPO_ROOT / "eval" / "results" / "retrieval.json"
+RETRIEVAL_RESULTS = RESULTS_DIR / "retrieval.json"
 
 
 def _get_or_create_matter(session: Session, name: str) -> Matter:
@@ -42,21 +34,6 @@ def _get_or_create_matter(session: Session, name: str) -> Matter:
         session.add(matter)
         session.flush()
     return matter
-
-
-def _load_subset(n: int, seed: int) -> list[CuadContract]:
-    contracts = load_cuad(download_cuad())
-    if SUBSET_PATH.exists():
-        manifest = json.loads(SUBSET_PATH.read_text())
-        if manifest["n"] != n or manifest["seed"] != seed:
-            raise SystemExit(
-                f"{SUBSET_PATH} pins n={manifest['n']} seed={manifest['seed']}; delete it to resample"
-            )
-        return apply_manifest(contracts, manifest)
-    subset = select_subset(contracts, n, seed)
-    SUBSET_PATH.write_text(json.dumps(build_manifest(subset, seed), indent=2) + "\n")
-    print(f"wrote {SUBSET_PATH.relative_to(SUBSET_PATH.parents[1])}")
-    return subset
 
 
 def _gold_span_stats(subset: list[CuadContract], chunks_by_title: dict[str, list[Chunk]]) -> tuple[int, int]:
@@ -72,7 +49,7 @@ def _gold_span_stats(subset: list[CuadContract], chunks_by_title: dict[str, list
 
 
 def cmd_ingest(args: argparse.Namespace) -> None:
-    subset = _load_subset(args.n, args.seed)
+    subset = load_subset(args.n, args.seed)
     engine = make_engine()
     created = 0
     chunks_by_title: dict[str, list[Chunk]] = {}
@@ -126,7 +103,7 @@ def cmd_build_questions(args: argparse.Namespace) -> None:
     if QUESTIONS_PATH.exists() and not args.force:
         raise SystemExit(f"{QUESTIONS_PATH} exists; pass --force to rebuild")
     questions = build_question_set(
-        _load_subset(40, 42), n_answerable=args.answerable, n_impossible=args.impossible, seed=args.seed
+        load_subset(40, 42), n_answerable=args.answerable, n_impossible=args.impossible, seed=args.seed
     )
     write_questions(QUESTIONS_PATH, questions)
     impossible = sum(q.is_impossible for q in questions)
@@ -148,7 +125,7 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
     unknown = set(methods) - {"lexical", "bm25", "vector", "hybrid"}
     if unknown:
         raise SystemExit(f"unknown methods: {sorted(unknown)}")
-    subset = _load_subset(40, 42)
+    subset = load_subset(40, 42)
     spans_by_cuad_id = {q.id: q.spans for c in subset for q in c.questions}
     if args.set == "all":
         cases = all_pairs(subset, answerable=True)
@@ -200,7 +177,7 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
         "command": "uv run cqa-eval " + shlex.join(sys.argv[1:] if args.argv is None else args.argv),
         "database": make_url(str(engine.url)).database,
         "chunks": len(chunk_rows),
-        "git_commit": _git_commit(),
+        "git_commit": git_commit(),
         "embedding_model": args.embedding if embedder else None,
         "question_set": args.set,
         "n": len(cases),
@@ -229,14 +206,6 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
             f"  {m:8s} recall@5={s['recall@5']:.3f} {_ci(s['recall@5_ci'])}  "
             f"mrr@10={s['mrr@10']:.3f} {_ci(s['mrr@10_ci'])}"
         )
-
-
-def _git_commit() -> str:
-    import subprocess
-
-    out = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True)
-    dirty = subprocess.run(["git", "diff", "--quiet", "--", "api", "eval/src"]).returncode != 0
-    return out.stdout.strip() + ("-dirty" if dirty else "")
 
 
 def _ci(ci: list[float]) -> str:
@@ -285,6 +254,8 @@ def main(argv: list[str] | None = None) -> None:
 
     p = sub.add_parser("retrieval-report", help="render eval/results/retrieval.md")
     p.set_defaults(func=cmd_retrieval_report)
+
+    add_answer_commands(sub)
 
     args = parser.parse_args(argv)
     args.argv = argv
