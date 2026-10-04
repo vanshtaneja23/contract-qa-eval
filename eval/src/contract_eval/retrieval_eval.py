@@ -1,8 +1,8 @@
 """Retrieval metrics against CUAD gold spans.
 
 A retrieved chunk is a hit if its character range overlaps any gold span for
-the question. Overlap rather than containment, because ~4.5% of gold spans are
-longer than a chunk and can never be fully contained.
+the question. Overlap rather than containment, because 8.5% of gold spans
+(88 of 1,034 in the 40-contract subset) are not fully inside any single chunk.
 """
 
 from __future__ import annotations

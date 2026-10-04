@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import shlex
 import statistics
 import sys
 import time
@@ -196,7 +197,7 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
     baseline = methods[0]
     run = {
         "date": datetime.date.today().isoformat(),
-        "command": "uv run cqa-eval " + " ".join(sys.argv[1:] if args.argv is None else args.argv),
+        "command": "uv run cqa-eval " + shlex.join(sys.argv[1:] if args.argv is None else args.argv),
         "database": make_url(str(engine.url)).database,
         "chunks": len(chunk_rows),
         "git_commit": _git_commit(),
