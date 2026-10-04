@@ -11,6 +11,12 @@ dev = [
     "mypy>=1.13",
     "testcontainers[postgres]>=4.8",
 ]
+# Local embedding models (pulls in torch). On by default locally; CI runs with
+# --no-group embed because tests use a fake embedder.
+embed = ["sentence-transformers>=3.3"]
+
+[tool.uv]
+default-groups = ["dev", "embed"]
 
 [tool.pytest.ini_options]
 testpaths = ["scripts", "api/tests", "eval/tests"]
@@ -33,3 +39,7 @@ python_version = "3.12"
 strict = true
 plugins = ["pydantic.mypy"]
 exclude = ["migrations/"]
+
+[[tool.mypy.overrides]]
+module = ["sentence_transformers.*", "snowballstemmer.*", "testcontainers.*", "pgvector.*"]
+ignore_missing_imports = true
