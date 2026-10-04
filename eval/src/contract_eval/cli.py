@@ -87,7 +87,7 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     inside, total = _gold_span_stats(subset, chunks_by_title)
     print(f"documents: {len(subset)} ({created} newly inserted) across {len(matters)} matters")
     print(f"chunks: {len(all_chunks)}  section={kinds['section']}  window={kinds['window']}")
-    print(f"documents chunked purely by windows (too few headings): {window_only}/{len(subset)}")
+    print(f"window-only documents (few headings or long sections): {window_only}/{len(subset)}")
     print(
         f"words/chunk: median={statistics.median(words):.0f}  p95={words[int(0.95 * (len(words) - 1))]}"
         f"  max={words[-1]}"
