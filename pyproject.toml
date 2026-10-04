@@ -20,7 +20,7 @@ default-groups = ["dev", "embed"]
 
 [tool.pytest.ini_options]
 testpaths = ["scripts", "api/tests", "eval/tests"]
-pythonpath = ["scripts", "api/src", "eval/src"]
+pythonpath = ["scripts", "api/src", "eval/src", "api/tests"]
 markers = ["integration: needs Docker (Testcontainers Postgres+pgvector)"]
 addopts = "-ra --import-mode=importlib"
 
@@ -32,7 +32,7 @@ target-version = "py312"
 select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["contract_qa", "contract_eval", "check_secrets"]
+known-first-party = ["contract_qa", "contract_eval", "check_secrets", "fakes"]
 
 [tool.mypy]
 python_version = "3.12"

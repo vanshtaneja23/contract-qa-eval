@@ -1,8 +1,4 @@
-import hashlib
-import math
-import re
 import uuid
-from collections.abc import Sequence
 
 import pytest
 from sqlalchemy import select, text
@@ -12,29 +8,10 @@ from contract_qa.embedding import embed_chunks
 from contract_qa.ingest import ingest_document
 from contract_qa.models import EMBEDDING_DIM, Chunk
 from contract_qa.retrieval import Retriever, lexical_search, vector_search
+from fakes import FakeEmbedder
 
 pytestmark = pytest.mark.integration
 Docs = tuple[uuid.UUID, uuid.UUID]
-
-
-class FakeEmbedder:
-    """Deterministic bag-of-words hashing: texts sharing words get similar vectors."""
-
-    def __init__(self, key: str = "fake") -> None:
-        self.key = key
-
-    def _vec(self, s: str) -> list[float]:
-        v = [0.0] * EMBEDDING_DIM
-        for w in re.findall(r"[a-z]+", s.lower()):
-            v[int(hashlib.md5(w.encode()).hexdigest(), 16) % EMBEDDING_DIM] += 1.0
-        norm = math.sqrt(sum(x * x for x in v)) or 1.0
-        return [x / norm for x in v]
-
-    def embed_passages(self, texts: Sequence[str]) -> list[list[float]]:
-        return [self._vec(t) for t in texts]
-
-    def embed_query(self, text: str) -> list[float]:
-        return self._vec(text)
 
 
 CONTRACT_A = (
