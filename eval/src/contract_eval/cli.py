@@ -84,7 +84,6 @@ def cmd_ingest(args: argparse.Namespace) -> None:
                 title=contract.title,
                 text=contract.text,
                 source=f"cuad-v1:{contract.title}",
-                strategy=args.strategy,
             )
             created += was_created
             chunks_by_title[contract.title] = list(
@@ -93,12 +92,9 @@ def cmd_ingest(args: argparse.Namespace) -> None:
 
     all_chunks = [ch for chs in chunks_by_title.values() for ch in chs]
     words = sorted(len(ch.text.split()) for ch in all_chunks)
-    kinds = Counter(ch.kind for ch in all_chunks)
-    window_only = sum(all(ch.kind == "window" for ch in chs) for chs in chunks_by_title.values())
     inside, total = _gold_span_stats(subset, chunks_by_title)
     print(f"documents: {len(subset)} ({created} newly inserted) across {len(matters)} matters")
-    print(f"chunks: {len(all_chunks)}  section={kinds['section']}  window={kinds['window']}")
-    print(f"window-only documents (few headings or long sections): {window_only}/{len(subset)}")
+    print(f"chunks: {len(all_chunks)}")
     print(
         f"words/chunk: median={statistics.median(words):.0f}  p95={words[int(0.95 * (len(words) - 1))]}"
         f"  max={words[-1]}"
@@ -162,7 +158,7 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
     with Session(engine) as session:
         doc_ids = dict(session.execute(select(Document.title, Document.id)).tuples().all())
         chunk_rows = session.execute(
-            select(Chunk.id, Chunk.document_id, Chunk.start_char, Chunk.end_char, Chunk.text, Chunk.kind)
+            select(Chunk.id, Chunk.document_id, Chunk.start_char, Chunk.end_char, Chunk.text)
         ).all()
         models_in_db = set(session.scalars(select(Chunk.embedding_model).distinct()))
 
@@ -202,7 +198,8 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
         "date": datetime.date.today().isoformat(),
         "command": "uv run cqa-eval " + " ".join(sys.argv[1:] if args.argv is None else args.argv),
         "database": make_url(str(engine.url)).database,
-        "chunks": dict(Counter(r.kind for r in chunk_rows)),
+        "chunks": len(chunk_rows),
+        "git_commit": _git_commit(),
         "embedding_model": args.embedding if embedder else None,
         "question_set": args.set,
         "n": len(cases),
@@ -233,6 +230,14 @@ def cmd_retrieval_eval(args: argparse.Namespace) -> None:
         )
 
 
+def _git_commit() -> str:
+    import subprocess
+
+    out = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True)
+    dirty = subprocess.run(["git", "diff", "--quiet", "--", "api", "eval/src"]).returncode != 0
+    return out.stdout.strip() + ("-dirty" if dirty else "")
+
+
 def _ci(ci: list[float]) -> str:
     return f"[{ci[0]:.3f}, {ci[1]:.3f}]"
 
@@ -252,7 +257,6 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--n", type=int, default=40, help="number of contracts")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--matters", type=int, default=4, help="spread contracts over this many matters")
-    p.add_argument("--strategy", choices=["section", "window"], default="section")
     p.set_defaults(func=cmd_ingest)
 
     p = sub.add_parser("embed", help="embed all chunks with a local model")

@@ -70,8 +70,8 @@ def test_db_rejects_chunk_whose_matter_differs_from_its_document(
     with pytest.raises(IntegrityError, match="fk_chunks_document_matter"), session.begin_nested():
         session.execute(
             text(
-                "INSERT INTO chunks (document_id, matter_id, ordinal, start_char, end_char, kind, text) "
-                "VALUES (:d, :m, 999, 0, 2, 'window', '1.')"
+                "INSERT INTO chunks (document_id, matter_id, ordinal, start_char, end_char, text) "
+                "VALUES (:d, :m, 999, 0, 2, '1.')"
             ),
             {"d": doc.id, "m": other},
         )
@@ -82,8 +82,8 @@ def test_db_rejects_text_that_does_not_match_offsets(session: Session, matter_id
     with pytest.raises(IntegrityError, match="ck_chunks_text_length"), session.begin_nested():
         session.execute(
             text(
-                "INSERT INTO chunks (document_id, matter_id, ordinal, start_char, end_char, kind, text) "
-                "VALUES (:d, :m, 999, 0, 10, 'window', 'too short')"
+                "INSERT INTO chunks (document_id, matter_id, ordinal, start_char, end_char, text) "
+                "VALUES (:d, :m, 999, 0, 10, 'too short')"
             ),
             {"d": doc.id, "m": matter_id},
         )

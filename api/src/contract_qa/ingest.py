@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import hashlib
 import uuid
-from typing import Literal
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -22,7 +21,6 @@ def ingest_document(
     source: str,
     max_words: int = 200,
     overlap_words: int = 40,
-    strategy: Literal["section", "window"] = "section",
 ) -> tuple[Document, bool]:
     """Insert the document and its chunks. Returns (document, created).
 
@@ -52,17 +50,9 @@ def ingest_document(
             ordinal=i,
             start_char=c.start,
             end_char=c.end,
-            kind=c.kind,
             text=c.text,
         )
-        for i, c in enumerate(
-            chunk_document(
-                text,
-                max_words=max_words,
-                overlap_words=overlap_words,
-                use_headings=strategy == "section",
-            )
-        )
+        for i, c in enumerate(chunk_document(text, max_words=max_words, overlap_words=overlap_words))
     )
     session.flush()
     return doc, True

@@ -104,7 +104,6 @@ class Chunk(Base):
         UniqueConstraint("document_id", "ordinal", name="uq_chunks_document_ordinal"),
         CheckConstraint("start_char >= 0 AND end_char > start_char", name="ck_chunks_offsets"),
         CheckConstraint("char_length(text) = end_char - start_char", name="ck_chunks_text_length"),
-        CheckConstraint("kind IN ('section', 'window')", name="ck_chunks_kind"),
         CheckConstraint("(embedding IS NULL) = (embedding_model IS NULL)", name="ck_chunks_embedding_model"),
         Index("ix_chunks_matter_id", "matter_id"),
         Index("ix_chunks_tsv", "tsv", postgresql_using="gin"),
@@ -116,7 +115,6 @@ class Chunk(Base):
     ordinal: Mapped[int] = mapped_column(Integer)
     start_char: Mapped[int] = mapped_column(Integer)
     end_char: Mapped[int] = mapped_column(Integer)
-    kind: Mapped[str] = mapped_column(Text)
     text: Mapped[str] = mapped_column(Text)
     embedding: Mapped[list[float] | None] = mapped_column(Vector(EMBEDDING_DIM), nullable=True)
     # Which model produced `embedding`; queries filter on it so vectors from
