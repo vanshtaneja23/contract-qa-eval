@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     # Matches docker-compose defaults; override with DATABASE_URL in .env.
-    database_url: str = "postgresql+psycopg://contractqa:contractqa@localhost:5433/contractqa"
+    database_url: str = "postgresql+psycopg://contractqa:contractqa@localhost:5434/contractqa"
 
 
 def get_settings() -> Settings:
