@@ -173,3 +173,17 @@ def test_no_redact_sends_original_text(session: Session, setup: Any) -> None:
     result, client = ask(session, setup, answer("State of Delaware"), redact=False)
     assert "Acme Widgets Inc." in client.prompts[0] and 'document="Supply"' in client.prompts[0]
     assert result.status == "answered" and result.redactions == {}
+
+
+def test_truncated_output_is_rejected_with_its_stop_reason(session: Session, setup: Any) -> None:
+    doc, _, retriever = setup
+    client = ScriptedClient('{"status": "answered", "answer": "      ', stop_reason="length")
+    result = answer_question(session, "Which law governs?", [doc], client, retriever)
+    assert result.status == "rejected" and result.rejection_reasons == ["length"]
+
+
+def test_ollama_style_normal_stop_with_bad_json_is_invalid_json(session: Session, setup: Any) -> None:
+    doc, _, retriever = setup
+    client = ScriptedClient("not json", stop_reason="stop")
+    result = answer_question(session, "Which law governs?", [doc], client, retriever)
+    assert result.rejection_reasons == ["invalid_json"]

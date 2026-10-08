@@ -325,7 +325,10 @@ def answer_question(
     try:
         parsed = ModelAnswer.model_validate_json(completion.text)
     except ValidationError:
-        reason = "invalid_json" if completion.stop_reason in ("end_turn", "") else completion.stop_reason
+        # A normal stop with bad JSON is "invalid_json"; otherwise report why generation
+        # ended (length / max_tokens = output cap hit, refusal, ...).
+        normal = completion.stop_reason in ("end_turn", "stop", "")
+        reason = "invalid_json" if normal else completion.stop_reason
         result = AnswerResult(status="rejected", answer=None, rejection_reasons=[reason], **base)
     else:
         if parsed.status == "not_found":

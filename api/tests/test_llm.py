@@ -165,7 +165,7 @@ def test_ollama_adapter_with_recorded_response(monkeypatch: pytest.MonkeyPatch) 
     c = client.complete("sys", "user", SCHEMA)
     assert sent["url"] == "http://localhost:11434/api/chat"
     assert sent["body"]["model"] == "qwen2.5:7b" and sent["body"]["format"] == SCHEMA
-    assert sent["body"]["options"] == {"temperature": 0, "seed": 0, "num_ctx": 8192}
+    assert sent["body"]["options"] == {"temperature": 0, "seed": 0, "num_ctx": 8192, "num_predict": 1024}
     assert c.model == "ollama:qwen2.5:7b" and c.usage == Usage(50, 43)
     assert json.loads(c.text)["citations"][0]["quote"].startswith("The term of this Agreement")
 

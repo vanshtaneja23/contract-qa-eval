@@ -180,16 +180,20 @@ class OllamaClient:
         model: str,
         base_url: str | None = None,
         num_ctx: int = 8192,
+        max_tokens: int = 1024,
         timeout_s: float = 600.0,
     ) -> None:
         self.name = model.removeprefix(OLLAMA_PREFIX)
         self.model = OLLAMA_PREFIX + self.name
         self.base_url = (base_url or os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")).rstrip("/")
         self.num_ctx = num_ctx
+        self.max_tokens = max_tokens
         self.timeout_s = timeout_s
 
     def options(self) -> dict[str, Any]:
-        return {"temperature": 0, "seed": 0, "num_ctx": self.num_ctx}
+        # num_predict caps output: without it a small model can loop inside its JSON
+        # and generate tens of thousands of tokens (observed: 24k+ before a timeout).
+        return {"temperature": 0, "seed": 0, "num_ctx": self.num_ctx, "num_predict": self.max_tokens}
 
     def cache_params(self) -> dict[str, Any]:
         return {"provider": "ollama", "options": self.options()}
