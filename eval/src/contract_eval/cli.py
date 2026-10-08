@@ -19,6 +19,7 @@ from sqlalchemy.orm import Session
 from contract_eval.answer_eval import add_commands as add_answer_commands
 from contract_eval.common import QUESTIONS_PATH, RESULTS_DIR, git_commit, load_subset
 from contract_eval.cuad import CuadContract
+from contract_eval.m5 import add_commands as add_m5_commands
 from contract_eval.questions import all_pairs, build_question_set, read_questions, write_questions
 from contract_qa.db import make_engine
 from contract_qa.ingest import ingest_document
@@ -256,6 +257,7 @@ def main(argv: list[str] | None = None) -> None:
     p.set_defaults(func=cmd_retrieval_report)
 
     add_answer_commands(sub)
+    add_m5_commands(sub)
 
     args = parser.parse_args(argv)
     args.argv = argv
