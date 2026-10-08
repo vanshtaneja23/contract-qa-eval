@@ -12,7 +12,8 @@ from __future__ import annotations
 
 import logging
 import uuid
-from collections.abc import Sequence
+from collections import Counter
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any, Literal
 
@@ -20,9 +21,10 @@ from pydantic import BaseModel, ValidationError
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from contract_qa.citations import Citation, merge_regions, resolve_quote, verify_citation
+from contract_qa.citations import Citation, MatchMode, merge_regions, resolve_quote, verify_citation
 from contract_qa.llm import ModelClient
 from contract_qa.models import AuditLog, Chunk, Document
+from contract_qa.redaction import DocumentRedactor, unredact
 from contract_qa.retrieval import Retriever, Signals
 
 log = logging.getLogger(__name__)
@@ -101,6 +103,9 @@ class AnswerConfig:
     k: int = 6
     include_first_chunk: bool = True
     gate: GateConfig | None = None
+    # Replace names, emails, phones and addresses with per-document placeholders
+    # before any text reaches a model; map them back in answers and citations.
+    redact: bool = True
 
 
 # Calibrated in eval/results/gate.json: top ts_rank separates "clause present"
@@ -138,6 +143,7 @@ class AnswerResult(BaseModel):
     latency_ms: float = 0.0
     cached: bool = False
     raw_output: str | None = None
+    redactions: dict[str, int] = {}  # entity types and counts in the shown context, never values
 
 
 def build_context(
@@ -170,20 +176,50 @@ def build_context(
     ]
 
 
-def build_prompt(question: str, context: Sequence[ContextChunk]) -> str:
+def build_prompt(
+    question: str,
+    context: Sequence[ContextChunk],
+    redactors: Mapping[uuid.UUID, DocumentRedactor] | None = None,
+) -> str:
     parts = ["<excerpts>"]
+    doc_numbers = {d: i for i, d in enumerate(dict.fromkeys(c.document_id for c in context), start=1)}
     for c in context:
-        title = c.title.replace('"', "'")
-        parts.append(f'<excerpt id="{c.label}" document="{title}">\n{c.text}\n</excerpt>')
+        if redactors:
+            # Titles carry company names too (CUAD titles start with the filer's name).
+            title = f"Document {doc_numbers[c.document_id]}"
+            text = redactors[c.document_id].redact(c.start, c.end).text
+        else:
+            title, text = c.title.replace('"', "'"), c.text
+        parts.append(f'<excerpt id="{c.label}" document="{title}">\n{text}\n</excerpt>')
     parts.append("</excerpts>")
     parts.append(f"\nQuestion: {question}")
     return "\n".join(parts)
+
+
+def model_inputs(
+    question: str,
+    documents: Mapping[uuid.UUID, Document],
+    context: Sequence[ContextChunk],
+    config: AnswerConfig,
+) -> tuple[str, dict[uuid.UUID, DocumentRedactor]]:
+    """The exact user prompt sent to the model, and the redactors used to build it."""
+    redactors: dict[uuid.UUID, DocumentRedactor] = {}
+    if config.redact:
+        if len(documents) > 1:
+            # Placeholders are numbered per document; mixing documents would make
+            # PARTY_1 ambiguous when mapping answers back.
+            raise NotImplementedError("redaction supports one document per question")
+        redactors = {doc_id: DocumentRedactor(d.text) for doc_id, d in documents.items()}
+        for r in redactors.values():
+            question = r.redact_question(question)
+    return build_prompt(question, context, redactors or None), redactors
 
 
 def _check_citations(
     model_citations: Sequence[ModelCitation],
     context: Sequence[ContextChunk],
     documents: dict[uuid.UUID, Document],
+    redactors: Mapping[uuid.UUID, DocumentRedactor],
 ) -> tuple[list[Citation], list[str], int]:
     by_label = {c.label: c for c in context}
     spans: dict[uuid.UUID, list[tuple[int, int]]] = {}
@@ -200,7 +236,9 @@ def _check_citations(
         if ctx is None:
             reasons.append(f"unknown_chunk:{mc.chunk_id}")
             continue
-        hit = resolve_quote(mc.quote, texts[ctx.document_id], regions[ctx.document_id])
+        hit = _locate(
+            mc.quote, texts[ctx.document_id], regions[ctx.document_id], redactors.get(ctx.document_id)
+        )
         if hit is None:
             reasons.append(f"quote_not_found:{mc.chunk_id}")
             continue
@@ -220,6 +258,26 @@ def _check_citations(
         if citation not in citations:
             citations.append(citation)
     return citations, reasons, whitespace
+
+
+def _locate(
+    quote: str,
+    doc_text: str,
+    regions: Sequence[tuple[int, int]],
+    redactor: DocumentRedactor | None,
+) -> tuple[int, int, MatchMode] | None:
+    """Find the model's quote in what it was shown. With redaction the model saw
+    placeholders, so search the redacted text and map the match back to original
+    offsets; the strict verifier then checks the original text."""
+    if redactor is None:
+        return resolve_quote(quote, doc_text, regions)
+    for start, end in regions:
+        span = redactor.redact(start, end)
+        hit = resolve_quote(quote, span.text, [(0, len(span.text))])
+        if hit is not None:
+            o_start, o_end = span.to_original(hit[0], hit[1])
+            return o_start, o_end, hit[2]
+    return None
 
 
 def answer_question(
@@ -246,8 +304,14 @@ def answer_question(
     context = build_context(
         session, [h.chunk_id for h in hits], documents, config.k, config.include_first_chunk
     )
-    completion = client.complete(SYSTEM_PROMPT, build_prompt(question, context), ANSWER_SCHEMA)
+    prompt, redactors = model_inputs(question, documents, context, config)
+    completion = client.complete(SYSTEM_PROMPT, prompt, ANSWER_SCHEMA)
+    mapping = {ph: v for r in redactors.values() for ph, v in r.mapping.items()}
+    redaction_counts: Counter[str] = Counter()
+    for doc_id, r in redactors.items():
+        redaction_counts.update(r.counts([(c.start, c.end) for c in context if c.document_id == doc_id]))
     base: dict[str, Any] = {
+        "redactions": dict(redaction_counts),
         "context_chunk_ids": [c.chunk_id for c in context],
         "signals": signal_values,
         "model": client.model,
@@ -267,7 +331,7 @@ def answer_question(
         if parsed.status == "not_found":
             result = AnswerResult(
                 status="not_found",
-                answer=parsed.answer or NOT_FOUND_MESSAGE,
+                answer=unredact(parsed.answer, mapping) or NOT_FOUND_MESSAGE,
                 model_status="not_found",
                 **base,
             )
@@ -280,7 +344,7 @@ def answer_question(
                 **base,
             )
         else:
-            citations, reasons, whitespace = _check_citations(parsed.citations, context, documents)
+            citations, reasons, whitespace = _check_citations(parsed.citations, context, documents, redactors)
             if reasons:
                 result = AnswerResult(
                     status="rejected",
@@ -293,7 +357,7 @@ def answer_question(
             else:
                 result = AnswerResult(
                     status="answered",
-                    answer=parsed.answer,
+                    answer=unredact(parsed.answer, mapping),
                     citations=citations,
                     model_status="answered",
                     whitespace_matches=whitespace,
@@ -332,6 +396,7 @@ def _audit(
                 "input_tokens": result.input_tokens,
                 "output_tokens": result.output_tokens,
                 "latency_ms": round(result.latency_ms, 1),
+                "redactions": result.redactions,
             },
         )
     )

@@ -33,7 +33,7 @@ from contract_qa.answering import (
     GateConfig,
     answer_question,
     build_context,
-    build_prompt,
+    model_inputs,
 )
 from contract_qa.db import make_engine
 from contract_qa.llm import CachedClient, Usage, cost_usd, estimate_tokens, make_client
@@ -204,7 +204,10 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
         random.Random(0).shuffle(questions)  # so --limit takes a mix of contracts and categories
         questions = questions[: args.limit] if args.limit else questions
     config = AnswerConfig(
-        k=args.k, include_first_chunk=not args.no_first_chunk, gate=None if args.no_gate else load_gate()
+        k=args.k,
+        include_first_chunk=not args.no_first_chunk,
+        gate=None if args.no_gate else load_gate(),
+        redact=not args.no_redact,
     )
     client = CachedClient(make_client(args.model), CACHE_DIR, offline=args.offline)
     label = args.label or args.model.replace(":", "_")
@@ -225,7 +228,7 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
             ctx = build_context(
                 session, [h.chunk_id for h in ranked], {doc.id: doc}, config.k, config.include_first_chunk
             )
-            prompt = build_prompt(q.question, ctx)
+            prompt, _ = model_inputs(q.question, {doc.id: doc}, ctx, config)
             if client.is_cached(SYSTEM_PROMPT, prompt, ANSWER_SCHEMA):
                 cached += 1
                 continue
@@ -269,6 +272,7 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
             "model": args.model,
             "config": {
                 "k": config.k,
+                "redact": config.redact,
                 "include_first_chunk": config.include_first_chunk,
                 "gate": None
                 if config.gate is None
@@ -350,6 +354,9 @@ def add_commands(sub: Any) -> None:
     p.add_argument("--k", type=int, default=6)
     p.add_argument("--no-first-chunk", action="store_true")
     p.add_argument("--no-gate", action="store_true")
+    p.add_argument(
+        "--no-redact", action="store_true", help="send unredacted text (redaction cost experiment)"
+    )
     p.add_argument("--label")
     p.add_argument(
         "--split",

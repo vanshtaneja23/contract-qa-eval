@@ -66,7 +66,7 @@ def test_valid_answer_gets_exact_verified_offsets(session: Session, setup: Any) 
     (c,) = result.citations
     assert CONTRACT[c.start : c.end] == c.quoted_text == "governed by the laws of the\n   State of Delaware"
     assert result.whitespace_matches == 0
-    assert '<excerpt id="C1" document="Supply">' in client.prompts[0]
+    assert '<excerpt id="C1" document="Document 1">' in client.prompts[0]  # title redacted
     assert last_audit(session).detail["status"] == "answered"
 
 
@@ -132,10 +132,44 @@ def test_first_chunk_is_included_when_configured(session: Session, setup: Any) -
     answer_question(
         session, "insurance amount", [doc], client, retriever, AnswerConfig(k=1, include_first_chunk=True)
     )
-    assert "SUPPLY AGREEMENT between Acme" in client.prompts[0]
+    assert "SUPPLY AGREEMENT between PARTY_1" in client.prompts[0]
 
 
 def test_unknown_document_id_raises(session: Session, setup: Any) -> None:
     _, _, retriever = setup
     with pytest.raises(ValueError):
         answer_question(session, "q", [uuid.uuid4()], ScriptedClient("{}"), retriever)
+
+
+# --- redaction end to end ---------------------------------------------------------
+
+
+def test_prompt_contains_no_pii_and_audit_logs_only_counts(session: Session, setup: Any) -> None:
+    result, client = ask(session, setup, answer("governed by the laws of the\n   State of Delaware"))
+    prompt = client.prompts[0]
+    for value in ("Acme Widgets", "Beta Retail", "Supply"):
+        assert value not in prompt
+    assert result.redactions == {"PARTY": 2}
+    audit = last_audit(session)
+    assert audit.detail["redactions"] == {"PARTY": 2}
+    assert "Acme" not in str(audit.detail["redactions"])
+
+
+def test_quote_with_placeholders_maps_back_to_real_text(session: Session, setup: Any) -> None:
+    resp = {
+        "status": "answered",
+        "answer": "The parties are PARTY_1 and PARTY_2.",
+        "citations": [{"chunk_id": "C1", "quote": "SUPPLY AGREEMENT between PARTY_1 and PARTY_2."}],
+    }
+    result, _ = ask(session, setup, resp)
+    assert result.status == "answered"
+    assert result.answer == "The parties are Acme Widgets Inc. and Beta Retail LLC."
+    (c,) = result.citations
+    assert c.quoted_text == "SUPPLY AGREEMENT between Acme Widgets Inc. and Beta Retail LLC."
+    assert CONTRACT[c.start : c.end] == c.quoted_text  # verified against the original
+
+
+def test_no_redact_sends_original_text(session: Session, setup: Any) -> None:
+    result, client = ask(session, setup, answer("State of Delaware"), redact=False)
+    assert "Acme Widgets Inc." in client.prompts[0] and 'document="Supply"' in client.prompts[0]
+    assert result.status == "answered" and result.redactions == {}
