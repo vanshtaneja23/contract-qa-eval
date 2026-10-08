@@ -205,3 +205,71 @@ model's context, and keep it only if it measurably helps.
 - `answer-eval` plans first: it counts gated and cached questions, estimates the rest (1 token
   per 3.5 characters, deliberately high, plus `--est-output-tokens`), and refuses to run above
   `--max-cost` (default $2).
+
+---
+
+## Zero API spend: local open-weight models (2026-10-08)
+
+### D18. All model runs are local (Ollama); paid APIs are blocked, not just unused
+- **Decision:** no Anthropic/OpenAI key, no paid calls. Real paid clients raise
+  `PaidCallsDisabled` unless `CQA_ALLOW_PAID_CALLS=1`, and `answer-eval --max-cost` defaults to 0.
+  The Anthropic and OpenAI adapters stay (same interface) and are tested only against fixtures:
+  the Ollama fixture is a recorded local response; the Anthropic/OpenAI fixtures are built in the
+  documented response shapes and say so in a `_note` field.
+- **Models:** `llama3.1:8b`, `qwen2.5:7b`, `gemma2:9b` (three vendors, similar size; ~5 GB each at
+  4-bit, comfortable on an M4 Pro with 24 GB). Judge: `qwen2.5:14b`, a different and larger model
+  than the graded ones, to avoid a model grading its own answers.
+- **Consequence:** the project compares open-weight models, not frontier models. The README says so.
+
+### D19. Ollama settings that change results
+- `temperature 0`, `seed 0` for repeatability.
+- `num_ctx 8192` set explicitly: prompts are ~2.3k tokens, and Ollama silently truncates prompts
+  longer than its context window. The client also errors if a prompt fills the window.
+- `num_predict 1024`: added after a model looped inside its JSON and generated 24k+ tokens until
+  the HTTP timeout. A capped response is rejected with reason `length`.
+
+### D20. Prompt v2, tuned on a dev slice, not on the eval set
+- **Problem (M3 smoke run, 20 eval questions, qwen2.5:7b, v1 prompt):** 12 of 16 answerable
+  questions came back `not_found`, and in 11 of those 12 the gold clause *was* in the context. The
+  model was over-cautious, not under-informed.
+- **Method:** `--split dev` draws questions disjoint from `eval/questions.jsonl` (same 3:1
+  answerable/absent mix). Metric: grounded accuracy (answerable = answered with a citation
+  overlapping a CUAD gold span; absent = abstained), no judge needed.
+- **Evidence** (40 dev questions, qwen2.5:7b, 2026-10-08):
+
+  | prompt | grounded accuracy | answerable answered | absent abstained | citation validity |
+  |---|---|---|---|---|
+  | v1 | 0.375 | 5 / 30 | 10 / 10 | 0.71 |
+  | v2 | 0.525 | 18 / 30 | 7 / 10 | 0.74 |
+
+  v2 − v1: +0.150, paired 95% CI [−0.050, +0.325]: **not significant at n=40.** Adopted anyway
+  because v1's failure (abstaining with the clause in front of it) is the product's core failure
+  mode; the cost is visible (3 more absent-clause questions answered) and M5 measures both.
+- **Limitation:** tuned on one model (qwen2.5:7b), which may favour it slightly in M5.
+- Whitespace-tolerant quote matching (D12) earned its place: in the smoke run it rescued 2 of the 3
+  valid citations.
+
+### D21. PII redaction before every model call, and what it costs
+- **What:** organisations (corporate suffix, plus their core name), people in signature/notice
+  patterns, emails, phones and street addresses become `PARTY_n` / `PERSON_n` / `EMAIL_n` /
+  `PHONE_n` / `ADDRESS_n`, numbered per document so the same party is the same token in every
+  excerpt. Document titles become "Document 1" (CUAD titles start with the filer's name). The
+  model's quotes are located in the redacted text, mapped back through a segment offset map, and
+  verified against the original. `audit_log` stores counts by type, never values.
+- **Why regex, not NER:** deterministic, fast, and every rule is testable. **Known gaps:** person
+  names in running prose, and organisations without a corporate suffix, are not caught.
+- **Cost** (`answer-eval --split dev --limit 40`, with and without `--no-redact`, qwen2.5:7b,
+  2026-10-08): 296 entities redacted across 39 prompts (PARTY 204, PERSON 49, ADDRESS 32,
+  PHONE 7, EMAIL 4).
+
+  | | grounded accuracy | answerable answered | absent abstained | citation validity |
+  |---|---|---|---|---|
+  | no redaction | 0.525 | 18 / 30 | 7 / 10 | 0.74 |
+  | redaction | 0.525 | 18 / 30 | 8 / 10 | 0.77 |
+
+  Redacted − plain: **+0.000, paired 95% CI [−0.100, +0.100]**: no cost detectable at n=40, which
+  is not the same as no cost. By category the changes go both ways (Parties −1 of 2, Liquidated
+  Damages −1 of 1; Exclusivity +1 of 2, Change of Control +1 of 1). **Parties is where a real cost
+  is expected:** the model sees `PARTY_1` instead of a name and has to rely on the mapping back.
+- **Single-document only:** placeholder numbers are per document, so a multi-document question
+  with redaction raises `NotImplementedError` rather than risk mapping a name to the wrong party.

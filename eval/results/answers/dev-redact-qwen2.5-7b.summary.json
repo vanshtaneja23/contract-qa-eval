@@ -1,0 +1,53 @@
+{
+ "date": "2026-10-08",
+ "command": "uv run cqa-eval answer-eval --model ollama:qwen2.5:7b --split dev --limit 40 --label dev-redact-qwen2.5-7b",
+ "git_commit": "8caded7",
+ "label": "dev-redact-qwen2.5-7b",
+ "model": "ollama:qwen2.5:7b",
+ "config": {
+  "k": 6,
+  "redact": true,
+  "include_first_chunk": true,
+  "gate": {
+   "signal": "top_ts_rank",
+   "threshold": 0.02507458
+  }
+ },
+ "n": 40,
+ "grounded_accuracy": 0.525,
+ "status": {
+  "rejected": 7,
+  "answered": 20,
+  "not_found": 13
+ },
+ "answerable": {
+  "n": 30,
+  "rejected": 7,
+  "answered": 18,
+  "not_found": 5
+ },
+ "absent": {
+  "n": 10,
+  "not_found": 8,
+  "answered": 2
+ },
+ "gated": 1,
+ "citation_validity": 0.7692307692307693,
+ "rejection_reasons": {
+  "quote_not_found": 6,
+  "length": 1
+ },
+ "whitespace_matches": 3,
+ "citations": 24,
+ "tokens": {
+  "input": 77654,
+  "output": 5634
+ },
+ "cost_usd_all_calls": 0.0,
+ "latency_ms": {
+  "p50": 5921.178415999748,
+  "p95": 10106.498332999763,
+  "n": 39
+ },
+ "spent_usd_this_run": 0.0
+}
