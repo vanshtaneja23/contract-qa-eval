@@ -35,6 +35,10 @@ LABELS_DIR = REPO_ROOT / "eval" / "labels"
 QUEUE_PATH = LABELS_DIR / "queue.jsonl"
 HUMAN_PATH = LABELS_DIR / "human.jsonl"
 AGREEMENT_PATH = RESULTS_DIR / "judge_agreement.json"
+HARDWARE = (
+    "Apple M4 Pro, 24 GB unified memory, Ollama 0.40.1; 4-bit weights "
+    "(llama3.1:8b, qwen2.5:7b, qwen2.5:14b: Q4_K_M; gemma2:9b: Q4_0); one model loaded at a time"
+)
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -417,5 +421,8 @@ def add_commands(sub: Any) -> None:
     p = sub.add_parser("m5-report", help="write eval/results/report.md")
     p.add_argument("--labels", default=default_labels)
     p.add_argument("--judge", default="ollama:qwen2.5:14b")
-    p.add_argument("--hardware", default="Apple M4 Pro, 24 GB unified memory, Ollama 0.40.1")
+    p.add_argument(
+        "--hardware",
+        default=HARDWARE,
+    )
     p.set_defaults(func=cmd_m5_report)
