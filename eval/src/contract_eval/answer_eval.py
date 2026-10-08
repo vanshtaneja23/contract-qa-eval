@@ -15,14 +15,16 @@ import shlex
 import statistics
 import sys
 from collections import Counter
+from dataclasses import asdict
 from typing import Any
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from contract_eval.common import CACHE_DIR, QUESTIONS_PATH, RESULTS_DIR, git_commit, load_subset
+from contract_eval.cuad import GoldSpan
 from contract_eval.gate_eval import auc, gate_stats, threshold_for_false_abstain
-from contract_eval.questions import EvalQuestion, all_pairs, read_questions
+from contract_eval.questions import EvalQuestion, all_pairs, dev_question_set, read_questions
 from contract_eval.retrieval_eval import bootstrap_ci, overlaps, paired_diff_ci
 from contract_qa.answering import (
     ANSWER_SCHEMA,
@@ -190,9 +192,17 @@ def _pct(values: list[float], q: float) -> float:
 
 
 def cmd_answer_eval(args: argparse.Namespace) -> None:
-    questions = read_questions(QUESTIONS_PATH)
-    random.Random(0).shuffle(questions)  # so --limit takes a mix of contracts and categories
-    questions = questions[: args.limit] if args.limit else questions
+    subset = load_subset()
+    gold = {q.id: q.spans for c in subset for q in c.questions}
+    eval_questions = read_questions(QUESTIONS_PATH)
+    if args.split == "dev":
+        # Tuning slice: same 3:1 answerable/absent mix, disjoint from the eval set.
+        n = args.limit or 20
+        questions = dev_question_set(subset, {q.cuad_id for q in eval_questions}, n - n // 4, n // 4)
+    else:
+        questions = eval_questions
+        random.Random(0).shuffle(questions)  # so --limit takes a mix of contracts and categories
+        questions = questions[: args.limit] if args.limit else questions
     config = AnswerConfig(
         k=args.k, include_first_chunk=not args.no_first_chunk, gate=None if args.no_gate else load_gate()
     )
@@ -244,7 +254,7 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
                 spent += cost_usd(args.model, Usage(result.input_tokens, result.output_tokens))
             rows.append(
                 {
-                    "question": q.__dict__ | {"document_id": str(doc.id)},
+                    "question": asdict(q) | {"document_id": str(doc.id)},
                     "result": result.model_dump(mode="json"),
                 }
             )
@@ -265,15 +275,30 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
                 else {"signal": config.gate.signal, "threshold": config.gate.threshold},
             },
         }
-        | summarize_answers(rows, args.model)
+        | summarize_answers(rows, args.model, gold)
         | {"spent_usd_this_run": spent}
     )
     (out_dir / f"{label}.summary.json").write_text(json.dumps(summary, indent=1) + "\n")
     print(json.dumps({k: v for k, v in summary.items() if k not in ("command",)}, indent=1))
 
 
-def summarize_answers(rows: list[dict[str, Any]], model: str) -> dict[str, Any]:
-    """Smoke-level metrics (answer correctness vs CUAD comes in M5)."""
+def grounded_correct(row: dict[str, Any], gold: dict[str, tuple[GoldSpan, ...]]) -> bool:
+    """Deterministic correctness proxy, no judge: an answerable question is correct if
+    it was answered with a citation overlapping a CUAD gold span; an absent-clause
+    question is correct if the system abstained."""
+    q, r = row["question"], row["result"]
+    if q["is_impossible"]:
+        return bool(r["status"] == "not_found")
+    if r["status"] != "answered":
+        return False
+    spans = gold[q["cuad_id"]]
+    return any(overlaps(c["start"], c["end"], s) for c in r["citations"] for s in spans)
+
+
+def summarize_answers(
+    rows: list[dict[str, Any]], model: str, gold: dict[str, tuple[GoldSpan, ...]]
+) -> dict[str, Any]:
+    """Run-level metrics. Judge-based answer correctness is added by the M5 report."""
     results = [r["result"] for r in rows]
     answerable = [r["result"] for r in rows if not r["question"]["is_impossible"]]
     absent = [r["result"] for r in rows if r["question"]["is_impossible"]]
@@ -283,6 +308,7 @@ def summarize_answers(rows: list[dict[str, Any]], model: str) -> dict[str, Any]:
     tokens = Usage(sum(r["input_tokens"] for r in results), sum(r["output_tokens"] for r in results))
     return {
         "n": len(results),
+        "grounded_accuracy": statistics.fmean(grounded_correct(r, gold) for r in rows),
         "status": dict(Counter(r["status"] for r in results)),
         "answerable": {"n": len(answerable), **Counter(r["status"] for r in answerable)},
         "absent": {"n": len(absent), **Counter(r["status"] for r in absent)},
@@ -325,4 +351,10 @@ def add_commands(sub: Any) -> None:
     p.add_argument("--no-first-chunk", action="store_true")
     p.add_argument("--no-gate", action="store_true")
     p.add_argument("--label")
+    p.add_argument(
+        "--split",
+        choices=["eval", "dev"],
+        default="eval",
+        help="eval: questions.jsonl; dev: a disjoint tuning slice (size = --limit, default 20)",
+    )
     p.set_defaults(func=cmd_answer_eval)

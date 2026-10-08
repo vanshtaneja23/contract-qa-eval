@@ -108,3 +108,21 @@ def write_questions(path: Path, questions: list[EvalQuestion]) -> None:
 
 def read_questions(path: Path) -> list[EvalQuestion]:
     return [EvalQuestion(**json.loads(line)) for line in path.read_text().splitlines() if line]
+
+
+def dev_question_set(
+    subset: list[CuadContract],
+    exclude_cuad_ids: set[str],
+    n_answerable: int,
+    n_impossible: int,
+    seed: int = 7,
+) -> list[EvalQuestion]:
+    """Questions for tuning (prompts, thresholds) that never overlap the eval set."""
+    rng = random.Random(seed)
+    pos = [q for q in all_pairs(subset, True) if q.cuad_id not in exclude_cuad_ids]
+    neg = [q for q in all_pairs(subset, False) if q.cuad_id not in exclude_cuad_ids]
+    chosen = _round_robin(pos, n_answerable, rng) + _round_robin(neg, n_impossible, rng)
+    return [
+        EvalQuestion(f"dev{i:03d}", q.contract_title, q.category, q.question, q.is_impossible, q.cuad_id)
+        for i, q in enumerate(chosen, start=1)
+    ]

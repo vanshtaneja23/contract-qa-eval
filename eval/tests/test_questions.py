@@ -41,3 +41,12 @@ def test_question_set_spreads_across_categories() -> None:
 def test_question_set_is_deterministic() -> None:
     assert build_question_set(SUBSET, seed=1) == build_question_set(SUBSET, seed=1)
     assert build_question_set(SUBSET, seed=1) != build_question_set(SUBSET, seed=2)
+
+
+def test_dev_set_never_overlaps_eval_set() -> None:
+    from contract_eval.questions import dev_question_set
+
+    eval_ids = {q.cuad_id for q in build_question_set(SUBSET, seed=42)}
+    dev = dev_question_set(SUBSET, eval_ids, n_answerable=30, n_impossible=10)
+    assert len(dev) == 40 and sum(q.is_impossible for q in dev) == 10
+    assert not {q.cuad_id for q in dev} & eval_ids
