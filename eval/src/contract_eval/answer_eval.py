@@ -2,7 +2,7 @@
 
 Only `answer-eval` calls a paid model, and it always plans first: it counts
 cached responses, estimates the cost of the rest, and refuses to run above
---max-cost (default $2) unless the limit is raised explicitly.
+--max-cost (default $0: the project runs at zero API spend).
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ from contract_qa.answering import (
     build_prompt,
 )
 from contract_qa.db import make_engine
-from contract_qa.llm import PRICES, AnthropicClient, CachedClient, Usage, cost_usd, estimate_tokens
+from contract_qa.llm import CachedClient, Usage, cost_usd, estimate_tokens, make_client
 from contract_qa.models import Document
 from contract_qa.retrieval import Retriever
 
@@ -196,8 +196,8 @@ def cmd_answer_eval(args: argparse.Namespace) -> None:
     config = AnswerConfig(
         k=args.k, include_first_chunk=not args.no_first_chunk, gate=None if args.no_gate else load_gate()
     )
-    client = CachedClient(AnthropicClient(args.model), CACHE_DIR, offline=args.offline)
-    label = args.label or f"{args.model}"
+    client = CachedClient(make_client(args.model), CACHE_DIR, offline=args.offline)
+    label = args.label or args.model.replace(":", "_")
 
     with Session(make_engine()) as session:
         retriever = _retriever(session)
@@ -294,7 +294,7 @@ def summarize_answers(rows: list[dict[str, Any]], model: str) -> dict[str, Any]:
         "whitespace_matches": sum(r["whitespace_matches"] for r in results),
         "citations": sum(len(r["citations"]) for r in results),
         "tokens": {"input": tokens.input_tokens, "output": tokens.output_tokens},
-        "cost_usd_all_calls": cost_usd(model, tokens) if model in PRICES else None,
+        "cost_usd_all_calls": cost_usd(model, tokens),
         "latency_ms": {"p50": _pct(latencies, 0.5), "p95": _pct(latencies, 0.95), "n": len(latencies)},
     }
 
@@ -313,11 +313,11 @@ def add_commands(sub: Any) -> None:
     p.set_defaults(func=cmd_gate_calibrate)
 
     p = sub.add_parser("answer-eval", help="cited answers on eval/questions.jsonl (paid model calls)")
-    p.add_argument("--model", choices=sorted(PRICES), required=True)
+    p.add_argument("--model", required=True, help="e.g. ollama:qwen2.5:7b (local, free)")
     p.add_argument("--limit", type=int, default=0, help="only the first N questions (seeded shuffle)")
     p.add_argument("--dry-run", action="store_true", help="plan and estimate cost; call nothing")
     p.add_argument("--offline", action="store_true", help="use only cached responses; never call the API")
-    p.add_argument("--max-cost", type=float, default=2.0, help="refuse to run above this estimate (USD)")
+    p.add_argument("--max-cost", type=float, default=0.0, help="refuse to run above this estimate (USD)")
     p.add_argument(
         "--est-output-tokens", type=int, default=1000, help="per-call output estimate for --dry-run"
     )
