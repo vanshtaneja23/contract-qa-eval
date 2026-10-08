@@ -1,0 +1,50 @@
+{
+ "date": "2026-10-08",
+ "command": "uv run cqa-eval answer-eval --model ollama:qwen2.5:7b --split dev --limit 40 --label dev-prompt-v1-qwen2.5-7b",
+ "git_commit": "3a82fa7-dirty",
+ "label": "dev-prompt-v1-qwen2.5-7b",
+ "model": "ollama:qwen2.5:7b",
+ "config": {
+  "k": 6,
+  "include_first_chunk": true,
+  "gate": {
+   "signal": "top_ts_rank",
+   "threshold": 0.02507458
+  }
+ },
+ "n": 40,
+ "grounded_accuracy": 0.375,
+ "status": {
+  "not_found": 33,
+  "answered": 5,
+  "rejected": 2
+ },
+ "answerable": {
+  "n": 30,
+  "not_found": 23,
+  "answered": 5,
+  "rejected": 2
+ },
+ "absent": {
+  "n": 10,
+  "not_found": 10
+ },
+ "gated": 1,
+ "citation_validity": 0.7142857142857143,
+ "rejection_reasons": {
+  "quote_not_found": 2
+ },
+ "whitespace_matches": 0,
+ "citations": 5,
+ "tokens": {
+  "input": 83696,
+  "output": 2295
+ },
+ "cost_usd_all_calls": 0.0,
+ "latency_ms": {
+  "p50": 6498.800375004066,
+  "p95": 10310.656583009404,
+  "n": 39
+ },
+ "spent_usd_this_run": 0.0
+}
