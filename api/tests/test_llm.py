@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
@@ -9,9 +10,13 @@ from contract_qa.llm import (
     CachedClient,
     CacheMiss,
     Completion,
+    OllamaClient,
+    OpenAIClient,
+    PaidCallsDisabled,
     Usage,
     cost_usd,
     estimate_tokens,
+    make_client,
 )
 
 SCHEMA = {"type": "object", "properties": {"x": {"type": "string"}}, "required": ["x"]}
@@ -93,3 +98,87 @@ def test_cost_and_estimates() -> None:
     with pytest.raises(KeyError):
         cost_usd("unknown-model", Usage(1, 1))
     assert estimate_tokens("x" * 35) == 10
+
+
+# --- fixture-based adapter tests (no network, no spend) ---------------------------
+
+FIXTURES = Path(__file__).parent / "fixtures"
+
+
+def _ns(obj: Any) -> Any:
+    """JSON -> attribute access, mimicking SDK response objects."""
+    if isinstance(obj, dict):
+        return SimpleNamespace(**{k: _ns(v) for k, v in obj.items()})
+    if isinstance(obj, list):
+        return [_ns(v) for v in obj]
+    return obj
+
+
+def _fixture(name: str) -> Any:
+    return json.loads((FIXTURES / name).read_text())
+
+
+def test_anthropic_adapter_with_fixture_response() -> None:
+    resp = _ns(_fixture("anthropic_message.json"))
+    stub = SimpleNamespace(messages=SimpleNamespace(create=lambda **kw: resp))
+    c = AnthropicClient("claude-haiku-4-5", client=stub).complete("s", "u", SCHEMA)  # type: ignore[arg-type]
+    assert json.loads(c.text)["citations"][0]["chunk_id"] == "C1"
+    assert c.usage == Usage(61, 44) and c.stop_reason == "end_turn"
+
+
+def test_openai_adapter_requests_strict_schema_and_reads_fixture() -> None:
+    calls: list[dict[str, Any]] = []
+
+    def create(**kw: Any) -> Any:
+        calls.append(kw)
+        return _ns(_fixture("openai_chat_completion.json"))
+
+    stub = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+    c = OpenAIClient("gpt-fixture", client=stub).complete("sys", "user", SCHEMA)
+    (call,) = calls
+    assert call["messages"][0] == {"role": "system", "content": "sys"}
+    assert call["response_format"]["json_schema"] == {"name": "answer", "schema": SCHEMA, "strict": True}
+    assert json.loads(c.text)["status"] == "not_found"
+    assert c.usage == Usage(58, 21) and c.stop_reason == "stop"
+
+
+def test_ollama_adapter_with_recorded_response(monkeypatch: pytest.MonkeyPatch) -> None:
+    sent: dict[str, Any] = {}
+
+    class FakeResponse:
+        def __enter__(self) -> "FakeResponse":
+            return self
+
+        def __exit__(self, *a: object) -> None:
+            return None
+
+        def read(self) -> bytes:
+            return (FIXTURES / "ollama_chat.json").read_bytes()
+
+    def fake_urlopen(req: Any, timeout: float) -> FakeResponse:
+        sent["url"] = req.full_url
+        sent["body"] = json.loads(req.data)
+        return FakeResponse()
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    client = OllamaClient("ollama:qwen2.5:7b", base_url="http://localhost:11434")
+    c = client.complete("sys", "user", SCHEMA)
+    assert sent["url"] == "http://localhost:11434/api/chat"
+    assert sent["body"]["model"] == "qwen2.5:7b" and sent["body"]["format"] == SCHEMA
+    assert sent["body"]["options"] == {"temperature": 0, "seed": 0, "num_ctx": 8192}
+    assert c.model == "ollama:qwen2.5:7b" and c.usage == Usage(50, 43)
+    assert json.loads(c.text)["citations"][0]["quote"].startswith("The term of this Agreement")
+
+
+def test_paid_clients_refuse_without_opt_in(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("CQA_ALLOW_PAID_CALLS", raising=False)
+    for model in ("claude-haiku-4-5", "gpt-fixture"):
+        with pytest.raises(PaidCallsDisabled):
+            make_client(model)
+
+
+def test_local_models_are_free_and_routed_to_ollama() -> None:
+    assert isinstance(make_client("ollama:llama3.1:8b"), OllamaClient)
+    assert cost_usd("ollama:llama3.1:8b", Usage(10**9, 10**9)) == 0.0
+    with pytest.raises(ValueError):
+        make_client("mystery-model")

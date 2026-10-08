@@ -1,0 +1,18 @@
+{
+ "model": "qwen2.5:7b",
+ "created_at": "2026-10-08T22:24:01.107633Z",
+ "message": {
+  "role": "assistant",
+  "content": "{\"status\":\"answered\",\"answer\":\"five (5) years.\",\"citations\":[{\"chunk_id\":\"C1\",\"quote\":\"The term of this Agreement is five (5) years.\"}]}"
+ },
+ "done": true,
+ "done_reason": "stop",
+ "total_duration": 1216392333,
+ "load_duration": 4955250,
+ "prompt_eval_count": 50,
+ "prompt_eval_cached_count": 6,
+ "prompt_eval_duration": 186887000,
+ "eval_count": 43,
+ "eval_duration": 1021764000,
+ "_note": "recorded from a local Ollama 0.40.1 server (qwen2.5:7b) on 2026-10-08"
+}

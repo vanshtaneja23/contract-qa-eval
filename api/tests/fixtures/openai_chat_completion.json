@@ -1,0 +1,14 @@
+{
+ "_note": "Constructed in the documented Chat Completions response shape, not recorded from a live call: this project runs at zero API spend.",
+ "id": "chatcmpl-fixture-01",
+ "object": "chat.completion",
+ "model": "gpt-fixture",
+ "choices": [
+  {
+   "index": 0,
+   "message": {"role": "assistant", "content": "{\"status\": \"not_found\", \"answer\": \"The excerpts contain no non-compete clause.\", \"citations\": []}"},
+   "finish_reason": "stop"
+  }
+ ],
+ "usage": {"prompt_tokens": 58, "completion_tokens": 21, "total_tokens": 79}
+}

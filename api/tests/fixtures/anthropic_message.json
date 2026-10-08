@@ -1,0 +1,12 @@
+{
+ "_note": "Constructed in the documented Messages API response shape, not recorded from a live call: this project runs at zero API spend.",
+ "id": "msg_fixture_01",
+ "type": "message",
+ "role": "assistant",
+ "model": "claude-haiku-4-5",
+ "content": [
+  {"type": "text", "text": "{\"status\": \"answered\", \"answer\": \"five (5) years.\", \"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"The term of this Agreement is five (5) years.\"}]}"}
+ ],
+ "stop_reason": "end_turn",
+ "usage": {"input_tokens": 61, "output_tokens": 44}
+}
