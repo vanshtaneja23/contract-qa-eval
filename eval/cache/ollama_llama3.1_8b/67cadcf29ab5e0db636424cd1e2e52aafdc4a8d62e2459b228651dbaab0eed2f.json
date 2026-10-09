@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"MMI shall not be liable for indirect or consequential damages unless caused by intention or gross negligence.\", \"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"MMI shall not be liable for indirect or consequential damages unless caused by intention or gross negligence.\" } ] }",
+ "input_tokens": 1933,
+ "output_tokens": 73,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6941.809166994062,
+ "created_at": "2026-10-08T23:21:53.328328+00:00"
+}

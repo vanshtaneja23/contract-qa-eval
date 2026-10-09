@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention a termination for convenience clause or any termination without cause. Therefore, based on the given information, it cannot be determined if a party can terminate this agreement for convenience without cause.\",\"citations\": [] }",
+ "input_tokens": 2178,
+ "output_tokens": 60,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6988.484957997571,
+ "created_at": "2026-10-08T23:39:54.291229+00:00"
+}

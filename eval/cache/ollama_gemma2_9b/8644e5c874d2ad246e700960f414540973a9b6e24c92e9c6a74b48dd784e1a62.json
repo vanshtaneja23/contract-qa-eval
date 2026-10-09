@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement is entered into this 1st day of September 2016 (\\\"Effective Date\\\")\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C1\",\n    \"quote\": \"This Agreement is entered into this 1st day of September 2016 (\\\"Effective Date\\\")\"\n  }\n]\n}",
+ "input_tokens": 1964,
+ "output_tokens": 96,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 10749.316082990845,
+ "created_at": "2026-10-09T00:05:26.028540+00:00"
+}

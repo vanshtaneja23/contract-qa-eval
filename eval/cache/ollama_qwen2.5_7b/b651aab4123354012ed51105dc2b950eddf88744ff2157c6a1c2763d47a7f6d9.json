@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt explicitly grants any exclusive rights to either party. However, Contractor is granted a non-exclusive sublicense under the Company's Intellectual Property, as stated in Section 5.03.\",\n  \"citations\": [\n    {\"chunk_id\": \"C2\", \"quote\": \"Solely to the extent necessary to enable Contractor to provide the Services in accordance with the terms herein, the Company hereby grants Contractor a royalty-free, non-exclusive sublicense, without the right to grant further sublicenses, under any and all applicable trademarks and other Intellectual Property owned or controlled by or licensed to the Company or any of its Affiliates to provide, during the Term of this Agreement, the Services in respect of the Products in the Territory.\"}\n  ]\n}",
+ "input_tokens": 1954,
+ "output_tokens": 166,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7656.5560000017285,
+ "created_at": "2026-10-08T23:39:37.443163+00:00"
+}

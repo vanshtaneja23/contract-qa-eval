@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No non-compete restriction is found in the provided excerpts.\",\n\n  \"citations\": [] }",
+ "input_tokens": 1988,
+ "output_tokens": 33,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4050.418416998582,
+ "created_at": "2026-10-08T23:43:13.540056+00:00"
+}

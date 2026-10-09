@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\", \"answer\":\"The excerpts do not explicitly list the parties to the agreement beyond mentioning Bravatek Solutions, Inc. and Fazync LLC.\",\"citations\":[]}",
+ "input_tokens": 2008,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6137.42437500332,
+ "created_at": "2026-10-08T22:26:08.969432+00:00"
+}

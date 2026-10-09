@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\", \"answer\":\"A manufacturing license\", \"citations\": [ \n  ]}",
+ "input_tokens": 2000,
+ "output_tokens": 22,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5910.737666999921,
+ "created_at": "2026-10-08T23:27:58.646098+00:00"
+}

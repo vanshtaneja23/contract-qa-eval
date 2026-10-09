@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"A party's consent is required for assignment, except by operation of law or in connection with the sale of substantially all of the assigning party's business or the acquisition of the assigning party by a third party.\",\n\n\"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"Neither party may assign this Agreement without the other's prior written approval, except by operation of law or in connection with the sale of substantially all of the assets of such party's business or the acquisition of such party by a third party.\" } ] }",
+ "input_tokens": 1964,
+ "output_tokens": 124,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6974.669417002588,
+ "created_at": "2026-10-08T23:37:07.594842+00:00"
+}

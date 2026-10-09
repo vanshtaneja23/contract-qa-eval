@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Notwithstanding anything to the contrary stated in this Agreement, either party may terminate this Agreement at any time without cause by giving to the other party, not less than four (4) months written notice.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"Notwithstanding anything to the contrary stated in this Agreement, either party may terminate this Agreement at any time without cause by giving to the other party, not less than four (4) months written notice.\"\n  }\n]\n}",
+ "input_tokens": 1904,
+ "output_tokens": 129,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 11067.449375012075,
+ "created_at": "2026-10-09T00:03:39.617883+00:00"
+}

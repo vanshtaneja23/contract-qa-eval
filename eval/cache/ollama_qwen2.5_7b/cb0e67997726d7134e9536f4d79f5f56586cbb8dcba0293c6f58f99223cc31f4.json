@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The excerpts do not explicitly state whether a party can assign the agreement or if the other party's consent is required. Therefore, based on the provided information, it cannot be determined.\", \"citations\": [] }",
+ "input_tokens": 1953,
+ "output_tokens": 56,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5567.254042005516,
+ "created_at": "2026-10-08T22:31:27.815589+00:00"
+}

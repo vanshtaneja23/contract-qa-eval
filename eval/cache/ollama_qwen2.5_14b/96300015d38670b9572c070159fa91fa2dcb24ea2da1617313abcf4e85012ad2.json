@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause, stating that a party's consent is required for assignment, with exceptions for operation of law or specific business transactions.\" }",
+ "input_tokens": 390,
+ "output_tokens": 46,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3313.866540993331,
+ "created_at": "2026-10-09T00:12:30.108848+00:00"
+}

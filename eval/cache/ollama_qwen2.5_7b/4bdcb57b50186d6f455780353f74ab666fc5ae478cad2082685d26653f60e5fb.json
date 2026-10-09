@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, each party is required to maintain insurance at their own expense.\",\n\n\"citations\": [{\"chunk_id\": \"C5\", \"quote\": \"Each Party, at its own expense, shall maintain comprehensive general liability, product liability and other appropriate insurance for the activities such Party undertakes pursuant to this Agreement, from reputable and financially secure insurance carriers in a form and at levels consistent with sound business practice and adequate in light of its obligations under this Agreement.\"}]}",
+ "input_tokens": 1921,
+ "output_tokens": 108,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7107.768375004525,
+ "created_at": "2026-10-08T23:34:48.307013+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt mentions a minimum purchase, volume, or spending commitment.\", \"citations\": [] }",
+ "input_tokens": 2048,
+ "output_tokens": 33,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5244.800667001982,
+ "created_at": "2026-10-08T22:27:34.050153+00:00"
+}

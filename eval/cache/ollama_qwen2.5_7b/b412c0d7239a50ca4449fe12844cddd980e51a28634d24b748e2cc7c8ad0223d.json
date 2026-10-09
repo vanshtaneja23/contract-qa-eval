@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement ends after an initial term of 12 months, and can be extended for an additional one year if neither party is in default.\",\n\n  \"citations\": [\n    { \"chunk_id\": \"C2\", \"quote\": \"The term of this Agreement shall begin on the date hereof (the \" } ]}",
+ "input_tokens": 1885,
+ "output_tokens": 83,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5125.784083997132,
+ "created_at": "2026-10-08T23:38:50.444484+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement, including its attachment and order acknowledgments under the Agreement, constitutes the entire agreement between Distributor and PARTY_1 with respect to the purchase, resale and distribution of the Products and is governed by the laws of the State of California except that body of law dealing with conflicts of law.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C1\",\n    \"quote\": \"This Agreement, including its attachment and order acknowledgments under the Agreement, constitutes the entire agreement between Distributor and PARTY_1 with respect to the purchase, resale and distribution of the Products and is governed by the laws of the State of California except that body of law dealing with conflicts of law.\"\n  }\n]\n}",
+ "input_tokens": 2120,
+ "output_tokens": 165,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12319.733374999487,
+ "created_at": "2026-10-09T00:02:48.643910+00:00"
+}

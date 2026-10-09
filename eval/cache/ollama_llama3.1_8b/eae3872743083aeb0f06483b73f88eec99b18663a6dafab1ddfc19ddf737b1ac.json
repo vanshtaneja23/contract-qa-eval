@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"No information in the provided excerpts indicates the agreement provides for liquidated damages.\",\"citations\":[]}",
+ "input_tokens": 1972,
+ "output_tokens": 30,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5164.485165994847,
+ "created_at": "2026-10-08T23:21:06.838422+00:00"
+}

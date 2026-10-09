@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, specifying that the agreement is governed by the laws of the State of New York without reference to conflict of laws principles.\" }",
+ "input_tokens": 250,
+ "output_tokens": 48,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2546.8822910042945,
+ "created_at": "2026-10-09T00:08:57.076119+00:00"
+}

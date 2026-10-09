@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer misses the specific obligations mentioned in the reference clause, such as canceling assumed names and providing evidence of compliance to AIRSOPURE, and purchasing items bearing Licensed Marks at cost or fair market value.\" }",
+ "input_tokens": 498,
+ "output_tokens": 58,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3501.6182079998543,
+ "created_at": "2026-10-09T00:14:32.818290+00:00"
+}

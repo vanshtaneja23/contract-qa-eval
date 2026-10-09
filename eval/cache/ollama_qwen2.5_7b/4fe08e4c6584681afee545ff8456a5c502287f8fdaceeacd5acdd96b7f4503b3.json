@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"There is no mention of revenue sharing, royalties, or profit distribution in the provided excerpts. The excerpts focus on the terms of the stock offering, subscription process, and representations and warranties but do not address any revenue or profit sharing arrangements between the parties involved. Therefore, based on the given information, it cannot be concluded that the agreement requires sharing revenue or profits. \",\n  \"citations\": []\n}",
+ "input_tokens": 2217,
+ "output_tokens": 95,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6832.34608299972,
+ "created_at": "2026-10-08T23:42:14.759569+00:00"
+}

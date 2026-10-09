@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a non-compete restriction on the Franchisee. The restriction is for a period of two years following the termination of the Agreement, and it prohibits the Franchisee from engaging in any business or entity that competes with AIRSOPURE or offers similar products within a 25-mile radius of the Franchisee's exclusive territory.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"You covenant and agree that You (or any shareholder if Your Franchise is a corporation) shall not, for a period of two years following termination of this Agreement for any reason, either directly or indirectly own, maintain, engage in, be employed by, advise, consult, assist, invest in or have any interest whatsoever in any business or entity which competes with or offers products or services which are the same or similar to those of AIRSOPURE or the Franchise within a radius of 25 miles of Your Exclusive Territory.\"}]}",
+ "input_tokens": 2114,
+ "output_tokens": 213,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9173.914958009846,
+ "created_at": "2026-10-08T23:10:24.317881+00:00"
+}

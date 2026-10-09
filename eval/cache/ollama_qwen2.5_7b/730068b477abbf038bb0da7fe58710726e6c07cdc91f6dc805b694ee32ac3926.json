@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, Customer is required to maintain insurance. This is stated in excerpt C6: 'Customer specifically agrees to maintain insurance coverage for any finished Products or materials which passes to Customer pursuant to this Agreement and which is stored on the premises of Contractor.'\", \"citations\": [{\"chunk_id\": \"C6\", \"quote\": \"Customer specifically agrees to maintain insurance coverage for any finished Products or materials which passes to Customer pursuant to this Agreement and which is stored on the premises of Contractor.\"}]}",
+ "input_tokens": 1950,
+ "output_tokens": 112,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7144.219416004489,
+ "created_at": "2026-10-08T23:15:48.423815+00:00"
+}

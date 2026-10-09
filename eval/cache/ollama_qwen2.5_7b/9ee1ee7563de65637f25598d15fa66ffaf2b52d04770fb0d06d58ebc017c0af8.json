@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt provided indicates that a party can terminate the agreement for convenience without cause. The excerpts only outline specific termination conditions, such as failure to comply with obligations or force majeure events.\", \"citations\": [] }",
+ "input_tokens": 2154,
+ "output_tokens": 58,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6833.4142090025125,
+ "created_at": "2026-10-08T22:32:29.494110+00:00"
+}

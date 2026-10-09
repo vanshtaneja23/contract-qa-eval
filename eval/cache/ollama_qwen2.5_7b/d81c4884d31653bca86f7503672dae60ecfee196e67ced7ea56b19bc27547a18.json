@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention the ability to assign the agreement or the requirement for the other party's consent to an assignment.\",\"citations\": [] }",
+ "input_tokens": 2236,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5589.06837500399,
+ "created_at": "2026-10-08T23:40:32.276256+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"No excerpt provides the specific date on which the agreement was made.\",\"citations\":[]}",
+ "input_tokens": 2855,
+ "output_tokens": 28,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8687.051834000158,
+ "created_at": "2026-10-08T22:37:15.881798+00:00"
+}

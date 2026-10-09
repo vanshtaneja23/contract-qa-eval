@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\", \"answer\":\"The excerpts do not explicitly state the names of the individuals involved, only the entities Vyera Pharmaceuticals, LLC and CytoDyn Inc.\",\"citations\":[]}",
+ "input_tokens": 2059,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5995.508124993648,
+ "created_at": "2026-10-08T22:28:52.011713+00:00"
+}

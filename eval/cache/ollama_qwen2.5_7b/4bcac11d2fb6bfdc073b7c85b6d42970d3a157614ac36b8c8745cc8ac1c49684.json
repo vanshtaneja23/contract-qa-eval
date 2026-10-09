@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts specify which jurisdiction's law governs the agreement.\",\"citations\": [] }",
+ "input_tokens": 1992,
+ "output_tokens": 34,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5842.608374994597,
+ "created_at": "2026-10-08T23:38:13.609410+00:00"
+}

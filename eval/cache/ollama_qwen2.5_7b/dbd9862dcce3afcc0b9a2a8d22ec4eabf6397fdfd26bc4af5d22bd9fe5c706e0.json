@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, PARTY_1 has the right to audit Inktomi's books and records. This is stated in Excerpt C2, clause 4.3: 'Inktomi will permit PARTY_1 to have access to, and to make copies of, all such books and records for purposes of auditing and verifying such costs and expenses'.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"Inktomi will permit PARTY_1 to have access to, and to make copies of, all such books and records for purposes of auditing and verifying such costs and expenses, provided that PARTY_1 shall give Inktomi reasonable notice prior to each requested audit and shall perform such audit during normal business hours at Inktomi's office(s) where such records are normally kept.\"}]}",
+ "input_tokens": 2070,
+ "output_tokens": 178,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8743.72100000619,
+ "created_at": "2026-10-08T23:42:49.645043+00:00"
+}

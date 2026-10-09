@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"A party's consent is required for an assignment, except in specific circumstances.\",\n\n\"citations\":\n  [\n    { \"chunk_id\": \"C4\", \"quote\": \"The failure of either party to enforce at any time for any period any provision hereof shall not be construed to be a waiver of such provision or of the right of such party thereafter to enforce each such provision, nor shall any single or partial exercise of any right or remedy hereunder preclude any other or further exercise thereof or the exercise of any other right or remedy.\" },\n  { \"chunk_id\": \"C4\", \"quote\": \"This Agreement may not be assigned by either party without the prior written consent of the other party, except that, without such consent, (i) Company may make an assignment of this Agreement as collateral security in favor of its lenders, and (ii) the Company may assign this Agreement to a purchaser of all or substantially all of the assets of the Company's business related to the Products.\" }\n  ]\n}",
+ "input_tokens": 1971,
+ "output_tokens": 222,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9751.373416002025,
+ "created_at": "2026-10-08T23:32:56.717782+00:00"
+}

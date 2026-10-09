@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Synchron, a California corporation having a principal place of business at ADDRESS_1, San Diego, CA 92121-1122 (or one or more Affiliates, the \", \"citations\": [ { \"chunk_id\": \"C1\", \"quote\": \"Synchron, a California corporation having a principal place of business at ADDRESS_1, San Diego, CA 92121-1122 (or one or more Affiliates, the \" } ] }",
+ "input_tokens": 1918,
+ "output_tokens": 112,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7920.832957999664,
+ "created_at": "2026-10-08T23:21:34.331937+00:00"
+}

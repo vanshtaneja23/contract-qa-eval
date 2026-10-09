@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The Laws of the State of New York\", \"citations\": [ { \"chunk_id\": \"C6\", \"quote\": \"This Agreement shall be governed by, and construed in accordance with, the Laws of the State of New York,\" }, { \"chunk_id\": \"C11\", \"quote\": \"This Agreement shall be governed by, and construed in accordance with, the Laws of the State of New York,\" } ] }",
+ "input_tokens": 1970,
+ "output_tokens": 103,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6507.904250000138,
+ "created_at": "2026-10-08T23:17:56.916493+00:00"
+}

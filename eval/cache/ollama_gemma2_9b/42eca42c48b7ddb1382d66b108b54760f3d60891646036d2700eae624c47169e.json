@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, subject to an early termination fee. The Company may terminate this Agreement for convenience by way of Notice of termination; the Agreement shall be then terminated following a [*****] period as from   [*****]\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C6\",\n    \"quote\": \"Notwithstanding this Clause 16 (\\\"Termination\\\"), upon receipt of such Notice of termination and without prejudice to any rights it may have at Law, the Repairer shall invoice to the Company an early termination fee equivalent to [*****], which shall be paid within [*****] as from the issuance date of the said invoice and/or set off against any outstanding or due payment to the Company, at the Repairer's discretion.\"\n  }\n]\n}",
+ "input_tokens": 2185,
+ "output_tokens": 180,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13059.649292001268,
+ "created_at": "2026-10-09T00:05:14.852164+00:00"
+}

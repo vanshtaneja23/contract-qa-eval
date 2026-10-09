@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The parties to this agreement are Vyera Pharmaceuticals, LLC and CytoDyn Inc. This is cited from Excerpt C1: 'by and between Vyera Pharmaceuticals, LLC, a Delaware limited liability company (\",\"citations\":[{\"chunk_id\":\"C1\",\"quote\":\"by and between Vyera Pharmaceuticals, LLC, a Delaware limited liability company (\"}]}",
+ "input_tokens": 2118,
+ "output_tokens": 81,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8678.808082986507,
+ "created_at": "2026-10-08T22:33:42.375898+00:00"
+}

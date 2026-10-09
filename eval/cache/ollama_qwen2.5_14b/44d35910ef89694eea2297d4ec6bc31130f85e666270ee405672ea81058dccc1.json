@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly states that ninety (90) days prior to the expiration of the original term is the required notice period to stop the agreement from renewing, which matches the reference clause text.\" }",
+ "input_tokens": 279,
+ "output_tokens": 55,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3081.1623750050785,
+ "created_at": "2026-10-09T00:09:34.224332+00:00"
+}

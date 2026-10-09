@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Licensor may terminate this Agreement by providing prior written notice to Licensee upon the occurrence of a Change of Control.\", \"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"6.4. Termination for a Change of Control. Licensor may terminate this Agreement by providing prior written notice to Licensee upon the occurrence of a Change of Control.\" } ] }",
+ "input_tokens": 1924,
+ "output_tokens": 94,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7809.432458001538,
+ "created_at": "2026-10-08T23:29:09.123268+00:00"
+}

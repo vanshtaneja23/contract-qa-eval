@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the excerpts directly address what happens if a party undergoes a change of control, merger, or acquisition. The closest related content is in C6, which mentions assignments in connection with a Change in Control, but does not specify the details. }\",\"citations\": [] }",
+ "input_tokens": 2125,
+ "output_tokens": 71,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5917.840875001275,
+ "created_at": "2026-10-08T23:40:00.283337+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly identifies that Premier has the right to audit Heritage's records, and the cited clause explicitly grants this right.\" }",
+ "input_tokens": 416,
+ "output_tokens": 40,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3103.3901250048075,
+ "created_at": "2026-10-09T00:12:50.375105+00:00"
+}

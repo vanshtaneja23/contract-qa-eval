@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"Yes, this agreement provides for liquidated damages. The Liquidated Damages Amount is defined in Exhibit A and is payable in the event of termination by Co-Host due to a material default by NAI. This is specified in Recital 7 of the agreement.\",\"citations\":[{\"chunk_id\":\"C2\",\"quote\":\"WHEREAS, NAI has developed various Internet locations (the \\\"NAI Internet Sites\\\") (with separate URL designations issued to NAI by InterNIC) (said designations being herein referred to individually as an \\\"URL\\\") comprised of one or more file servers, with an Internet access at the applicable URL. Those portions of\\nof this Agreement if by reason of material           breach by Co-Host shall not affect any of Co-Host's payment           obligations, all of which survive termination of this Agreement;           provided that, in (i) the event of termination of this Agreement by           Co-Host due to a material default by NAI, NAI shall pay to the Co-Host           the Liquidated Damages Amount (as defined in Part 2 of Exhibit \\\"A\\\").\"}]}",
+ "input_tokens": 2188,
+ "output_tokens": 240,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10900.89779200207,
+ "created_at": "2026-10-08T22:30:49.479602+00:00"
+}

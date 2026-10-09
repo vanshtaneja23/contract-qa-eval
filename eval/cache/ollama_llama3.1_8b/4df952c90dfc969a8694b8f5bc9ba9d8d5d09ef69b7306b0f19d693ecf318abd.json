@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The laws of the State of New York, without reference to any principles of conflicts of law thereof.\",\"citations\":[{\"chunk_id\":\"C5\",\"quote\":\"This Agreement shall be governed by, and construed in accordance with, the laws of the State of New York,\"}]}",
+ "input_tokens": 2010,
+ "output_tokens": 65,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5943.024625012185,
+ "created_at": "2026-10-08T23:19:06.662102+00:00"
+}

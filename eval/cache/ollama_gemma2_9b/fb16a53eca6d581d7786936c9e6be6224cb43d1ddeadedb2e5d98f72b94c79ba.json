@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, this agreement grants exclusive rights.  \\\"HPS agrees to outsource to SHPS, and hereby appoints SHPS as the exclusive provider of, Care Management Services to the Clients, subject to the terms and conditions set forth in this Agreement.\\\"\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C1\",\n    \"quote\": \"HPS agrees to outsource to SHPS, and hereby appoints SHPS as the exclusive provider of, Care Management Services to the Clients, subject to the terms and conditions set forth in this Agreement.\"\n  }\n]\n}",
+ "input_tokens": 1889,
+ "output_tokens": 138,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12671.585792006226,
+ "created_at": "2026-10-08T23:56:44.708578+00:00"
+}

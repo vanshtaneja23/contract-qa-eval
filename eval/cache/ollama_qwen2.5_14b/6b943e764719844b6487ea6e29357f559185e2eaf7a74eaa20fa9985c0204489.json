@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer incorrectly addresses sublicense transferability and consent requirements, rather than describing the exclusive license granted to Vyera for Commercialization of Licensed Products.\" }",
+ "input_tokens": 419,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3370.5250829953,
+ "created_at": "2026-10-09T00:10:58.112742+00:00"
+}

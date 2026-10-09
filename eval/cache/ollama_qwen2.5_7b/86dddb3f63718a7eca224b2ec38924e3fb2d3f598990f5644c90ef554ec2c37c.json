@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Payment obligations continue after the agreement terminates or expires. Specifically, Co-Host's payment obligations survive termination of the agreement.\",\"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"Termination or expiration of this Agreement if by reason of material breach by Co-Host shall not affect any of Co-Host's payment obligations, all of which survive termination of this Agreement\" } ] }",
+ "input_tokens": 2216,
+ "output_tokens": 97,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6798.144625005079,
+ "created_at": "2026-10-08T23:09:28.287940+00:00"
+}

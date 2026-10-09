@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, Reseller agrees to allow Diversinet or its agents and representatives to examine and audit Reseller's books, records and accounts during Reseller's normal business hours for no more than once per calendar quarter upon reasonable notice.\",\n  \"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"Reseller agrees to allow Diversinet or its agents and representatives the right to examine and audit such books, records and accounts during Reseller's normal business hours for no more than once per calendar quarter upon reasonable notice.\" } ] }",
+ "input_tokens": 2031,
+ "output_tokens": 127,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8359.39095899812,
+ "created_at": "2026-10-08T22:26:37.241995+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause by specifying that written notice is required at least ninety days before the end of the term to prevent automatic renewal.\" }",
+ "input_tokens": 329,
+ "output_tokens": 45,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2989.3709589960054,
+ "created_at": "2026-10-09T00:18:01.573946+00:00"
+}

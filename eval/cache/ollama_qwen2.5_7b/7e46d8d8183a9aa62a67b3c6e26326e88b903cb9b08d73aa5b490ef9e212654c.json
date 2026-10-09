@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, there is a cap on liability. Neither Party shall be responsible to the other Party in respect of any indirect loss or damage caused hereunder.\",\"citations\": [ { \"chunk_id\": \"C6\", \"quote\": \"Neither Party shall be responsible to the other Party in respect of any indirect loss or damage caused hereunder.\" } ] }",
+ "input_tokens": 1923,
+ "output_tokens": 86,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6210.0962919939775,
+ "created_at": "2026-10-08T23:44:58.644690+00:00"
+}

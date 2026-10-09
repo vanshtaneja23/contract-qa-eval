@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, stating that Diversinet grants Reseller an exclusive right to market, sell, and sub-license specific products within a defined territory and to specific types of entities, consistent with the exclusive rights granted as per the clause.\" }",
+ "input_tokens": 409,
+ "output_tokens": 68,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 4492.357124996488,
+ "created_at": "2026-10-09T00:18:21.116475+00:00"
+}

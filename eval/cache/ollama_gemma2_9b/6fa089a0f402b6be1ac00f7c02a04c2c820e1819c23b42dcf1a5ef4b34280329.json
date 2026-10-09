@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement shall inure solely to the benefit of, and shall be binding upon, the Agent, the Company, the MHC, the Bank, and their respective successors and assigns, and no other person shall have or be\",\n\"citations\": [\n{\n\"chunk_id\": \"C6\",\n\"quote\": \"This Agreement shall inure solely to the benefit of, and shall be binding upon, the Agent, the Company, the MHC, the Bank, and their respective successors and assigns, and no other person shall have or be\"\n}\n]\n}",
+ "input_tokens": 2271,
+ "output_tokens": 135,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12043.346708000172,
+ "created_at": "2026-10-08T23:59:49.876773+00:00"
+}

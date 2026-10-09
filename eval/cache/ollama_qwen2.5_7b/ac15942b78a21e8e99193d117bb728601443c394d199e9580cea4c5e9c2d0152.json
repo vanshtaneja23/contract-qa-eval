@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\", \"answer\":\"No excerpt explicitly mentions a minimum purchase, volume, or spending commitment beyond the Minimum Annual Order Volume (MAOV) specified in the agreement.\",\"citations\":[]}",
+ "input_tokens": 2154,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6531.702500011306,
+ "created_at": "2026-10-08T22:27:20.696291+00:00"
+}

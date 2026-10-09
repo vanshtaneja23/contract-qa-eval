@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention any requirement for maintaining insurance by either party.\",\"citations\": []}",
+ "input_tokens": 1923,
+ "output_tokens": 33,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5501.589666993823,
+ "created_at": "2026-10-08T23:40:10.729525+00:00"
+}

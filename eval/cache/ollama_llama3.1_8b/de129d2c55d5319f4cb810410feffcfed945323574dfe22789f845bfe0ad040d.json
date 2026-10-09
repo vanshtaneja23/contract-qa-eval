@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, CRO agrees to disclose and assign to Client as its exclusive property all inventions and technical or business innovations specifically derived from the work assigned by Client to CRO (C3).\", \"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"CRO agrees that during the term of this Agreement and for a period of three years thereafter: (a) to disclose and assign to Client as its exclusive property all inventions and technical or business innovations specifically derived from the work assigned by Client to CRO which CRO develops or conceives,\" } ] }",
+ "input_tokens": 1857,
+ "output_tokens": 131,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8231.789875004324,
+ "created_at": "2026-10-08T23:22:19.400451+00:00"
+}

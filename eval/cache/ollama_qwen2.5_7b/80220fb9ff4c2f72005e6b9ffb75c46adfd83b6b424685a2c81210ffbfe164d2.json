@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention any provisions related to auditing the books or records of either party.\",\"citations\": []}",
+ "input_tokens": 1934,
+ "output_tokens": 37,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4799.914375005756,
+ "created_at": "2026-10-08T23:15:33.614280+00:00"
+}

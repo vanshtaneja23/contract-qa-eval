@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"A party cannot assign any of its rights or obligations under this Agreement to any third party directly or indirectly without the prior written consent of the other Party.\",\"citations\": [{\"chunk_id\": \"C5\", \"quote\": \"Neither Party shall assign any of its rights or obligations under this Agreement to any third party directly or indirectly without the prior written consent of the other Party.\"}]}",
+ "input_tokens": 2012,
+ "output_tokens": 91,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5999.054208994494,
+ "created_at": "2026-10-08T23:11:10.543806+00:00"
+}

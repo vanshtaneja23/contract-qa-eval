@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"not_found\",\n\"answer\": \"The provided excerpts do not mention anything about auditing rights.\",\n\"citations\": []\n}",
+ "input_tokens": 1855,
+ "output_tokens": 36,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 7767.325792010524,
+ "created_at": "2026-10-08T23:52:25.395305+00:00"
+}

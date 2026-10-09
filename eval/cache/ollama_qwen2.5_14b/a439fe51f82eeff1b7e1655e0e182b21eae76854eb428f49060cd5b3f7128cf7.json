@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer incorrectly lists 'ACCURAY INCORPORATED' as a party, while the reference mentions 'Accuray' without specifying the full legal name, and also includes 'Siemens' which the system omits. The reference does not provide a definitive full legal name for Accuray, and the system incorrectly assumes 'ACCURAY INCORPORATED' is a party without clear evidence from the reference.\" }",
+ "input_tokens": 282,
+ "output_tokens": 101,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 5128.93512500159,
+ "created_at": "2026-10-09T00:11:54.734176+00:00"
+}

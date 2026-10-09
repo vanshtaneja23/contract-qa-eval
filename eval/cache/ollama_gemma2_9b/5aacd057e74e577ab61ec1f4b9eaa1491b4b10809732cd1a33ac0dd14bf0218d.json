@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"It is acknowledged that the purchase of Shares in the Offering is subject to the maximum and minimum purchase limitations as described in the Plan and that the Company and the Bank may reject, in whole or in part, any orders received in the Community Offering or Syndicated Community Offering.\",\n\"citations\": [\n{\n\"chunk_id\": \"C2\",\n\"quote\": \"It is acknowledged that the purchase of Shares in the Offering is subject to the maximum and minimum purchase limitations as described in the Plan and that the Company and the Bank may reject, in whole or in part, any orders received in the Community Offering or Syndicated Community Offering.\"\n}\n]\n}",
+ "input_tokens": 2374,
+ "output_tokens": 153,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13107.933958002832,
+ "created_at": "2026-10-08T23:49:29.414399+00:00"
+}

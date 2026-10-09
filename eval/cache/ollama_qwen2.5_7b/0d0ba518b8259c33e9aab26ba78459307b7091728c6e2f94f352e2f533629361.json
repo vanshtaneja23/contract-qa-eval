@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, a party can terminate this agreement for convenience without cause. This is supported by the following excerpt: 'the Company may terminate this Agreement for convenience by way of Notice of termination; the Agreement shall be then terminated following a [*****] period as from [*****] Confidential material redacted and filed separately with the Securities and Exchange Commission.' (C6)\",\"citations\": [{\"chunk_id\": \"C6\", \"quote\": \"the Company may terminate this Agreement for convenience by way of Notice of termination; the Agreement shall be then terminated following a [*****] period as from [*****] Confidential material redacted and filed separately with the Securities and Exchange Commission.\"}]}",
+ "input_tokens": 2276,
+ "output_tokens": 150,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7758.387790992856,
+ "created_at": "2026-10-08T23:43:27.221634+00:00"
+}

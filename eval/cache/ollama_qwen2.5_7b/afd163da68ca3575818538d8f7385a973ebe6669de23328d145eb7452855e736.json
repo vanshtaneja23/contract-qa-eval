@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The following provisions shall survive termination or expiration of this Agreement: 2(o) (warranties); 2(p)(q), 3(e) audit rights/access; Schedule B (records); 7 (Indemnification); and Section 9 (Confidentiality).\",\"citations\": [ { \"chunk_id\": \"C5\", \"quote\": \"The following provisions shall survive termination or expiration of this Agreement:\" } ] }",
+ "input_tokens": 1880,
+ "output_tokens": 105,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7474.099208004191,
+ "created_at": "2026-10-08T23:15:41.170542+00:00"
+}

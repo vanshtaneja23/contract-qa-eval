@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"\", \"citations\": [] }",
+ "input_tokens": 2157,
+ "output_tokens": 19,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5182.787832993199,
+ "created_at": "2026-10-08T22:29:43.412795+00:00"
+}

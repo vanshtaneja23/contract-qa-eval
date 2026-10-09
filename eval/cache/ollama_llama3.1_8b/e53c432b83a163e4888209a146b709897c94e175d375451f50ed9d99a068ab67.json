@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"ACCURAY INCORPORATED, a Delaware corporation with its executive offices located at 1310 Chesapeake Terrace, Sunnyvale, California 94089, USA (\",\"citations\": [ { \"chunk_id\": \"C1\", \"quote\": \"This Multiple LINAC and Multi-Modality Distributor Agreement (\" }, { \"chunk_id\": \"C2\", \"quote\": \"party's Sub-Distributors that may be  considered to be illegal\" } ] }",
+ "input_tokens": 2042,
+ "output_tokens": 114,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8194.464583008084,
+ "created_at": "2026-10-08T23:19:44.325327+00:00"
+}

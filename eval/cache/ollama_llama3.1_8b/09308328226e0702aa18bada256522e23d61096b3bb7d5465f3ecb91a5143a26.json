@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"ninety (90) days prior to expiration of the original term\", \"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"Such notice must be given ninety (90) days prior to expiration of the original term.\" } ] }",
+ "input_tokens": 1797,
+ "output_tokens": 67,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 1978.5103749891277,
+ "created_at": "2026-10-08T23:22:11.050270+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The agreement grants a non-exclusive, non-transferable, and royalty-free license to use the software provided in connection with the Products. Additionally, it grants a non-exclusive, non-transferable, and royalty-free license to customers of Products under any Patents owned by PARTY_1 or the licensing of which is controlled by PARTY_1.\",\n\n\"citations\": [{\"chunk_id\": \"C5\", \"quote\": \"PARTY_1 hereby grants Distributor or Customer a nonexclusive, non-transferable, royalty-free right to use the software provided in connection with the Products only in machine readable form and only in combination with the Products with which such software is provided.\"},\n\n{\"chunk_id\": \"C6\", \"quote\": \"PARTY_1 hereby grants to Customers of Products a non-exclusive, non-transferable and royalty-free license under any Patents owned by PARTY_1 or the licensing of which is controlled by PARTY_1 that, but for this license, would be infringed by the use of such Products in accordance with the applicable Specification.\"}]}",
+ "input_tokens": 2044,
+ "output_tokens": 231,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9819.87570799538,
+ "created_at": "2026-10-08T23:40:20.635040+00:00"
+}

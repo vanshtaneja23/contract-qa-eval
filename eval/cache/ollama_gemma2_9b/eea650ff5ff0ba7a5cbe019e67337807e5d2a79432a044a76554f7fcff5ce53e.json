@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Investor and Company\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C1\",\n    \"quote\": \"Investor and Company each a \\\"Party\\\" and together the \\\"Parties\\\")\"\n  }\n]\n}",
+ "input_tokens": 1938,
+ "output_tokens": 68,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 9223.445291994722,
+ "created_at": "2026-10-08T23:52:03.532257+00:00"
+}

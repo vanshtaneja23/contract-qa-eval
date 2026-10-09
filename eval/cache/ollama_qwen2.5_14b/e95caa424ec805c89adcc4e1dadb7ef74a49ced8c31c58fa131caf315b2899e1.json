@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer and cited quote address payment obligations upon default, not the obligations that continue after termination or expiration as specified in the reference clause text.\" }",
+ "input_tokens": 440,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3630.989417011733,
+ "created_at": "2026-10-09T00:11:18.418436+00:00"
+}

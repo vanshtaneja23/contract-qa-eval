@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, there is a cap on the indemnifying party's liability for fees and expenses of more than one counsel (in addition to any local counsel) separate from their own counsel for all indemnified parties in connection with any one action or separate but similar or related actions in the same jurisdiction arising out of the same allegations or circumstances.\",\"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"In no event shall the indemnifying party be liable for fees and expenses of more than one counsel (in addition to any local counsel) separate from their own counsel for all indemnified parties in connection with any one action or separate but similar or related actions in the same jurisdiction arising out of the same allegations or circumstances.\" } ] }",
+ "input_tokens": 1820,
+ "output_tokens": 164,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7758.134500007145,
+ "created_at": "2026-10-08T23:24:42.897390+00:00"
+}

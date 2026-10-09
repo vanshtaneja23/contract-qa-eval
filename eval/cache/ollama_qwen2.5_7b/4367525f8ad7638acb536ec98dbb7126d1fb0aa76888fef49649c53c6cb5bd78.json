@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"The provided excerpts do not mention any provisions related to liquidated damages.\",\"citations\":[]}",
+ "input_tokens": 2152,
+ "output_tokens": 28,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6444.450249997317,
+ "created_at": "2026-10-08T22:26:43.757940+00:00"
+}

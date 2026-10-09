@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpts address the right of either party to audit the other's books or records.\",\n  \"citations\": []\n}",
+ "input_tokens": 1925,
+ "output_tokens": 39,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5781.546625003102,
+ "created_at": "2026-10-08T23:37:42.366001+00:00"
+}

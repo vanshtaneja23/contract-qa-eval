@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"A party cannot assign this agreement without the other party's prior written consent, except that Tadeo can assign all of its rights and obligations to any subsidiary or affiliated entity without Diplomat's consent.\",\n\n\"citations\": [\n  { \"chunk_id\": \"C4\", \"quote\": \"Neither party any assign this Agreement, or their respective rights and obligations hereunder, in whole or in part, without the other party's prior written consent; PROVIDED, HOWEVER, that Tadeo shall be entitled to assign all of its rights and obligations hereunder to any subsidiary or affiliated entity without the consent of Diplomat.\" }\n] }",
+ "input_tokens": 1846,
+ "output_tokens": 142,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7164.543750011944,
+ "created_at": "2026-10-08T23:41:30.695492+00:00"
+}

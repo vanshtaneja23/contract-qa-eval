@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The agreement is governed by the Laws of the State of New York.\",\n\n\"citations\": [{\"chunk_id\": \"C5\", \"quote\": \"This Agreement shall be governed by, and construed in accordance with, the Laws of the State of New York, applicable to contracts executed in and to be performed entirely within that state.\"}]}",
+ "input_tokens": 2014,
+ "output_tokens": 83,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5690.901625013794,
+ "created_at": "2026-10-08T23:32:07.257581+00:00"
+}

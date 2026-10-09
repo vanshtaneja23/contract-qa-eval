@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, PARTY_1 grants Reseller an exclusive, non-transferable and non-assignable right to market, sell, and sub-license those PARTY_1 products listed in Schedule 2 (the \\\"Products\\\") within the territory listed in Schedule 3 (the \\\"Territory\\\") to Canadian headquartered companies, and governmental and broader public sector entities located in Canada.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C2\",\n    \"quote\": \"Subject to payment of the Annual Minimum Commitment (\\\"AMC\\\"  - defined herein), PARTY_1 hereby grants to Reseller an exclusive, non- transferable and non-assignable right to market, sell, and sub-license those PARTY_1 products listed in Schedule 2 (the \\\"Products\\\") within the  territory listed in Schedule 3 (the \\\"Territory\\\")\"\n  }\n]\n}",
+ "input_tokens": 1808,
+ "output_tokens": 202,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13947.993042005692,
+ "created_at": "2026-10-09T00:08:28.108155+00:00"
+}

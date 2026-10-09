@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, intellectual property created under this agreement is assigned to Party B. This is stated in Excerpt C4, where it says: 'The Parties agree that any and all intellectual property researched and developed, created and invented by the Parties (including their employees) in the course of performance of this Agreement shall be owned by Party B.' \",\"citations\": [{\"chunk_id\": \"C4\", \"quote\": \"The Parties agree that any and all intellectual property researched and developed, created and invented by the Parties (including their employees) in the course of performance of this Agreement shall be owned by Party B.\"}]}",
+ "input_tokens": 1901,
+ "output_tokens": 139,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7695.801833004225,
+ "created_at": "2026-10-08T23:37:50.135281+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, MMI is required to maintain insurance. According to Document 1, excerpt C6, MMI shall at its own expense obtain and maintain with an insurer adequate insurance coverage in respect of any Dragon Systems property under the care, custody or control of MMI.\",\"citations\": [{\"chunk_id\": \"C6\", \"quote\": \"MMI shall at its own expense obtain and maintain with an insurer adequate insurance coverage in respect of any Dragon Systems property under the care, custody or control of MMI.\"}]}",
+ "input_tokens": 1903,
+ "output_tokens": 116,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 3074.0892500034533,
+ "created_at": "2026-10-08T23:44:52.320048+00:00"
+}

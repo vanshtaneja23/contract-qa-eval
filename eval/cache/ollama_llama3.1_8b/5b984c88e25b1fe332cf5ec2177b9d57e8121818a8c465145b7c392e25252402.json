@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The laws of the State of Delaware\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"THIS AGREEMENT SHALL BE GOVERNED IN ALL RESPECTS, INCLUDING WITHOUT LIMITATION VALIDITY, INTERPRETATION AND EFFECT, BY THE LAWS OF THE STATE OF DELAWARE APPLICABLE TO CONTRACTS EXECUTED AND TO BE\" }, { \"chunk_id\": \"C3\", \"quote\": \"THIS AGREEMENT SHALL BE GOVERNED IN ALL RESPECTS, INCLUDING WITHOUT LIMITATION VALIDITY, INTERPRETATION AND EFFECT, BY THE LAWS OF THE STATE OF DELAWARE APPLICABLE TO CONTRACTS EXECUTED AND TO BE PERFORMED WHOLLY WITHIN SUCH STATE\" } ] }",
+ "input_tokens": 1874,
+ "output_tokens": 172,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8263.210208999226,
+ "created_at": "2026-10-08T23:24:07.798490+00:00"
+}

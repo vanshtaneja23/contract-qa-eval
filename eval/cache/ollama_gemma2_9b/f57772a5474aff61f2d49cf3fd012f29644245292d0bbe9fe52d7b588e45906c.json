@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement may not be assigned by either party without the prior written consent of the other party, except that, without such consent, (i) Company may make an assignment of this Agreement as collateral security in favor of its lenders, and (ii) the Company may assign this Agreement to a purchaser of all or substantially all of the assets of the Company's business related to the Products.\",\n\"citations\": [\n{\n\"chunk_id\": \"C4\",\n\"quote\": \"This Agreement may not be assigned by either party without the prior written consent of the other party, except that, without such consent, (i) Company may make an assignment of this Agreement as collateral security in favor of its lenders, and (ii) the Company may assign this Agreement to a purchaser of all or substantially all of the assets of the Company's business related to the Products.\"\n}\n]\n}",
+ "input_tokens": 1907,
+ "output_tokens": 201,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12620.565874996828,
+ "created_at": "2026-10-08T23:47:15.863431+00:00"
+}

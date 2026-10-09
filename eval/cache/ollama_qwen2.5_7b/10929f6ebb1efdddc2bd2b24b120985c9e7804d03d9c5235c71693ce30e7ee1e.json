@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a cap or limit on either party's liability. Specifically, under Section 13.4 of the agreement, neither party's liability, except as set forth in Section 13.4(b), will be greater than the amount paid by the party in the 12 months preceding the event giving rise to the claim.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"IN NO EVENT SHALL A PARTY'S LIABILITY, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, BE GREATER THAN, PER CLAIM OR SERIES OF CLAIMS ARISING FROM THE SAME CAUSE OF ACTION, [* * *].\"}]}",
+ "input_tokens": 2457,
+ "output_tokens": 145,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 3873.8670829916373,
+ "created_at": "2026-10-08T23:11:19.811907+00:00"
+}

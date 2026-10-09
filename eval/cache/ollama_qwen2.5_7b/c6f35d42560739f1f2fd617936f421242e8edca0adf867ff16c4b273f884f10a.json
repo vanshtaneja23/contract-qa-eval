@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a minimum purchase volume commitment. According to the contract, the minimum purchase volume of the Product (Solo) is 50,000 units within the period of three (3) years (calendar years of 2018, 2019, 2020). If EMV fails to reach this target volume within the specified period, EMV shall reimburse the Manufacturer the investment of the equipment by the percentage of unachieved volume.\",\"citations\": [{\"chunk_id\": \"C4\", \"quote\": \"the minimum purchase volume of the Product (Solo) is 50,000 units within the period of three (3) years (calendar year of 2018, 2019, 2020). In case that EMV fails to reach the target volume within the specified period of the agreement, EMV shall reimburse the Manufacturer the investment of the equipment by the percentage of unachieved volume.\"}]}",
+ "input_tokens": 2038,
+ "output_tokens": 219,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5329.2051669996,
+ "created_at": "2026-10-08T23:13:27.948933+00:00"
+}

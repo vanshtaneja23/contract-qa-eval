@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"verdict\": \"incorrect\",\n  \"reason\": \"The system answer incorrectly identifies the party as 'HPS' instead of 'SHPS' as stated in the reference clause.\"\n}",
+ "input_tokens": 292,
+ "output_tokens": 42,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 4584.808500003419,
+ "created_at": "2026-10-09T00:15:18.539027+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement will terminate when all obligations required of both parties hereunder are performed, unless either terminated earlier or extended by the parties pursuant to the terms of this Agreement subject to clause 4.0.\",\n  \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"3.1. This Agreement shall take effect on the date of signature of the Agreement by both parties and shall terminate when all obligations required of both parties hereunder are performed unless either terminated earlier or extended by the parties pursuant to the terms of this Agreement subject to clause 4.0.\" } ] }",
+ "input_tokens": 2040,
+ "output_tokens": 135,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9047.128042002441,
+ "created_at": "2026-10-08T22:37:31.952754+00:00"
+}

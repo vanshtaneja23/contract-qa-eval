@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"not_found\",\n\"answer\": \"The provided excerpts do not mention liquidated damages.\",\n\"citations\": []\n}",
+ "input_tokens": 1963,
+ "output_tokens": 34,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 8552.657249994809,
+ "created_at": "2026-10-08T23:55:29.737433+00:00"
+}

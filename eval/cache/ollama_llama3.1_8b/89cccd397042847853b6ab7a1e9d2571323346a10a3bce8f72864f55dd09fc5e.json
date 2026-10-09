@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The term of this Agreement shall be for 10 years commencing on the date of execution of this Agreement by AIRSOPURE. You may, at its option, renew the Franchise granted hereunder for 2 additional terms of 10 years each.\",\"citations\":[{\"chunk_id\":\"C2\",\"quote\":\"The term of this Agreement shall be for 10 years commencing on the date of execution of this Agreement by AIRSOPURE.\"},{\"chunk_id\":\"C2\",\"quote\":\"You may, at its option, renew the Franchise granted hereunder for 2 additional terms of 10 years each\"}]}",
+ "input_tokens": 1979,
+ "output_tokens": 138,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8284.578999999212,
+ "created_at": "2026-10-08T23:22:42.058705+00:00"
+}

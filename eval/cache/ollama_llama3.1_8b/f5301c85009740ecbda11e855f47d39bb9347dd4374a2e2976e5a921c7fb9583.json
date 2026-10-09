@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"No\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"to either party's Intellectual Property, including all rights in patents, patent applications, formulae, trademarks, trademark applications, trade names, confidential information, trade secrets, inventions, copyright, industrial designs and know-how, (\" }, { \"chunk_id\": \"C3\", \"quote\": \"Nothing contained herein shall give Contractor any right to use any of the Company's Intellectual Property used in connection with the Products or trademarks or trade names that may appear on the labeling for the Products, except for providing the Services in accordance with the terms herein.\" } ] }",
+ "input_tokens": 1929,
+ "output_tokens": 147,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8833.396750007523,
+ "created_at": "2026-10-08T23:25:14.211527+00:00"
+}

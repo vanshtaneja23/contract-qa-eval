@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer and cited quote address assignment restrictions, not exclusive distribution rights as specified in the reference clause.\" }",
+ "input_tokens": 338,
+ "output_tokens": 36,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2561.4412910072133,
+ "created_at": "2026-10-09T00:17:04.010949+00:00"
+}

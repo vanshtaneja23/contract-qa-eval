@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpts in the provided contract address the right to audit the other party's books or records. Therefore, based on the given information, there is no indication that either party has the right to audit the other's books or records.\",\n  \"citations\": []\n}",
+ "input_tokens": 1924,
+ "output_tokens": 68,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5814.778208005009,
+ "created_at": "2026-10-08T23:16:26.937781+00:00"
+}

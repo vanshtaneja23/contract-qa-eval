@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt directly addresses what obligations continue after the agreement terminates or expires. The excerpts discuss the term, termination conditions, and automatic renewals, but do not specify ongoing obligations post-termination.\",\"citations\": [] }",
+ "input_tokens": 1899,
+ "output_tokens": 57,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5793.759415988461,
+ "created_at": "2026-10-08T23:32:21.814809+00:00"
+}

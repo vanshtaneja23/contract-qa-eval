@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement shall be governed by, and construed in accordance with, the Laws of the State of New York, applicable to contracts executed in and to be performed entirely within that state.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C6\",\n    \"quote\": \"This Agreement shall be governed by, and construed in accordance with, the Laws of the State of New York, applicable to contracts executed in and to be performed entirely within that state.\"\n  }\n]\n}",
+ "input_tokens": 2016,
+ "output_tokens": 121,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 10868.740624995553,
+ "created_at": "2026-10-08T23:46:14.825662+00:00"
+}

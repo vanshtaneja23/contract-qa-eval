@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects Premier's right to inspect, copy, and audit records as stated in the reference clause text, and the cited quote supports this.\" }",
+ "input_tokens": 399,
+ "output_tokens": 46,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3291.3857079984155,
+ "created_at": "2026-10-09T00:10:04.273591+00:00"
+}

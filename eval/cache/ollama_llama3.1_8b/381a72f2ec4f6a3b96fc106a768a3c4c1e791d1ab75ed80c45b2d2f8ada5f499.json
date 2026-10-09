@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Either party may assign this Agreement without the other's prior written approval, except by operation of law or in connection with the sale of substantially all of the assets of such party's business or the acquisition of such party by a third party.\",\"citations\": [ {\"chunk_id\": \"C4\", \"quote\": \"Neither party may assign this Agreement without the other's prior written approval, except by operation of law or in connection with the sale of substantially all of the assets of such party's business or the acquisition of such party by a third party.\"} ]}",
+ "input_tokens": 1952,
+ "output_tokens": 127,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7274.747749994276,
+ "created_at": "2026-10-08T23:22:33.707869+00:00"
+}

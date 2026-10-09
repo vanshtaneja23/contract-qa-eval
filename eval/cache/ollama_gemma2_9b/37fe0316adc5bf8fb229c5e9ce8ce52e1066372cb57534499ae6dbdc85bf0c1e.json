@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement grants Supplier a paid-up, royalty-free, non-exclusive license, without the right to sublicense, to Customer's Confidential Information and the Customer Technology reasonably necessary to Manufacture and supply to Customer the Product hereunder, but only for such purposes.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"During the Term, Customer hereby grants to Supplier a paid-up, royalty-free, non-exclusive license, without the right to sublicense, to Customer's Confidential Information and the Customer Technology reasonably necessary to Manufacture and supply to Customer the Product hereunder, but only for such purposes.\"\n  }\n]\n}",
+ "input_tokens": 2091,
+ "output_tokens": 164,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12900.609749995056,
+ "created_at": "2026-10-08T23:54:31.209300+00:00"
+}

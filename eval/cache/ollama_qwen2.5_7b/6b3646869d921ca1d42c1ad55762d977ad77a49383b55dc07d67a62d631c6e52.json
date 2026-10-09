@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpts provided address the topic of audits or the right to review the other party's books or records. Therefore, based on the given information, it cannot be determined if either party has the right to audit the other's books or records. Please refer to the full contract for this specific clause if available. Citations: None provided as the topic is not covered in the excerpts. \",\n  \"citations\": []\n}",
+ "input_tokens": 2234,
+ "output_tokens": 100,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7264.859417002299,
+ "created_at": "2026-10-08T22:39:02.556495+00:00"
+}

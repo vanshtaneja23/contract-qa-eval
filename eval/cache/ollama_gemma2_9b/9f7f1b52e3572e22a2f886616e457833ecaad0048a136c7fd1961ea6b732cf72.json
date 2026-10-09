@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Remarketing Agreement and the Pricing Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to principles of conflicts of law to the extent that such principles would require or permit the application of laws of another jurisdiction.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C5\",\n    \"quote\": \"This Remarketing Agreement and the Pricing Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to principles of conflicts of law to the extent that such principles would require or permit the application of laws of another jurisdiction.\"\n  }\n]\n}",
+ "input_tokens": 1901,
+ "output_tokens": 153,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 11623.144209006568,
+ "created_at": "2026-10-08T23:57:11.893426+00:00"
+}

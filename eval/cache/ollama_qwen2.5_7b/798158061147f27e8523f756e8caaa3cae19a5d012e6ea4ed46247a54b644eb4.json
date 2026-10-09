@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpts mention liquidated damages. The excerpts cover definitions, warranties, limitations of liability, confidentiality, and other terms, but do not include any clause regarding liquidated damages.\",\n  \"citations\": []\n}",
+ "input_tokens": 1957,
+ "output_tokens": 57,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6196.798499993747,
+ "created_at": "2026-10-08T23:34:20.322067+00:00"
+}

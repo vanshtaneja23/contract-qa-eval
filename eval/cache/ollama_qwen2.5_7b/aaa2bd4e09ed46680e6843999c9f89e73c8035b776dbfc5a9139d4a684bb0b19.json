@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt indicates that a party can terminate the agreement for convenience without cause. The only termination clause mentioned is for specific conditions, such as breach by Dr. Murray or upon mutual agreement, but not for convenience. \",\n\"citations\": [] }",
+ "input_tokens": 2183,
+ "output_tokens": 63,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7308.748875002493,
+ "created_at": "2026-10-08T22:29:27.222922+00:00"
+}

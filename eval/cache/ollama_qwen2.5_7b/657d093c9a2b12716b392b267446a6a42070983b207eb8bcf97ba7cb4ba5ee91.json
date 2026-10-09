@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpts mention any provisions regarding revenue sharing, royalties, or profit distribution between the Company and Contractor.\", \"citations\": [] }",
+ "input_tokens": 1945,
+ "output_tokens": 40,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4811.663291999139,
+ "created_at": "2026-10-08T23:42:24.378614+00:00"
+}

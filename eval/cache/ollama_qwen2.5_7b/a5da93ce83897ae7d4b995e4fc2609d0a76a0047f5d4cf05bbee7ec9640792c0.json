@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, the agreement grants exclusive rights. Specifically, Section 1 of the agreement states that PARTY_1 grants to Reseller an exclusive, non-transferable and non-assignable right to market, sell, and sub-license certain PRODUCTS within a defined TERRITORY. This is subject to payment of the Annual Minimum Commitment.\",\n  \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"Subject to payment of the Annual Minimum Commitment (“AMC” - defined herein), PARTY_1 hereby grants to Reseller an exclusive, non-transferable and non-assignable right to market, sell, and sub-license those PARTY_1 products listed in Schedule 2 (the “Products”) within the territory listed in Schedule 3 (the “Territory”) to Canadian headquartered companies, and governmental and broader public sector entities located in Canada.\" } ] }",
+ "input_tokens": 1803,
+ "output_tokens": 194,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8078.184375001001,
+ "created_at": "2026-10-08T23:45:14.400410+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, there is a non-compete restriction on the Developer.\", \"citations\": [ { \"chunk_id\": \"C5\", \"quote\": \"Developer covenants that, except as otherwise approved in writing by the Franchisor, Developer shall not, for a continuous, uninterrupted period commencing upon the expiration, termination or assignment of this Agreement, regardless of the cause for termination, and continuing for two (2) years thereafter, either directly or indirectly, for itself, or through or on behalf of, or in conjunction with any person, partnership, corporation or other entity, own, operate, control or have any financial interest in any Competitive Business which is located\" } ] }",
+ "input_tokens": 2172,
+ "output_tokens": 153,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8745.009791993652,
+ "created_at": "2026-10-08T23:30:37.308615+00:00"
+}

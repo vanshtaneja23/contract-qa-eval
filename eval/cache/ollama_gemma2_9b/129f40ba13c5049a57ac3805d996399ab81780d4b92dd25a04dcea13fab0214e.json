@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement shall be governed by and construed in accordance with the substantive Laws of the [* * *], excluding any rules of conflicts of laws that would apply the substantive laws of any other jurisdiction.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"This Agreement shall be governed by and construed in accordance with the substantive Laws of the [* * *], excluding any rules of conflicts of laws that would apply the substantive laws of any other jurisdiction.\"\n  }\n]\n}",
+ "input_tokens": 2062,
+ "output_tokens": 125,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13642.98350000172,
+ "created_at": "2026-10-08T23:52:17.348976+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The laws of the People's Republic of China govern this Agreement (without regard to its conflicts of laws rules that would mandate the application of the laws of another jurisdiction).\",\"citations\":[{\"chunk_id\":\"C5\",\"quote\":\"This Agreement and any dispute or claim arising out of or in connection with it or its subject matter shall be governed by, and construed in accordance with, the laws of the People's Republic of China (without regard to its conflicts of laws rules that would mandate the application of the laws of another jurisdiction).\"}]}",
+ "input_tokens": 2179,
+ "output_tokens": 118,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8005.003166006645,
+ "created_at": "2026-10-08T22:29:07.018223+00:00"
+}

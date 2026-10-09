@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The agreement does not have a fixed expiration date and will terminate when all obligations required of both parties are performed, unless terminated earlier or extended by the parties.\",\"citations\": [] }",
+ "input_tokens": 1981,
+ "output_tokens": 50,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6982.891749998089,
+ "created_at": "2026-10-08T22:31:22.178577+00:00"
+}

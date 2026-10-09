@@ -15,8 +15,7 @@ htmlcov/
 
 # data (downloaded, not committed — see DATA.md)
 eval/data/
-# model response cache (large, regenerable)
-eval/cache/
+# eval/cache/ (model responses) is committed: ~3 MB, makes every eval reproducible with --offline
 
 # node
 node_modules/

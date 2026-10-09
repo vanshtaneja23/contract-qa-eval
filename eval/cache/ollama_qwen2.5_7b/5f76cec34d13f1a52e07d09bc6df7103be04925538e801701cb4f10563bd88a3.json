@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The obligations that continue after the agreement terminates or expires include the confidentiality obligations and the indemnification obligations. Specifically, Section 7.02 addresses indemnification, and Section 8.02 addresses the effect of termination or expiration, including the payment of amounts due.\",\n\n\"citations\": [\n  { \"chunk_id\": \"C2\", \"quote\": \"Upon the termination or expiration of this Agreement or upon the earlier request of the Disclosing Party, the Receiving Party shall (i) promptly return to the Disclosing Party all Confidential Information, or (ii) upon written request by the Disclosing Party, destroy all Confidential Information and provide the Disclosing Party with written certification of such destruction.\" },\n  { \"chunk_id\": \"C7\", \"quote\": \"7.02 Indemnification by Contractor. Contractor hereby agrees to indemnify and hold the Company, including its Affiliates and its and their respective officers, directors, partners, members, employees and agents, harmless from and against any and all Claims brought in connection with or arising out of or related to Contractor's or its Affiliates' fraud, willful misconduct, negligence or material breach of this Agreement.\" }\n] }",
+ "input_tokens": 1989,
+ "output_tokens": 261,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10320.75708299817,
+ "created_at": "2026-10-08T23:35:21.098882+00:00"
+}

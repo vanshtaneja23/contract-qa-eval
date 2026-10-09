@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, the agreement grants exclusive rights. Specifically, the agreement grants Manufacturer an exclusive, non-transferable license to use EMV's Specifications and EMV firmware within the Territory for the purpose of manufacturing Products to fulfill Purchase Orders.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"License to Specifications. Subject to the terms of this Agreement, subject to Manufacturer meeting EMV's requirements for quality, price and lead- time, EMV hereby grants Manufacturer an exclusive, non-transferable, license (without the right to sublicense) under EMV's Proprietary Rights in the Territory, during the term of this Agreement, to use the Specifications solely for the purpose of manufacturing the Products to fulfil Purchase Orders for EMV.\"}, {\"chunk_id\": \"C3\", \"quote\": \"License to EMV Firmware. Subject to the terms of this Agreement, subject to Manufacturer meeting EMV's requirements for quality, price and lead- time, EMV hereby grants Manufacturer an exclusive, non-transferable, license (without the right to sublicense) under EMV's Proprietary Rights in the Territory, during the term of this Agreement, to copy the EMV firmware as may be provided by EMV from time to time onto Product units in the manufacturing process at each EMV-approved Manufacturer manufacturing facility.\"}]}",
+ "input_tokens": 2000,
+ "output_tokens": 282,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10940.459999997984,
+ "created_at": "2026-10-08T23:32:32.803207+00:00"
+}

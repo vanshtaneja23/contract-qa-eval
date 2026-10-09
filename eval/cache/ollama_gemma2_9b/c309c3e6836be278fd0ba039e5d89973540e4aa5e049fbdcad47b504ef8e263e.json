@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Company shall maintain Products Liability Insurance and in an amount satisfactory to Contractor, under which Contractor is named as an additional insured.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C2\",\n    \"quote\": \"Company shall maintain Products Liability Insurance and in an amount satisfactory to Contractor, under which Contractor is named as an additional insured.\"\n  }\n]\n}",
+ "input_tokens": 1934,
+ "output_tokens": 97,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 9965.425292000873,
+ "created_at": "2026-10-09T00:07:22.586385+00:00"
+}

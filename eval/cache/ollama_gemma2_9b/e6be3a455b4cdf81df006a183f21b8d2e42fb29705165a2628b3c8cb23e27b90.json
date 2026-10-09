@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, the agreement states that parties shall execute intellectual property assignments in a form substantially similar to that attached as Exhibit A1, Exhibit A2, Exhibit A3, and Exhibit A4.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"the transfers of any registrations or applications of Nuance IP or SpinCo IP, as applicable, to the extent the ownership thereof has transferred from a member of the Nuance Group to a member of the SpinCo Group, or vice versa, pursuant to the Separation Agreement or any other Ancillary Agreement, the Parties shall execute intellectual property assignments in a form substantially similar to that attached as Exhibit A1 (the \\\"Patent Assignment Agreement\\\"), Exhibit A2 (the \\\"Trademark Assignment Agreement\\\"), Exhibit A3 (the \\\"Domain Name Assignment Agreement\\\") and Exhibit A4 (the \\\"Invention Disclosure Assignment Agreement\\\") as well as such additional case specific assignments as deemed appropriate or necessary under applicable Laws (collectively, the \\\"Intellectual Property Assignment Agreements\\\")\"\n  }\n]\n}",
+ "input_tokens": 2037,
+ "output_tokens": 239,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 16305.029749986716,
+ "created_at": "2026-10-08T23:58:09.614595+00:00"
+}

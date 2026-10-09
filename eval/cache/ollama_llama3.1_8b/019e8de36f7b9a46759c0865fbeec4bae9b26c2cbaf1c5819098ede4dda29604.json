@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"September 21, 1998\", \"citations\": [ { \"chunk_id\": \"C1\", \"quote\": \"The Effective Date of this Agreement (herein called the \\\"Effective Date\\\") is September 21, 1998.\" }, { \"chunk_id\": \"C2\", \"quote\": \"Date: September 21, 1998\" } ] }",
+ "input_tokens": 2120,
+ "output_tokens": 93,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7024.888915999327,
+ "created_at": "2026-10-08T23:28:32.780823+00:00"
+}

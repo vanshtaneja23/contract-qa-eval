@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\", \"answer\":\"The excerpts do not explicitly mention any exclusive rights granted to the Manufacturer or EMV, other than the manufacturing license within the Territory as stated in section 2.8.\",\"citations\":[]}",
+ "input_tokens": 2019,
+ "output_tokens": 50,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6293.468749994645,
+ "created_at": "2026-10-08T22:26:02.728038+00:00"
+}

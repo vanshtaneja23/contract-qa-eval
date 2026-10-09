@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly identifies that intellectual property created under the agreement is assigned to the Customer, consistent with the reference clause text provided.\" }",
+ "input_tokens": 394,
+ "output_tokens": 41,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3158.106166010839,
+ "created_at": "2026-10-09T00:12:56.331642+00:00"
+}

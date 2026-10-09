@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpt provided explicitly mentions a cap or limit on either party's liability in the Joint Venture Agreement between Novo Integrated Sciences Inc. and Harvest Gold Farms Inc. The excerpts cover various aspects such as the relationship of the parties, start-up capital, dispute resolution, and confidentiality, but do not address liability caps or limits directly. Therefore, based on the provided excerpts, there is no explicit mention of a cap or limit on either party's liability in this agreement.\",\n  \"citations\": []\n}",
+ "input_tokens": 2185,
+ "output_tokens": 114,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 2775.039457992534,
+ "created_at": "2026-10-08T23:11:50.373939+00:00"
+}

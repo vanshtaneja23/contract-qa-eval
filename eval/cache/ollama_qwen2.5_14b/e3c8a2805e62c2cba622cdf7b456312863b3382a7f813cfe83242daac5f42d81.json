@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer incorrectly identifies Dassault Systemes as the sole party and provides inaccurate information about its legal status, while missing the reference's clear identification of PlanetCAD Inc. as the other party to the agreement.\" }",
+ "input_tokens": 358,
+ "output_tokens": 57,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3530.4525829997147,
+ "created_at": "2026-10-09T00:09:51.951850+00:00"
+}

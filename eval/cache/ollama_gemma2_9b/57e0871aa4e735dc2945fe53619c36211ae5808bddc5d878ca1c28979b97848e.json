@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"not_found\",\n\"answer\": \"The provided excerpts do not mention any non-compete restrictions.\",\n\"citations\": []\n}",
+ "input_tokens": 1859,
+ "output_tokens": 38,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 11898.715125003946,
+ "created_at": "2026-10-09T00:02:12.244700+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The obligations that continue after the agreement terminates or expires are not explicitly stated in the provided excerpts.\", \"citations\": [] }",
+ "input_tokens": 2102,
+ "output_tokens": 39,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5711.216124997009,
+ "created_at": "2026-10-08T22:31:54.527194+00:00"
+}

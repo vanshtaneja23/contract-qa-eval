@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"If a Change of Control occurs, Licensor may terminate the Agreement by providing prior written notice to Licensee. This is mentioned in excerpt C4, specifically in clause 6.4: \",\"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"6.4. Termination for a Change of Control. Licensor may terminate this Agreement by providing prior written notice to Licensee upon the occurrence of a Change of Control.\" } ] }",
+ "input_tokens": 1944,
+ "output_tokens": 109,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6612.775916990358,
+ "created_at": "2026-10-08T23:43:03.674183+00:00"
+}

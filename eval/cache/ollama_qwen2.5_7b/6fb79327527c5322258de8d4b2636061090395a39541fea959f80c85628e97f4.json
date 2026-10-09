@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpt in the provided contract mentions liquidated damages. The excerpts cover topics such as definitions, taxes, indemnification, limitation of liability, termination, and governing law, but do not include any clause related to liquidated damages.\",\n  \"citations\": []\n}",
+ "input_tokens": 2088,
+ "output_tokens": 68,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6766.087416996015,
+ "created_at": "2026-10-08T23:33:17.073230+00:00"
+}

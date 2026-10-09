@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"A party's consent is required for assignment of this agreement. Citation: H.       This Agreement may not be assigned by either party without prior written permission from the other party, which permission shall not be unreasonably withheld or delayed.\",\"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"This Agreement may not be assigned by either party without prior written permission from the other party, which permission shall not be unreasonably withheld or delayed.\"}]}",
+ "input_tokens": 2157,
+ "output_tokens": 109,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8151.207749993773,
+ "created_at": "2026-10-08T23:16:08.636292+00:00"
+}

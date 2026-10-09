@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\"answer\": \"There is no mention of revenue or profit sharing, such as royalties, in the provided excerpts.\",\"citations\": [] }",
+ "input_tokens": 1888,
+ "output_tokens": 38,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5952.401667003869,
+ "created_at": "2026-10-08T23:28:43.981341+00:00"
+}

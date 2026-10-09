@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer incorrectly states that both parties are required to maintain insurance, but the reference clause text only explicitly mentions the Repairer's requirement to maintain specific types of insurance and the Company's obligation to provide insurance certificates, not to maintain insurance.\" }",
+ "input_tokens": 486,
+ "output_tokens": 62,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 4590.565582999261,
+ "created_at": "2026-10-09T00:11:46.979679+00:00"
+}

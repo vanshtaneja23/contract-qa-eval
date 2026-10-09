@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"verdict\": \"correct\",\n  \"reason\": \"The system's answer accurately reflects the reference clause by identifying the minimum number of shares (708,050) the Company must sell within the specified period, which aligns with the question about a minimum purchase commitment.\"\n}",
+ "input_tokens": 365,
+ "output_tokens": 63,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3740.9414159919834,
+ "created_at": "2026-10-09T00:09:07.376753+00:00"
+}

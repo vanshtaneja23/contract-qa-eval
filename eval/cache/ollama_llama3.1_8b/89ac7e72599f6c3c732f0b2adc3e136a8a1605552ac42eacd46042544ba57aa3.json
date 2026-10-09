@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The parties' obligations to not unreasonably delay or withhold agreement, approval, acceptance, consent, or similar action continue after this agreement terminates or expires (C4).\",\"citations\":[{\"chunk_id\":\"C4\",\"quote\":\"Where agreement, approval, acceptance, consent, or similar action by either party is required by any provision of this Agreement, such action shall not be unreasonably delayed or withheld.\"}]}",
+ "input_tokens": 1865,
+ "output_tokens": 94,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6872.223208003561,
+ "created_at": "2026-10-08T23:18:09.802798+00:00"
+}

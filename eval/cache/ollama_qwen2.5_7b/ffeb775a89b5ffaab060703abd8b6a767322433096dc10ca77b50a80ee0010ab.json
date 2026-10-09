@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpt in the provided contract text mentions any cap or limit on the liability of either party. The closest related clause is in ARTICLE 23 - CONFORMITY WITH LAWS, but it does not specify any liability limits. Therefore, based on the given excerpts, there is no indication of a cap or limit on either party's liability.\",\n  \"citations\": []\n}",
+ "input_tokens": 1949,
+ "output_tokens": 91,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6955.875374987954,
+ "created_at": "2026-10-08T23:16:21.042608+00:00"
+}

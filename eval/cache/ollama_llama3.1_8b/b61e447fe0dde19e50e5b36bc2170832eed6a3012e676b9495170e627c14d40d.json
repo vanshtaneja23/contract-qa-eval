@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"No clause in the provided excerpts addresses liquidated damages.\",\"citations\":[]}",
+ "input_tokens": 1969,
+ "output_tokens": 26,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5063.6727919918485,
+ "created_at": "2026-10-08T23:23:30.988173+00:00"
+}

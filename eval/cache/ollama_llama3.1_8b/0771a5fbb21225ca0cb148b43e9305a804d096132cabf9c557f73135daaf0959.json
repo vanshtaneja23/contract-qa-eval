@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"You shall promptly pay all sums owing to AIRSOPURE and its subsidiaries and affiliates, including all damages, costs and expenses, including reasonable attorneys' fees, incurred by AIRSOPURE as a result of the default.\",\"citations\": [ { \"chunk_id\": \"C5\", \"quote\": \"D. You shall promptly pay all sums owing to AIRSOPURE and its subsidiaries and affiliates, including all damages, costs and expenses, including reasonable attorneys' fees, incurred by AIRSOPURE as a result of the default.\" } ] }",
+ "input_tokens": 2066,
+ "output_tokens": 127,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8226.66308299813,
+ "created_at": "2026-10-08T23:30:59.264780+00:00"
+}

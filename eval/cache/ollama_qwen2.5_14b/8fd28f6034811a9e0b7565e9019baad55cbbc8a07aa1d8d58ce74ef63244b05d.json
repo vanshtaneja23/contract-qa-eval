@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the revenue-sharing requirement specified in the reference clause, where HPS pays SHPS a percentage of Care Management Revenues each month.\" }",
+ "input_tokens": 462,
+ "output_tokens": 46,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2878.2339580066036,
+ "created_at": "2026-10-09T00:12:19.169972+00:00"
+}

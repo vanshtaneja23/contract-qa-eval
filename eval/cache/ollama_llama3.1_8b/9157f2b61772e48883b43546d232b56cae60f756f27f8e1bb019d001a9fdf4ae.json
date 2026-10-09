@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\n\n\"answer\": \"There is no information in the provided excerpts about when this agreement expires or ends.\",\n\n\"citations\": [] }",
+ "input_tokens": 1805,
+ "output_tokens": 37,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5841.464666009415,
+ "created_at": "2026-10-08T23:21:01.475974+00:00"
+}

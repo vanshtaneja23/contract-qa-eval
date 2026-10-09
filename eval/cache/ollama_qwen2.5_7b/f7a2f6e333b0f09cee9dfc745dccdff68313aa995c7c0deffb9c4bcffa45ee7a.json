@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The agreement renews automatically for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then-current term.\\n\\nCitation: C3 - 2.01 Term. This agreement shall commence on January 20, 2014 (the 'Effective Date') and shall continue in effect for six (6) months (the 'Initial Term'). This agreement shall automatically renew for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then-current term.\",\"citations\": [{\"chunk_id\": \"C3\", \"quote\": \"This agreement shall commence on January 20, 2014 (the 'Effective Date') and shall continue in effect for six (6) months (the 'Initial Term'). This agreement shall automatically renew for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then-current term.\"}]}",
+ "input_tokens": 2069,
+ "output_tokens": 249,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10293.81104199274,
+ "created_at": "2026-10-08T23:44:13.676603+00:00"
+}

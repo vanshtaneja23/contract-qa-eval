@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, stating that the Licensor may terminate the Agreement upon a Change of Control by providing prior written notice to the Licensee.\" }",
+ "input_tokens": 366,
+ "output_tokens": 49,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2636.9169160025194,
+ "created_at": "2026-10-09T00:14:00.357214+00:00"
+}

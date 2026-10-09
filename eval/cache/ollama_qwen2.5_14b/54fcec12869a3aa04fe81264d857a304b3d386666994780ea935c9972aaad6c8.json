@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly reflects that either party can terminate the agreement with 90 days written notice, which aligns with the reference clause text.\" }",
+ "input_tokens": 237,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2326.6173340089153,
+ "created_at": "2026-10-09T00:17:53.459968+00:00"
+}

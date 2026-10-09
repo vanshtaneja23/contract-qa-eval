@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpt mentions a non-compete restriction on either party. The excerpts discuss duties, confidentiality, and other terms but do not include a non-compete clause.\",\n  \"citations\": []\n}",
+ "input_tokens": 1868,
+ "output_tokens": 54,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5043.6447499960195,
+ "created_at": "2026-10-08T23:41:50.422108+00:00"
+}

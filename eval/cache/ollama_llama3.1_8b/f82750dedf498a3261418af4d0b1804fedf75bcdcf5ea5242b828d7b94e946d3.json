@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"There is no non-compete restriction on either party.\",\"citations\":[]}",
+ "input_tokens": 1977,
+ "output_tokens": 26,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5793.256000004476,
+ "created_at": "2026-10-08T23:18:30.758470+00:00"
+}

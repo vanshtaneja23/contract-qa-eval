@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The parties to this agreement are Cutanea Life Sciences, Inc. (referred to as 'CUTANEA') and Ferrer Internacional, S.A. (referred to as 'Ferrer' and/or 'Supplier'). They are collectively referred to as 'PARTIES'.\", \"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"CUTANEA and Ferrer Internacional, S.A., a Spanish corporation with its principal place of business at Av. Diagonal, 549, 5t h floor, 08029 Barcelona (Spain) (hereinafter indistinctly referred to as \"},{ \"chunk_id\": \"C4\", \"quote\": \"The Parties hereto acknowledge that this Agreement, including the Quality Agreement and the Pharmacovigilance Agreement and any exhibits, schedules or other attachments hereto sets forth the entire agreement and understanding of the Parties and supersede all prior written or oral agreements or understandings with respect to the subject matter hereof.\"}]}",
+ "input_tokens": 2165,
+ "output_tokens": 228,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 12223.689124992234,
+ "created_at": "2026-10-08T22:37:06.877734+00:00"
+}

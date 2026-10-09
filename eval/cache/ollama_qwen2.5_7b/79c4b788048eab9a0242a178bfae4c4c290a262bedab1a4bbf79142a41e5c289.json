@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpts provided address the topic of termination for convenience without cause.\",\"citations\": [] }",
+ "input_tokens": 2242,
+ "output_tokens": 32,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5084.754625000642,
+ "created_at": "2026-10-08T23:09:05.710384+00:00"
+}

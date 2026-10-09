@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The excerpts do not contain a clause that directly addresses the ability to assign the agreement without the other party's consent.\", \"citations\": [] }",
+ "input_tokens": 2120,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5570.324125001207,
+ "created_at": "2026-10-08T22:29:19.811033+00:00"
+}

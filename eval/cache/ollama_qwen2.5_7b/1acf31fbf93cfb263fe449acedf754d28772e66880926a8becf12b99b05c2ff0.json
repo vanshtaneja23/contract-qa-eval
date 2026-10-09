@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, NAI has the right to audit Co-Host's books and records. This is stated in excerpt C6: 'NAI may inspect the records described in Sections 4(c) upon demand from time to time. In addition, Co-Host agrees to allow NAI's independent auditors to audit and analyze appropriate accounting records of Co-Host from time to time (but not more than one every six (6) months) to ensure compliance with all terms of this Agreement.' \",\"citations\": [{\"chunk_id\": \"C6\", \"quote\": \"NAI may inspect the records described in Sections 4(c) upon demand from time to time. In addition, Co-Host agrees to allow NAI's independent auditors to audit and analyze appropriate accounting records of Co-Host from time to time (but not more than one every six (6) months) to ensure compliance with all terms of this Agreement.\"}]}",
+ "input_tokens": 2023,
+ "output_tokens": 205,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8263.334791990928,
+ "created_at": "2026-10-08T23:37:36.507309+00:00"
+}

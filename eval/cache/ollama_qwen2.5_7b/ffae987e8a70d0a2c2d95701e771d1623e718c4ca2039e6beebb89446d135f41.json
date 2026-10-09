@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention any clause allowing termination for convenience without cause.\",\"citations\": []}",
+ "input_tokens": 1919,
+ "output_tokens": 33,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4773.91958401131,
+ "created_at": "2026-10-08T23:41:45.331911+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, the agreement requires sharing revenue through royalties. Specifically, Vyera is obligated to pay royalties to CytoDyn. Citation: C3 - 'Vyera shall pay to CytoDyn royalties equal to fifty percent (50%) of Net Sales of Licensed Products in the Territory during the Royalty Term; provided that, after the Step-Down Date, the royalty percentage will be reduced to [***] of Net Sales of Licensed Products in the Territory throughout the remaining period in the Royalty Term.' \",\"citations\": [{\"chunk_id\": \"C3\", \"quote\": \"Vyera shall pay to CytoDyn royalties equal to fifty percent (50%) of Net Sales of Licensed Products in the Territory during the Royalty Term; provided that, after the Step-Down Date, the royalty percentage will be reduced to [***] of Net Sales of Licensed Products in the Territory throughout the remaining period in the Royalty Term.\"}]}",
+ "input_tokens": 2231,
+ "output_tokens": 205,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10451.046582995332,
+ "created_at": "2026-10-08T22:36:06.501509+00:00"
+}

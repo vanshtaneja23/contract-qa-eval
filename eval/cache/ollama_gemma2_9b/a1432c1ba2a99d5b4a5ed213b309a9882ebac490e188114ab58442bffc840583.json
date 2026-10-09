@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Subject to the terms of this Agreement, subject to Manufacturer meeting EMV's requirements for quality, price and lead- time, EMV hereby grants Manufacturer an exclusive, non-transferable, license (without the right to sublicense) under EMV's Proprietary Rights in the Territory, during the term of this Agreement, to use the Specifications solely for the purpose of manufacturing the Products to fulfil Purchase Orders for EMV.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"Subject to the terms of this Agreement, subject to Manufacturer meeting EMV's requirements for quality, price and lead- time, EMV hereby grants Manufacturer an exclusive, non-transferable, license (without the right to sublicense) under EMV's Proprietary Rights in the Territory, during the term of this Agreement, to use the Specifications solely for the purpose of manufacturing the Products to fulfil Purchase Orders for EMV.\"\n  }\n]\n}",
+ "input_tokens": 1993,
+ "output_tokens": 224,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13566.002125007799,
+ "created_at": "2026-10-09T00:02:26.024824+00:00"
+}

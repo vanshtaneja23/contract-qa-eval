@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"The Agreement shall automatically renew for successive one year additional terms unless terminated by either party at least six months prior to the expiration of the then-current term.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"The Agreement shall automatically renew for successive one year additional terms unless terminated by either party at least six months prior to the expiration of the then-current term.\"\n  }\n]\n}",
+ "input_tokens": 1962,
+ "output_tokens": 111,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 10250.993666995782,
+ "created_at": "2026-10-08T23:46:03.897576+00:00"
+}

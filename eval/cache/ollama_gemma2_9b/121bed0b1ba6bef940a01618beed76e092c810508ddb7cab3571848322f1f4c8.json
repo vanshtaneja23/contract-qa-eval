@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"not_found\",\n\"answer\": \"The excerpts do not mention intellectual property or assignment of intellectual property.\",\n\"citations\": []\n}",
+ "input_tokens": 1894,
+ "output_tokens": 38,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 8199.447417006013,
+ "created_at": "2026-10-09T00:00:32.769884+00:00"
+}

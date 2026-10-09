@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, the Company shall maintain Products Liability Insurance.\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"Company shall maintain Products Liability Insurance and in an amount satisfactory to Contractor,\" } ] }",
+ "input_tokens": 1964,
+ "output_tokens": 59,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6050.909041994601,
+ "created_at": "2026-10-08T23:30:50.964616+00:00"
+}

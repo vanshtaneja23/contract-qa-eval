@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"not_found\",\n  \"answer\": \"No excerpt provided specifies an expiration or end date for the agreement. The excerpts only mention the date of execution (4/8/2020) and that the Joint Filing Agreement may be executed in any number of counterparts, but do not indicate when it ends or expires.\",\n  \"citations\": []\n}",
+ "input_tokens": 1166,
+ "output_tokens": 79,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4751.73391700082,
+ "created_at": "2026-10-08T23:16:00.404436+00:00"
+}

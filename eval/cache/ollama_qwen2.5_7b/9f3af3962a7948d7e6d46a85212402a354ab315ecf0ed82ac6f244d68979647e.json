@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement grants an exclusive, non-transferable (except as set forth in Section 10.7) and non-sublicensable (except as provided in Section 2.1(c)) license to use the Licensed Domain Names and Licensed Content.\",\"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"Subject to the terms and conditions of this Agreement, Licensor hereby grants to Licensee, and Licensee hereby accepts from Licensor, an exclusive, non-transferable (except as set forth in Section 10.7) and non-sublicensable (except as provided in Section 2.1(c)) license to use the Licensed Domain Names in connection with the Business during the Term.\" }, { \"chunk_id\": \"C4\", \"quote\": \"Subject to the terms and conditions of this Agreement, Licensor hereby grants to Licensee, and Licensee hereby accepts from Licensor, an exclusive, non-transferable (except as set forth in Section 10.7) and non-sublicensable (except as provided in Section 2.1(c)) license to use the Licensed Content in connection with websites associated with the Licensed Domain Names until the earlier of (i) termination or expiration of this Agreement, or (ii) termination or expiration of the Agency Agreement.\" } ] }",
+ "input_tokens": 2274,
+ "output_tokens": 290,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 12641.003249998903,
+ "created_at": "2026-10-08T22:36:45.968500+00:00"
+}

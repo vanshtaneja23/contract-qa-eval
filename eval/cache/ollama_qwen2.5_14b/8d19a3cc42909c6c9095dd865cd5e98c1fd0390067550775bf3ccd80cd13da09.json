@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer only includes one expiration date from the reference and omits the earlier expiration date specified in Exhibit 'B' or upon the opening of the last restaurant, which is a critical part of the agreement's termination conditions.\" }",
+ "input_tokens": 361,
+ "output_tokens": 59,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3876.843416990596,
+ "created_at": "2026-10-09T00:14:23.279694+00:00"
+}

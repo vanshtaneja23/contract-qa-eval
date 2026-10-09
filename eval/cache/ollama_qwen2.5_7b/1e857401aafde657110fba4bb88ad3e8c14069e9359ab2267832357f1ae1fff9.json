@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, both parties are required to maintain insurance under the agreement. The Company is required to provide insurance certificates to the Repairer, and the Repairer is required to maintain specific types of insurance.\",\n\n\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"At the latest upon the Signing Date, the Company shall provide the Repairer with relevant insurance certificates, in English, evidencing insurance requirements of this Clause 8, in a form reasonably acceptable to the Repairer, to be attached to this Agreement in the Exhibit 17 (\" },{\"chunk_id\": \"C3\", \"quote\": \"The Repairer shall at its own expense procure and maintain in force, with insurers of internationally recognized reputation acceptable to the Company an Aviation Liability insurance which should include:\"}]}",
+ "input_tokens": 2390,
+ "output_tokens": 176,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9999.913874999038,
+ "created_at": "2026-10-08T23:33:46.416131+00:00"
+}

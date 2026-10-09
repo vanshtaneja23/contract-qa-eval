@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer only partially addresses the question by mentioning that the Company must maintain Products Liability Insurance and name the Contractor as an additional insured, but it fails to mention other key details such as the requirement for insurers to have a Best's rating of no less than \" }",
+ "input_tokens": 295,
+ "output_tokens": 67,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3789.446541995858,
+ "created_at": "2026-10-09T00:18:05.363987+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Reseller needs to provide 60 days' written notice to terminate the agreement before the expiration of the Initial Term or any renewal term.\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"AND WHEREAS Reseller has represented that it is qualified and desires to act as a reseller of certain of PARTY_1's products within a certain defined territory, and agrees to use its best efforts to market and sell such products in such territory;    NOW THEREFORE, for and in consideration of the mutual promises and commitments contained hereafter and other considerations, the\" }, { \"chunk_id\": \"C3\", \"quote\": \"(ii) providing thirty (60) days' written notice to the other Party if the other Party breaches any material term or condition of this Agreement, and fails to cure such breach within the 60 day period;\" } ] }",
+ "input_tokens": 1976,
+ "output_tokens": 197,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4609.233791998122,
+ "created_at": "2026-10-08T23:13:56.588939+00:00"
+}

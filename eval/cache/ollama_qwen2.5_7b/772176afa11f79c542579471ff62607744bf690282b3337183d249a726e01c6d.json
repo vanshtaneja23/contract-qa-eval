@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The parties to this agreement are ACCURAY INCORPORATED and SIEMENS AKTIENGESELLSCHAFT. This is cited from Excerpt C1: 'ACCURAY INCORPORATED, a Delaware corporation... (\",\"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"ACCURAY INCORPORATED, a Delaware corporation with its executive offices located at 1310 Chesapeake Terrace, Sunnyvale, California 94089, USA (\"}]}",
+ "input_tokens": 2084,
+ "output_tokens": 120,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8002.067166991765,
+ "created_at": "2026-10-08T23:34:02.552098+00:00"
+}

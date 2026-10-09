@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\"answer\": \"None of the excerpts mention insurance.\",\"citations\": [] }",
+ "input_tokens": 1855,
+ "output_tokens": 26,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5085.0967910082545,
+ "created_at": "2026-10-08T23:23:59.451674+00:00"
+}

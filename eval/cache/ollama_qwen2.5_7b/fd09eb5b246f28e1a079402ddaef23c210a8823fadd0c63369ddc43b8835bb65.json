@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The parties to this agreement are Synchron, a California corporation, and PARTY_1, a PARTY_2. They are referred to as 'Investor' and 'Company' in the agreement.\",\"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"and PARTY_1, a PARTY_2 having a principal place of business at P.O. Box 271049, Littleton, Colorado 80127 (the \"},{ \"chunk_id\": \"C1\", \"quote\": \"Investor), and PARTY_1, a PARTY_2 having a principal place of business at P.O. Box 271049, Littleton, Colorado 80127 (the \"}]}",
+ "input_tokens": 1978,
+ "output_tokens": 170,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8941.132166990428,
+ "created_at": "2026-10-08T23:36:07.518111+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, this agreement provides for liquidated damages. The agreement states that in the event of termination by Co-Host due to a material default by NAI, NAI shall pay to the Co-Host the Liquidated Damages Amount.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"provided that, in (i) the event of termination of this Agreement by Co-Host due to a material default by NAI, NAI shall pay to the Co-Host the Liquidated Damages Amount (as defined in Part 2 of Exhibit \"}]}",
+ "input_tokens": 2247,
+ "output_tokens": 132,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7648.317291008425,
+ "created_at": "2026-10-08T23:10:43.349623+00:00"
+}

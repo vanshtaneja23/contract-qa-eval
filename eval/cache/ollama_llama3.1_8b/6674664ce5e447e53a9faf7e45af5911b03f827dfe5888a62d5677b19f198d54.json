@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"No information in the provided excerpts indicates that a party can terminate this agreement for convenience, without cause.\",\"citations\":[]}",
+ "input_tokens": 2001,
+ "output_tokens": 35,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5639.417750004213,
+ "created_at": "2026-10-08T23:28:04.369079+00:00"
+}

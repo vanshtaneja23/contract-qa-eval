@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, the agreement grants exclusive rights.  \\\"The manufacturing license granted in this Agreement is exclusive within the Territory.\\\"\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"The manufacturing license granted in this Agreement is exclusive within the Territory.\"\n  }\n]\n}",
+ "input_tokens": 1985,
+ "output_tokens": 87,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 9686.789083003532,
+ "created_at": "2026-10-08T23:46:43.370745+00:00"
+}

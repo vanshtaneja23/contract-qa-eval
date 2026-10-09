@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes,  the liability of DIVERSINET relating to this Agreement (or the BUNDLED PRODUCT) shall not exceed one hundred percent (100%) of the aggregate amount of the license fees, royalties and support fees paid by RESELLER in the twelve (12) month period preceding the event or circumstance giving rise to the alleged liability on the part of DIVERSINET.\",\n\"citations\": [\n{\n\"chunk_id\": \"C4\",\n\"quote\": \"NOTWITHSTANDING THE ABOVE, IN NO EVENT SHALL DIVERSINET'S LIABILITY RELATING TO THIS AGREEMENT (OR THE BUNDLED PRODUCT) EXCEED ONE HUNDRED PERCENT (100%) OF THE AGGREGATE AMOUNT OF THE LICENSE FEES, ROYALTIES AND SUPPORT FEES PAID BY RESELLER IN THE TWELVE (12) MONTH PERIOD PRECEDING THE EVENT OR CIRCUMSTANCE GIVING RISE TO THE ALLEGED LIABILITY ON THE PART OF DIVERSINET.\"\n}\n]\n}",
+ "input_tokens": 2027,
+ "output_tokens": 219,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13383.075083009317,
+ "created_at": "2026-10-08T23:51:40.762295+00:00"
+}

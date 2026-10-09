@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately summarizes the exclusive, non-transferable license granted to the Manufacturer for using EMV's Specifications and EMV firmware, subject to meeting quality, price, and lead-time requirements, as per the reference clause text.\" }",
+ "input_tokens": 528,
+ "output_tokens": 61,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 4719.329125000513,
+ "created_at": "2026-10-09T00:13:49.329628+00:00"
+}

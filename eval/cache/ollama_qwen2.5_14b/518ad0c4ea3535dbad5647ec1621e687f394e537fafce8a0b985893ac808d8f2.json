@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly identifies that the agreement grants exclusive rights, as supported by the cited clause stating the manufacturing license is exclusive within the Territory.\" }",
+ "input_tokens": 405,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3036.5907910017995,
+ "created_at": "2026-10-09T00:15:23.891665+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"A nonexclusive, non-transferable, royalty-free right to use the software provided in connection with the Products only in machine readable form and only in combination with the Products with which such software is provided.\", \"citations\": [  ]}",
+ "input_tokens": 2030,
+ "output_tokens": 59,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5863.943165997625,
+ "created_at": "2026-10-08T23:25:53.731286+00:00"
+}

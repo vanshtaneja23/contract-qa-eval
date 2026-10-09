@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The provided excerpts do not mention automatic renewal. The agreement can be renewed, but it requires the Franchisee to give notice and meet certain conditions. The term can be renewed for two additional terms of 10 years each.\",\n  \"citations\": [] }",
+ "input_tokens": 2023,
+ "output_tokens": 67,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5708.951125008753,
+ "created_at": "2026-10-08T23:37:13.359845+00:00"
+}

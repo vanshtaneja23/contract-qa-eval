@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"verdict\": \"correct\",\n  \"reason\": \"The system's answer correctly states that the Company is required to maintain Products Liability Insurance, which is consistent with the reference clause text.\"\n}",
+ "input_tokens": 271,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2562.287540989928,
+ "created_at": "2026-10-09T00:11:14.786976+00:00"
+}

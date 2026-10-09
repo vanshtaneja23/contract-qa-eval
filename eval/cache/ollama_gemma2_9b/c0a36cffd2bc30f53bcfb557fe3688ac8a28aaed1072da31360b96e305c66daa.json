@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"PARTY_1 shall have access to, and to make copies of, all such books and records for purposes of auditing and verifying such costs and expenses, provided that PARTY_1 shall give Inktomi reasonable notice prior to each requested audit and shall perform such audit during normal business hours at Inktomi's office(s) where such records are normally kept.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C2\",\n    \"quote\": \"PARTY_1 shall have access to, and to make copies of, all such books and records for purposes of auditing and verifying such costs and expenses, provided that PARTY_1 shall give Inktomi reasonable notice prior to each requested audit and shall perform such audit during normal business hours at Inktomi's office(s) where such records are normally kept.\"\n  }\n]\n}",
+ "input_tokens": 2002,
+ "output_tokens": 191,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12713.352832986857,
+ "created_at": "2026-10-09T00:04:03.389283+00:00"
+}

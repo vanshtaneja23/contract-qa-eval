@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The term of this Agreement shall begin on the Effective Date and continue in effect for a period of five (5) years (the \\\"Initial Term\\\"), unless sooner terminated in accordance with the provisions set out herein. Upon expiration of the Initial Term, this Agreement shall automatically renew for consecutive one (1) year periods, unless terminated by Reseller within sixty (60) days prior to the expiration of the Initial Term or any renewal term, as the case may be (the Initial Term and each renewal term, collectively, the \\\"Term\\\").\",\"citations\":[{\"chunk_id\":\"C2\",\"quote\":\"The term of this Agreement shall begin on the Effective Date and continue in effect for a period of five (5) years (the \\\"Initial Term\\\"), unless sooner terminated in accordance with the provisions set out herein.\"}]}",
+ "input_tokens": 1989,
+ "output_tokens": 176,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 9081.451874997583,
+ "created_at": "2026-10-08T23:21:26.313134+00:00"
+}

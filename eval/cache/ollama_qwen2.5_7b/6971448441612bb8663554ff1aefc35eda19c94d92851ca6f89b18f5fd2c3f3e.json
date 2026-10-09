@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, there is a cap on the indemnifying party's liability. According to the contract, the indemnifying party shall not be liable for fees and expenses of more than one counsel (in addition to any local counsel) separate from their own counsel for all indemnified parties in connection with any one action or separate but similar or related actions in the same jurisdiction arising out of the same allegations or circumstances.\",\n  \"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"No indemnifying party shall, without the prior written consent of the indemnified party, effect the settlement or compromise of, or consent to the entry of any judgment with respect to, any pending or threatened action or claim in respect of which indemnification or contribution may be sought hereunder (whether or not the indemnified party is an actual or potential party to such action or claim) unless such settlement, compromise or judgment (i) includes an unconditional release of the indemnified party from all liability arising out of such action or claim and (ii) does not include a statement as to or an admission of fault, culpability or a failure to act, by or on behalf of any indemnified party.\" } ] }",
+ "input_tokens": 1838,
+ "output_tokens": 257,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9620.817749993876,
+ "created_at": "2026-10-08T23:39:13.193050+00:00"
+}

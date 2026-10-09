@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, the agreement requires sharing revenue. Specifically, HPS will pay SHPS 82.5% of the first $500,000 of Care Management Revenues and 80% of any amount exceeding $500,000 each month.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"HPS will pay to SHPS an amount equal to (i) eighty-two and one-half percent (82.5%) of the first $500,000 of Care Management Revenues (as defined below) during such month plus (ii) eighty percent (80%) of Care Management Revenues during such month in excess of $500,000.\"}]}",
+ "input_tokens": 2010,
+ "output_tokens": 170,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8430.14850000327,
+ "created_at": "2026-10-08T23:36:42.270115+00:00"
+}

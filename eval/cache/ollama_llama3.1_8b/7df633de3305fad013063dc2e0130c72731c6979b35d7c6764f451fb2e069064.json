@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The licenses granted to Vyera under this Agreement shall not be transferrable and/or sublicensable without PARTY_2's written consent, which it may grant, condition or withhold in its sole discretion. (C3)\",\"citations\":[{\"chunk_id\":\"C3\",\"quote\":\"(b) Sublicense Rights. The licenses granted to Vyera under this Agreement shall not be transferrable and/or sublicensable without PARTY_2's written consent, which it may grant, condition or withhold in its sole discretion.\"}]}",
+ "input_tokens": 2069,
+ "output_tokens": 117,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8406.112500000745,
+ "created_at": "2026-10-08T23:30:05.975770+00:00"
+}

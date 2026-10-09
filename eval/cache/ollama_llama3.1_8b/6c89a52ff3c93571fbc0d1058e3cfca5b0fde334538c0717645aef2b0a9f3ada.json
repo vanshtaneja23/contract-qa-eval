@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, any assignment, other transfer or license by either Party or any member of its Group of any Intellectual Property Rights licensed to the other Party or any member of its Group pursuant to ARTICLE III or ARTICLE IV, respectively, shall be subject to the applicable licenses, covenants and restrictions set forth herein.\",\"citations\": [{\"chunk_id\": \"C4\", \"quote\": \"Section 5.02. Assignments and Licenses. Any assignment, other transfer or license by either Party or any member of its Group of any Intellectual Property Rights licensed to the other Party or any member of its Group pursuant to ARTICLE III or ARTICLE IV, respectively, shall be subject to the applicable licenses, covenants and restrictions set forth herein.\"}]}",
+ "input_tokens": 2026,
+ "output_tokens": 164,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 9555.896666002809,
+ "created_at": "2026-10-08T23:25:05.236217+00:00"
+}

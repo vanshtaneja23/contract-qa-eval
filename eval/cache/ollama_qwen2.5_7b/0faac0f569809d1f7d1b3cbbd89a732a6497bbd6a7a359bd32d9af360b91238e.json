@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, the Company is required to maintain insurance. Citation: C2 - 'Company shall maintain Products Liability Insurance and in an amount satisfactory to Contractor, under which Contractor is named as an additional insured.' \",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"Company shall maintain Products Liability Insurance and in an amount satisfactory to Contractor, under which Contractor is named as an additional insured.\"}]}",
+ "input_tokens": 1991,
+ "output_tokens": 97,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7208.864999993239,
+ "created_at": "2026-10-08T23:44:39.545840+00:00"
+}

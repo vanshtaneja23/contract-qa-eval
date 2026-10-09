@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer only partially addresses the non-compete restriction on the Developer and omits the restriction on the Developer's officers, directors, shareholders, etc., which is also part of the reference clause text.\" }",
+ "input_tokens": 646,
+ "output_tokens": 55,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 5122.757416989771,
+ "created_at": "2026-10-09T00:17:58.584038+00:00"
+}

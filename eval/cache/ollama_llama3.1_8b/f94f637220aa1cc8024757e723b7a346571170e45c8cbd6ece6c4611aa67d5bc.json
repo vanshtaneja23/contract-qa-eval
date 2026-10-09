@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"the Company (CCA Industries, Inc.) and the Contractor (PARTY_1)\", \"citations\": [ { \"chunk_id\": \"C1\", \"quote\": \"Between CCA INDUSTRIES, INC. (\\\"Company\\\") And PARTY_1 (\\\"Contractor\\\")\" } ] }",
+ "input_tokens": 1921,
+ "output_tokens": 75,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6106.221125010052,
+ "created_at": "2026-10-08T23:29:31.350000+00:00"
+}

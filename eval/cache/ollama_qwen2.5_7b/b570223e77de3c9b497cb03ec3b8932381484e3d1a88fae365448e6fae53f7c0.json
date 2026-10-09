@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"The excerpts do not explicitly state whether a party can assign the agreement without the other party's consent. However, it mentions that assignments are subject to certain exceptions, such as collateral security for lenders or asset purchases, but does not provide a general rule for assignments. \",\n  \"citations\": [] }",
+ "input_tokens": 2089,
+ "output_tokens": 74,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7105.158917009248,
+ "created_at": "2026-10-08T22:26:22.337580+00:00"
+}

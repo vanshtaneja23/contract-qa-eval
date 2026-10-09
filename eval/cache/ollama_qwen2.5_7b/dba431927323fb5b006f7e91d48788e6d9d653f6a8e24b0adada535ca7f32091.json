@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"The agreement was made effective as of December 17, 2019.\",\"citations\":[{\"chunk_id\":\"C1\",\"quote\":\"This Commercialization and License Agreement (this \\\"Agreement\\\") is made effective as of December 17, 2019 (the \\\"Effective Date\\\") by and between Vyera Pharmaceuticals, LLC, a Delaware limited liability company (\\\"Vyera\\\"), and CytoDyn Inc., a Delaware corporation (\\\"CytoDyn\\\").\"}]}",
+ "input_tokens": 2213,
+ "output_tokens": 112,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6888.89395899605,
+ "created_at": "2026-10-08T22:28:58.967585+00:00"
+}

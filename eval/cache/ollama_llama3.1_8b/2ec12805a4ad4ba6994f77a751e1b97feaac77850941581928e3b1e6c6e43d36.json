@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"Yes, the Company may terminate this Agreement for convenience by way of Notice of termination; the Agreement shall be then terminated following a [*****] period as from [*****] (C6).\",\"citations\":[{\"chunk_id\":\"C6\",\"quote\":\"the Company may terminate this Agreement for convenience by way of Notice of termination; the Agreement shall be then terminated following a [*****] period as from [*****]\"}]}",
+ "input_tokens": 2197,
+ "output_tokens": 94,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8233.603999993647,
+ "created_at": "2026-10-08T23:29:39.747578+00:00"
+}

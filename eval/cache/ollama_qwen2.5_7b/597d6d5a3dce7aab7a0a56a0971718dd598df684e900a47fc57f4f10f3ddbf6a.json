@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpts explicitly mention any exclusive rights granted under this agreement.\",\"citations\": [] }",
+ "input_tokens": 2012,
+ "output_tokens": 31,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4856.608415997471,
+ "created_at": "2026-10-08T23:13:19.730024+00:00"
+}

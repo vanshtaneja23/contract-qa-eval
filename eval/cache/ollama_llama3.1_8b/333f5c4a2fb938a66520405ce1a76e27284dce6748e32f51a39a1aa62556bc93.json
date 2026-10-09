@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"MMI shall at its own expense obtain and maintain with an insurer adequate insurance coverage in respect of any Dragon Systems property under the care, custody or control of MMI.\", \"citations\": [ {\"chunk_id\": \"C6\", \"quote\": \"MMI shall at its own expense obtain and maintain with an insurer adequate insurance coverage in respect of any Dragon Systems property under the care, custody or control of MMI.\"} ] }",
+ "input_tokens": 1879,
+ "output_tokens": 100,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 2787.4785830063047,
+ "created_at": "2026-10-08T23:31:02.177311+00:00"
+}

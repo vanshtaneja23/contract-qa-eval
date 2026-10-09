@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"answered\",\n  \"answer\": \"A party's consent is required for assigning this agreement. Specifically, Vyera may not assign this Agreement, or any rights or obligations hereunder, without the prior written consent of PARTY_2, not to be unreasonably withheld or delayed. PARTY_2 may assign this Agreement and its rights and obligations hereunder, in whole but not in part, to any Third Party not in a materially worse (financially and otherwise) position to performing PARTY_2's obligations hereunder without the prior written consent of Vyera.\",\n  \"citations\": [\n    {\"chunk_id\": \"C4\", \"quote\": \"Vyera may not assign this Agreement, or any rights or obligations hereunder without the prior written consent of PARTY_2, not to be unreasonably withheld or delayed provided that Vyera may assign this Agreement without PARTY_2's consent to an Affiliate or to a successor to substantially all of the business of Vyera to which this Agreement relates.\"},\n    {\"chunk_id\": \"C5\", \"quote\": \"PARTY_2 may assign this Agreement and its rights and obligations hereunder, in whole but not in part, to any Third Party not in a materially worse (financially and otherwise) of performing PARTY_2's obligations hereunder without the prior written consent of Vyera (it being understood that any other assignment of this Agreement or any rights or obligations hereunder shall require the prior written consent of Vyera, not to be unreasonably withheld or delayed).\"}\n  ]\n}",
+ "input_tokens": 1858,
+ "output_tokens": 324,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 12443.094208996627,
+ "created_at": "2026-10-08T23:34:32.869860+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Notwithstanding the immediately preceding sentence, either party may assign this Agreement or all, but not less than all, of its rights and obligations hereunder to any entity that acquires it by purchase of stock or by merger or otherwise, or by obtaining all or substantially all of its assets (a \\\"Permitted Assignee\\\"); PROVIDED, that any such Permitted Assignee thereafter succeeds to all of the rights and is subject to all of the obligations of the assignor under this Agreement;\",\n\"citations\": [\n{\n\"chunk_id\": \"C5\",\n\"quote\": \"Notwithstanding the immediately preceding sentence, either party may assign this Agreement or all, but not less than all, of its rights and obligations hereunder to any entity that acquires it by purchase of stock or by merger or otherwise, or by obtaining all or substantially all of its assets (a \\\"Permitted Assignee\\\"); PROVIDED, that any such Permitted Assignee thereafter succeeds to all of the rights and is subject to all of the obligations of the assignor under this Agreement;\"\n}\n]\n}",
+ "input_tokens": 1852,
+ "output_tokens": 233,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 17234.6602500038,
+ "created_at": "2026-10-08T23:45:53.581013+00:00"
+}

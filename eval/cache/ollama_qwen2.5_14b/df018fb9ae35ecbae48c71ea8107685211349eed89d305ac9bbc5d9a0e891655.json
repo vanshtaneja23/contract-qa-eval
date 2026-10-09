@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer and cited quote do not address a minimum purchase commitment but rather mention maximum and minimum limitations without specifying the minimum purchase requirement of 708,050 Shares as stated in the reference clause.\" }",
+ "input_tokens": 396,
+ "output_tokens": 58,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3673.0907919991296,
+ "created_at": "2026-10-09T00:15:41.898998+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt directly states which obligations continue after the agreement terminates or expires. However, Article 10.4 mentions that certain articles will survive termination, but it does not specify which ones.\",\n  \"citations\": [] }",
+ "input_tokens": 2121,
+ "output_tokens": 59,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7714.0924999985145,
+ "created_at": "2026-10-08T22:32:52.618426+00:00"
+}

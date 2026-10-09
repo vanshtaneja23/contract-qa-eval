@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, including all key details about the license granted, such as its type, scope, and limitations.\" }",
+ "input_tokens": 335,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2960.7893750071526,
+ "created_at": "2026-10-09T00:09:54.913105+00:00"
+}

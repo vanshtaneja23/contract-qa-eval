@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\"answer\": \"None of the excerpts mention insurance requirements for either party.\",\"citations\": []}",
+ "input_tokens": 1892,
+ "output_tokens": 30,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 4859.366958000464,
+ "created_at": "2026-10-08T23:25:47.753282+00:00"
+}

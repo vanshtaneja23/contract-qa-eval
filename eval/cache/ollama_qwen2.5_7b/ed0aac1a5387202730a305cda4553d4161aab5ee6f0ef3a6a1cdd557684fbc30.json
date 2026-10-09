@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"not_found\", \"answer\": \"No excerpt discusses assignment of the agreement or the requirement for the other party's consent.\",\"citations\": []}",
+ "input_tokens": 1877,
+ "output_tokens": 35,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4667.456208000658,
+ "created_at": "2026-10-08T23:42:19.502946+00:00"
+}

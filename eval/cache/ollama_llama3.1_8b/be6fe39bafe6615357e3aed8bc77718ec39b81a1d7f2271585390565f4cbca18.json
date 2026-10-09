@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"Yes, HPS agrees to outsource to SHPS, and hereby appoints SHPS as the exclusive provider of, Care Management Services to the Clients, subject to the terms and conditions set forth in this Agreement. (C1)\",\"citations\":[{\"chunk_id\":\"C1\",\"quote\":\"HPS agrees to outsource to SHPS, and hereby appoints SHPS as the exclusive provider of, Care Management Services to the Clients, subject to the terms and conditions set forth in this Agreement.\"}]}",
+ "input_tokens": 1890,
+ "output_tokens": 112,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7671.718500001589,
+ "created_at": "2026-10-08T23:24:15.569211+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly identifies that the parties will execute intellectual property assignments, which implies the assignment of intellectual property created or transferred under the agreement, consistent with the reference clause text.\" }",
+ "input_tokens": 396,
+ "output_tokens": 50,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3639.691916992888,
+ "created_at": "2026-10-09T00:17:01.448216+00:00"
+}

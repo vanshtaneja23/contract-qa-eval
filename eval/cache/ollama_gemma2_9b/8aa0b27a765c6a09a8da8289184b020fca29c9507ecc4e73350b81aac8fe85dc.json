@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, each party is required to maintain comprehensive general liability, product liability and other appropriate insurance.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C6\",\n    \"quote\": \"Each Party, at its own expense, shall maintain comprehensive general liability, product liability and other appropriate insurance for the activities such Party undertakes pursuant to this Agreement, from reputable and financially secure insurance carriers in a form and at levels consistent with sound business practice and adequate in light of its obligations under this Agreement.\"\n  }\n]\n}",
+ "input_tokens": 1909,
+ "output_tokens": 128,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 14480.01741700864,
+ "created_at": "2026-10-08T23:50:26.975976+00:00"
+}

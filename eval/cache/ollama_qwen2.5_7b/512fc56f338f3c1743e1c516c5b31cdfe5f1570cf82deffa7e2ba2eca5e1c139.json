@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"A party's consent is required to assign this agreement. Citation: H. Neither party is liable for its failure or delay to perform its obligations under the Agreement due to strikes, wars, revolutions, acts of terrorism, fires, floods, explosions, earthquakes, shortages in labor, components or materials, government regulations, or other causes beyond its control.\",\"citations\": [ { \"chunk_id\": \"C1\", \"quote\": \"Neither party is liable for its failure or delay to perform its obligations under the Agreement due to strikes, wars, revolutions, acts of terrorism, fires, floods, explosions, earthquakes, shortages in labor, components or materials, government regulations, or other causes beyond its control.\" } ] }",
+ "input_tokens": 2416,
+ "output_tokens": 158,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 3976.110082992818,
+ "created_at": "2026-10-08T23:11:41.617459+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly reflects that the Company can terminate the agreement for convenience by providing notice, consistent with the reference clause text.\" }",
+ "input_tokens": 320,
+ "output_tokens": 40,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2736.42512501101,
+ "created_at": "2026-10-09T00:10:54.741651+00:00"
+}

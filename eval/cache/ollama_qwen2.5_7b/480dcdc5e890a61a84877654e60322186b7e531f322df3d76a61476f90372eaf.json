@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, the agreement automatically renews for successive one-year additional terms unless terminated by either party at least six months prior to the expiration of the then-current term.\", \"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"The Agreement shall automatically renew for successive one year additional terms unless terminated by either party at least six months prior to the expiration of the then-current term.\" } ] }",
+ "input_tokens": 1972,
+ "output_tokens": 97,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6712.997042006464,
+ "created_at": "2026-10-08T23:32:01.512999+00:00"
+}

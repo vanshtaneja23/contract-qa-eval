@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, it is assigned to Party B.\", \"citations\": [ { \"chunk_id\": \"C4\", \"quote\": \"The Parties agree that any and all intellectual property researched and developed, created and invented by the Parties (including their employees) in the course of performance of this Agreement shall be owned by Party B.\" } ] }",
+ "input_tokens": 1864,
+ "output_tokens": 84,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6167.660334001994,
+ "created_at": "2026-10-08T23:23:19.312200+00:00"
+}

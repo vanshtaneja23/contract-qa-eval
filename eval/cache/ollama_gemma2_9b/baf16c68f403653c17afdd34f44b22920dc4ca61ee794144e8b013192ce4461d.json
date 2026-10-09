@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"SHPS shall have the right, upon reasonable prior written notice, to examine, copy and audit such records. \",\n\"citations\": [\n  {\n    \"chunk_id\": \"C2\",\n    \"quote\": \"SHPS shall have the right, upon reasonable prior written notice, to examine, copy and audit such records.\"\n  }\n]\n}",
+ "input_tokens": 1969,
+ "output_tokens": 94,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 9859.871708991705,
+ "created_at": "2026-10-09T00:08:38.225995+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly identifies the presence of a minimum annual order volume (MAOV) commitment, which is consistent with the reference clause text.\" }",
+ "input_tokens": 436,
+ "output_tokens": 43,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3412.600540992571,
+ "created_at": "2026-10-09T00:09:00.489158+00:00"
+}

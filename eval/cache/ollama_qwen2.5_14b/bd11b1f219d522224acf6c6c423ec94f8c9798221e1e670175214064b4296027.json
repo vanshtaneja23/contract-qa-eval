@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, mentioning both the software license and the patent license granted to customers, with all key details matching.\" }",
+ "input_tokens": 472,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3693.4277919935994,
+ "created_at": "2026-10-09T00:13:24.195031+00:00"
+}

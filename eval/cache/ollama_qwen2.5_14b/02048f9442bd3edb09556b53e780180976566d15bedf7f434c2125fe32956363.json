@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system answer correctly identifies the parties as CCA Industries, Inc. and Emerson HealthCare, LLC, and includes the reference to one party being called the 'Contractor', consistent with the reference clause text.\" }",
+ "input_tokens": 281,
+ "output_tokens": 56,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3241.105791996233,
+ "created_at": "2026-10-09T00:17:48.194594+00:00"
+}

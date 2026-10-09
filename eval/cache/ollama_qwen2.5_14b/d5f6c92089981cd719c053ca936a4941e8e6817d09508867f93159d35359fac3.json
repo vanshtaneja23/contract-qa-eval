@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly states that the agreement grants SHPS exclusive rights to provide Care Management Services to the Clients, which is consistent with the reference clause text.\" }",
+ "input_tokens": 303,
+ "output_tokens": 46,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2805.431959000998,
+ "created_at": "2026-10-09T00:10:16.318919+00:00"
+}

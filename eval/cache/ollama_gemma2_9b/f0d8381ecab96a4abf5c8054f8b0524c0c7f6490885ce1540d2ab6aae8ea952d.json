@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Party B shall own all intellectual property researched and developed, created and invented by the Parties (including their employees) in the course of performance of this Agreement.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"For the purpose of this Article 12.3, \\\"Intellectual Property\\\" means the patent, patent application right, trademark, service mark, logo, image, trade name, internet domain name, design right, copyright (including copyright of computer software) and moral rights, database right, right of semiconductor design drawing, utility model, proprietary technology and other intellectual property that are registered and unregistered including those that have applied for registration, as well as all other rights or protection methods with same or similar effect on a global scope.\"\n  }\n]\n}",
+ "input_tokens": 1908,
+ "output_tokens": 185,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 14067.802457997459,
+ "created_at": "2026-10-08T23:55:08.731624+00:00"
+}

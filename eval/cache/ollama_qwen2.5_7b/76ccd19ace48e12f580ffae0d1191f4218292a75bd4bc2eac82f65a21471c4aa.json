@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts mention a termination clause for convenience without cause. The excerpts only outline specific conditions for termination, such as failure to comply with obligations, bankruptcy, and force majeure events.\",\"citations\": [] }",
+ "input_tokens": 2213,
+ "output_tokens": 59,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5865.263375002542,
+ "created_at": "2026-10-08T23:11:47.531353+00:00"
+}

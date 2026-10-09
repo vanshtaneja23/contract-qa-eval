@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt in the provided contract text explicitly mentions a cap or limit on either party's liability.\", \"citations\": [] }",
+ "input_tokens": 1834,
+ "output_tokens": 39,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4099.724166997476,
+ "created_at": "2026-10-08T23:40:48.604923+00:00"
+}

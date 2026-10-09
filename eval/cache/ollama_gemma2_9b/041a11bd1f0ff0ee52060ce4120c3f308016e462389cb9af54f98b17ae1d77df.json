@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"No Remarketing Agent shall be required to contribute any amount in excess of the amount by which the total price at which the applicable Securities remarketed by it and distributed to the public were offered to the public exceeds the amount of\",\n\"citations\": [\n{\n\"chunk_id\": \"C6\",\n\"quote\": \"No Remarketing Agent shall be required to contribute any amount in excess of the amount by which the total price at which the applicable Securities remarketed by it and distributed to the public were offered to the public exceeds the amount of\"\n}\n]\n}",
+ "input_tokens": 1846,
+ "output_tokens": 135,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 12971.664874989074,
+ "created_at": "2026-10-08T23:57:36.298223+00:00"
+}

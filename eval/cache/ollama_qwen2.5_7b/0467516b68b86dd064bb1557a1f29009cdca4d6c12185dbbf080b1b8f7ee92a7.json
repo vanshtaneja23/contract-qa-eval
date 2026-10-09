@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"not_found\", \"answer\": \"No excerpt in the provided text discusses the right to audit the other party's books or records.\",\"citations\": []}",
+ "input_tokens": 1953,
+ "output_tokens": 37,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5077.253708004719,
+ "created_at": "2026-10-08T22:31:48.771793+00:00"
+}

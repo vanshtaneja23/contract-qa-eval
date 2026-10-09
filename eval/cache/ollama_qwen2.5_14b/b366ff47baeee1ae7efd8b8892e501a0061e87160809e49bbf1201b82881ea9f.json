@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, stating that the agreement automatically renews for successive two-year terms unless notice is given at least 90 days before the end of the current term.\" }",
+ "input_tokens": 366,
+ "output_tokens": 55,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3580.9112090064446,
+ "created_at": "2026-10-09T00:17:11.439781+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, Client may terminate this Agreement on thirty (30) days written notice without cause.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"Client may terminate this Agreement on thirty (30) days written notice without cause.\"\n  }\n]\n}",
+ "input_tokens": 1882,
+ "output_tokens": 85,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 9258.794250010396,
+ "created_at": "2026-10-08T23:59:37.437828+00:00"
+}

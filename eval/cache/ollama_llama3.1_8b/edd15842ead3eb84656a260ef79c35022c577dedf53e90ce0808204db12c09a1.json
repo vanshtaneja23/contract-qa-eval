@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"A paid-up, royalty-free, non-exclusive license, without the right to sublicense, to Customer's Confidential Information and the Customer Technology reasonably necessary to Manufacture and supply to Customer the Product hereunder, but only for such purposes (C4).\",\"citations\":[{\"chunk_id\":\"C4\",\"quote\":\"During the Term, Customer hereby grants to Supplier a paid-up, royalty-free, non-exclusive license, without the right to sublicense, to Customer's Confidential Information and the Customer Technology reasonably necessary to Manufacture and supply to Customer the Product hereunder, but only for such purposes.\"}]}",
+ "input_tokens": 2110,
+ "output_tokens": 128,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7669.859917004942,
+ "created_at": "2026-10-08T23:23:00.033765+00:00"
+}

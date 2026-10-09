@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"A party's consent is required for an assignment. According to C2, paragraph 12.02 states: 'You agree that the rights and duties set forth in this Agreement are personal to You, and that AIRSOPURE has entered into this Agreement and granted the Franchise rights and license hereunder in reliance on Your business skill, financial capacity, and character. Accordingly, You shall not sell, assign, transfer, convey, give away, mortgage or otherwise encumber any direct or indirect interest in the Franchise without the prior written consent of AIRSOPURE.'\",\"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"You agree that the rights and duties set forth in this Agreement are personal to You, and that AIRSOPURE has entered into this Agreement and granted the Franchise rights and license hereunder in reliance on Your business skill, financial capacity, and character. Accordingly, You shall not sell, assign, transfer, convey, give away, mortgage or otherwise encumber any direct or indirect interest in the Franchise without the prior written consent of AIRSOPURE.\" } ] }",
+ "input_tokens": 2179,
+ "output_tokens": 244,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 13558.909457991831,
+ "created_at": "2026-10-08T22:34:23.399360+00:00"
+}

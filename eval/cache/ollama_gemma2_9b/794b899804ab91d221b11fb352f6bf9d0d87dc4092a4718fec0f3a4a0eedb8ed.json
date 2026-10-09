@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement may be assigned by a Party in connection with a Change in Control of such party, subject to the specific termination and other rights set forth in the Strategic Alliance Agreement upon such Change in Control\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C6\",\n    \"quote\": \"This Agreement may be assigned by a Party in connection with a Change in Control of such party, subject to the specific termination and other rights set forth in the Strategic Alliance Agreement upon such Change in Control\"\n  }\n]\n}",
+ "input_tokens": 2081,
+ "output_tokens": 129,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 11237.797916997806,
+ "created_at": "2026-10-08T23:58:57.146877+00:00"
+}

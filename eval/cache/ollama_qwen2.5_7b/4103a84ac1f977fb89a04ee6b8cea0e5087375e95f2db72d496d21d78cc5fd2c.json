@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"If Vyera undergoes a Change of Control, it will be subject to Section 2.6. This section states that Vyera may be required to terminate the development, manufacturing, commercialization, and other exploitation of certain products or terminate the Agreement. However, Vyera will not be in breach of this Section 2.6 during the 180-day Disposition Period if it complies with its obligations prior to the end of the period.\",\n\n\"citations\": [\n  { \"chunk_id\": \"C3\", \"quote\": \"For the avoidance of doubt, Vyera shall not be deemed to be in breach of this Section 2.6 (i) during the one hundred eighty (180) day period following a Change of Control described in this Section 2.6 (the \"},{ \"chunk_id\": \"C4\", \"quote\": \"A Change of Control shall be deemed an assignment for purposes of this Agreement. \"},\n  { \"chunk_id\": \"C5\", \"quote\": \"Any assignment or attempted assignment by Vyera in violation of the terms of this Section 14.6 shall be null, void and of no legal effect. For clarity, nothing in this Agreement shall prohibit Vyera from undergoing any Change of Control, but if Vyera undergoes a Change of Control, it will be subject to Section 2.6. \"}\n] }",
+ "input_tokens": 2006,
+ "output_tokens": 304,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 10142.730082996422,
+ "created_at": "2026-10-08T22:46:01.536646+00:00"
+}

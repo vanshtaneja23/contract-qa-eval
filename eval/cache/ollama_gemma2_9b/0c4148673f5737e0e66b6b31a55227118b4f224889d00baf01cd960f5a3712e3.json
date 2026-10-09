@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"This Agreement does not require sharing revenue or profits, such as royalties.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C2\",\n    \"quote\": \"HPS will pay to SHPS an amount equal to (i) eighty-two and one-half percent (82.5%) of the first $500,000 of Care Management Revenues (as defined below) during such month plus (ii) eighty percent (80%) of Care Management Revenues during such month in excess of $500,000.\"\n  },\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"HPS will pay to SHPS all Care Management Revenues collected from such New Client, and SHPS will pay a commission to HPS equal to five percent (5%) of such amount received by SHPS from HPS pursuant to this Section 2.4.\"\n  }\n]\n}",
+ "input_tokens": 1992,
+ "output_tokens": 221,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 16019.052249990636,
+ "created_at": "2026-10-08T23:53:06.326349+00:00"
+}

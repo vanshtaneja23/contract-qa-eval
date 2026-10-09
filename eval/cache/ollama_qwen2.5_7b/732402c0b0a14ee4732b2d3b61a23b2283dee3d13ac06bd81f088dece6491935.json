@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a minimum purchase commitment. According to the excerpt, Premier is required to purchase a Minimum Annual Order Volume (MAOV) of [***] Units for each twelve-month period commencing July 1, 2017. Additionally, for the six-month period commencing July 1, 2022 and ending December 31, 2022, Premier will be required to purchase [***] Units.\",\"citations\": [{\"chunk_id\": \"C2\", \"quote\": \"During the Term of this Agreement, Premier shall be required to purchase a Minimum Annual Order Volume (\"}]}",
+ "input_tokens": 1932,
+ "output_tokens": 143,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7986.747540999204,
+ "created_at": "2026-10-08T23:33:54.473021+00:00"
+}

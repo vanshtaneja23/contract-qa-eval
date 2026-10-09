@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"if Party A or its subsidiaries fail to pay the Service Fee in full on schedule according to provisions of Article 4.1 and Article 4.2, then Party A or its subsidiaries shall, in addition to the continuance of the payment of Service Fee in full, it shall pay Party B the liquidated damages at a daily interest rate of 0.03% in respect of the outstanding Service Fee.\" } ] }",
+ "input_tokens": 1900,
+ "output_tokens": 120,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7866.921708002337,
+ "created_at": "2026-10-08T23:20:41.555247+00:00"
+}

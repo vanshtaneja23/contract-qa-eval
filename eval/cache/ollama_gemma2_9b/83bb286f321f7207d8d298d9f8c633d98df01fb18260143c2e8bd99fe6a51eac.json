@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Unless earlier terminated by either party, this Agreement shall expire on ______, 20___, and all rights of Developer herein shall cease and all unapplied or unused Development Fees paid pursuant to Section 3 hereof shall be forfeited to Franchisor.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"Unless earlier terminated by either party, this Agreement shall expire on ______, 20___, and all rights of Developer herein shall cease and all unapplied or unused Development Fees paid pursuant to Section 3 hereof shall be forfeited to Franchisor.\"\n  }\n]\n}",
+ "input_tokens": 2226,
+ "output_tokens": 149,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 14849.019291999866,
+ "created_at": "2026-10-09T00:06:16.173586+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt explicitly mentions a cap or limit on either party's liability.\",\"citations\": [] }",
+ "input_tokens": 2047,
+ "output_tokens": 33,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5106.2436659995,
+ "created_at": "2026-10-08T23:39:03.447518+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Each Party, at its own expense, shall maintain comprehensive general liability, product liability and other appropriate insurance for the activities such Party undertakes pursuant to this Agreement.\", \"citations\": [ { \"chunk_id\": \"C13\", \"quote\": \"Each Party, at its own expense, shall maintain comprehensive general liability, product liability and other appropriate insurance for the activities such Party undertakes pursuant to this Agreement,\" }, { \"chunk_id\": \"C14\", \"quote\": \"Each Party, at its own expense, shall maintain comprehensive general liability, product liability and other appropriate insurance for the activities such Party undertakes pursuant to this Agreement,\" } ] }",
+ "input_tokens": 1884,
+ "output_tokens": 147,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7829.956375004258,
+ "created_at": "2026-10-08T23:20:28.295002+00:00"
+}

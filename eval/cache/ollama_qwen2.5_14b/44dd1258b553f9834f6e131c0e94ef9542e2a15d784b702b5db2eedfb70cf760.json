@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, which specifies a Minimum Annual Order Volume that Premier is required to purchase during the term of the agreement.\" }",
+ "input_tokens": 496,
+ "output_tokens": 45,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2624.5949169970118,
+ "created_at": "2026-10-09T00:11:49.604738+00:00"
+}

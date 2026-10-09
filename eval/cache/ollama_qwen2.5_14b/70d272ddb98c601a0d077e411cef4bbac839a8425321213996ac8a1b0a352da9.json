@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly states that 90 days' notice is required to stop the agreement from renewing, which matches the reference clause text.\" }",
+ "input_tokens": 270,
+ "output_tokens": 44,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2556.304833997274,
+ "created_at": "2026-10-09T00:12:21.726934+00:00"
+}

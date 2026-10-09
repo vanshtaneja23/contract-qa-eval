@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The agreement is governed by the laws of the State of Arizona without regard to conflict of law principles.\",\"citations\": [{\"chunk_id\": \"C3\", \"quote\": \"This Agreement shall be governed by and construed and enforced in accordance with the laws of the State of Arizona without regard to conflict of law principles,\"}]}",
+ "input_tokens": 1876,
+ "output_tokens": 80,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5650.316665996797,
+ "created_at": "2026-10-08T23:14:59.029547+00:00"
+}

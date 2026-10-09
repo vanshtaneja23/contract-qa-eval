@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause text, specifying that six months' written notice is required to prevent automatic renewal of the agreement.\" }",
+ "input_tokens": 322,
+ "output_tokens": 42,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2628.1705830042483,
+ "created_at": "2026-10-09T00:12:26.794504+00:00"
+}

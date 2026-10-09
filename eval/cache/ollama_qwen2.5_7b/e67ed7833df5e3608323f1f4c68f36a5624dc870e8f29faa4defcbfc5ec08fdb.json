@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"This agreement grants Vyera a license to Commercialize, use, have used, offer for sale and sell Licensed Products in the Field in the Territory. However, the license is not exclusive, as it is stated that the licenses granted to Vyera under this Agreement shall not be transferrable and/or sublicensable without PARTY_2's written consent, which it may grant, condition or withhold in its sole discretion.\",\"citations\": [{\"chunk_id\": \"C3\", \"quote\": \"Title to the PARTY_2 Patents, the PARTY_2 Know-How, Regulatory Approvals, Regulatory Materials, Regulatory Documentation, and all Inventions shall at all times remain vested in PARTY_2. Except as otherwise provided in Section 2.2(b) with respect to Inventions, this Agreement does not convey to PARTY_2 any rights in any Vyera Know-How or any Vyera Patents by implication, estoppel or otherwise.\"}]}",
+ "input_tokens": 2100,
+ "output_tokens": 208,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9483.976084011374,
+ "created_at": "2026-10-08T23:43:54.779561+00:00"
+}

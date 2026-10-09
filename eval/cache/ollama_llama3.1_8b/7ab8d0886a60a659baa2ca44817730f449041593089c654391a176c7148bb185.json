@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Unless earlier terminated by either party, this Agreement shall expire on ______, 20___\", \"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"Notwithstanding any provision to the contrary contained herein, unless earlier terminated by either party, this Agreement shall expire on ______, 20___,\" }, { \"chunk_id\": \"C4\", \"quote\": \"contrary contained herein, unless earlier terminated by either party, this Agreement shall expire on ______, 20___,\" } ] }",
+ "input_tokens": 2213,
+ "output_tokens": 120,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8390.638917000615,
+ "created_at": "2026-10-08T23:30:14.541367+00:00"
+}

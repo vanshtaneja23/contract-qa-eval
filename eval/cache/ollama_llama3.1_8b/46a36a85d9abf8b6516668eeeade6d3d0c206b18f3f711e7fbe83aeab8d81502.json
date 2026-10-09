@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The laws of the State of New York\", \"citations\": [ { \"chunk_id\": \"C15\", \"quote\": \"THIS REMARKETING AGREEMENT AND THE PRICING AGREEMENT SHALL BE GOVERNED BY AND CONSTRUED IN ACCORDANCE WITH THE LAWS OF THE STATE OF NEW YORK\" } ] }",
+ "input_tokens": 1887,
+ "output_tokens": 82,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7137.909334007418,
+ "created_at": "2026-10-08T23:24:29.688167+00:00"
+}

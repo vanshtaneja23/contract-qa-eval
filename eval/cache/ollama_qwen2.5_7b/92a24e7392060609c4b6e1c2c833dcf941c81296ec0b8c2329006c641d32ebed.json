@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement will expire on ______, 20___.\",\"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"10.1. This Agreement shall terminate immediately upon PARTY_2's receipt of Developer's notice to terminate. In such event, the Development Fee shall be forfeited to Franchisor in consideration of the rights granted in the Territory up to the time of termination. Notwithstanding any provision to the contrary contained herein, unless earlier terminated by either party, this Agreement shall expire on ______, 20___, and all rights of Developer herein shall cease and all unapplied or unused Development Fees paid pursuant to Section 3 hereof shall be forfeited to Franchisor.\" } ] }",
+ "input_tokens": 2295,
+ "output_tokens": 164,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 8367.071832995862,
+ "created_at": "2026-10-08T23:44:03.302569+00:00"
+}

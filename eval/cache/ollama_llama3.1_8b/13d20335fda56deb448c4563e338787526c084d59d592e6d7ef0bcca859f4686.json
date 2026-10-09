@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"Yes, Premier has the right to inspect, copy, and audit all records related to the manufacture of the Products upon reasonable request and during normal business hours.\",\"citations\":[{\"chunk_id\":\"C2\",\"quote\":\"Premier, shall have the right, directly or through its representative, to inspect, copy, and audit all such records upon reasonable request and during normal business hours,\"}]}",
+ "input_tokens": 1903,
+ "output_tokens": 87,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 6363.476667000214,
+ "created_at": "2026-10-08T23:23:25.761514+00:00"
+}

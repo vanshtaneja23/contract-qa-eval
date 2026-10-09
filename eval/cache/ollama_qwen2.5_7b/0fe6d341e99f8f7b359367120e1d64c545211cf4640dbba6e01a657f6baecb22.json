@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement will automatically renew for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then-current term.\",\"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"This agreement shall automatically renew for successive six (6) month periods unless written notice is provided of either party's intent not to renew at least six (6) months before the end of the then-current term.\" } ] }",
+ "input_tokens": 2035,
+ "output_tokens": 119,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7269.1882500075735,
+ "created_at": "2026-10-08T23:42:56.987468+00:00"
+}

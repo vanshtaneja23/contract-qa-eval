@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, there is a minimum annual order volume (MAOV) commitment.\", \"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"During the Term of this Agreement, Premier shall be required to purchase a Minimum Annual Order Volume (\" },{\"chunk_id\": \"C4\", \"quote\": \"The final Unit quantities on Premier's Purchase Orders will count towards the MAOV.\" } ] }",
+ "input_tokens": 1904,
+ "output_tokens": 100,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 7458.10841700586,
+ "created_at": "2026-10-08T23:19:36.043642+00:00"
+}

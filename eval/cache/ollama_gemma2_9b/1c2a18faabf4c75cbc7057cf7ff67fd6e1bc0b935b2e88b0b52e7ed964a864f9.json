@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"You shall immediately cease to operate the Franchise and shall not thereafter, directly or indirectly, represent to the public or hold itself out as a present or former franchisee of AIRSOPURE. You shall immediately and permanently cease to use, by advertising or in any other manner whatsoever, the Licensed Marks of AIRSOPURE, any other identifying characteristics or trade dress of the system, and all confidential methods, procedures and techniques associated with the Franchise.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"A. You shall immediately cease to operate the Franchise and shall not thereafter, directly or indirectly, represent to the public or hold itself out as a present or former franchisee of AIRSOPURE. B. You shall immediately and permanently cease to use, by advertising or in any other manner whatsoever, the Licensed Marks of AIRSOPURE, any other identifying characteristics or trade dress of the system, and all confidential methods, procedures and techniques associated with the Franchise.\"\n  }\n]\n}",
+ "input_tokens": 2036,
+ "output_tokens": 227,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 17436.946583999088,
+ "created_at": "2026-10-09T00:07:40.309896+00:00"
+}

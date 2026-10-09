@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause, indicating that the Client can terminate the agreement for convenience with 30 days written notice without needing a cause.\" }",
+ "input_tokens": 234,
+ "output_tokens": 46,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2480.9116249962244,
+ "created_at": "2026-10-09T00:13:26.676564+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects that Microsoft has the right to audit Inktomi's books and records, consistent with the reference clause text.\" }",
+ "input_tokens": 375,
+ "output_tokens": 42,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3223.068749997765,
+ "created_at": "2026-10-09T00:13:55.009097+00:00"
+}

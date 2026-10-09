@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"No excerpt explicitly mentions the assignment of intellectual property created under this agreement.\", \"citations\": [] }",
+ "input_tokens": 2097,
+ "output_tokens": 34,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6498.800375004066,
+ "created_at": "2026-10-08T22:30:31.780225+00:00"
+}

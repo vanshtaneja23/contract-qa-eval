@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a cap on the liability of Diversinet ( PARTY_1 ). The limitation is that Diversinet's liability relating to this agreement (or the bundled product) shall not exceed one hundred percent (100%) of the aggregate amount of the license fees, royalties, and support fees paid by Reseller in the twelve (12) month period preceding the event or circumstance giving rise to the alleged liability on the part of Diversinet.\",\"citations\": [{\"chunk_id\": \"C4\", \"quote\": \"IN NO EVENT SHALL DIVERSINET'S LIABILITY RELATING TO THIS AGREEMENT (OR THE BUNDLED PRODUCT) EXCEED ONE HUNDRED PERCENT (100%) OF THE AGGREGATE AMOUNT OF THE LICENSE FEES, ROYALTIES AND SUPPORT FEES PAID BY RESELLER IN THE TWELVE (12) MONTH PERIOD PRECEDING THE EVENT OR CIRCUMSTANCE GIVING RISE TO THE ALLEGED LIABILITY ON THE PART OF DIVERSINET.\"}]}",
+ "input_tokens": 2049,
+ "output_tokens": 230,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 9264.64575000864,
+ "created_at": "2026-10-08T23:35:51.444541+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"answered\",\n  \"answer\": \"The obligations that continue after this agreement terminates or expires are found in Article 9.4, which states that Articles 7.2, 7.3, 7.4, 8, 9, 10, 11, 12, 13, 14 will survive any termination or expiration of this Agreement.\",\n  \"citations\": [\n    {\"chunk_id\": \"C2\", \"quote\": \"9.4      Survival. Articles 7.2, 7.3,7.4, 8, 9, 10, 11, 12, 13, 14 shall survive any termination or expiration of this Agreement.\"}\n  ]\n}",
+ "input_tokens": 2180,
+ "output_tokens": 168,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 4014.8311669909162,
+ "created_at": "2026-10-08T23:12:01.609086+00:00"
+}

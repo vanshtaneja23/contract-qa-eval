@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement was made on June 30, 1999.\",\"citations\": [ { \"chunk_id\": \"C6\", \"quote\": \"IN WITNESS WHEREOF, the parties hereto have executed this Agreement as of June 30, 1999.\" } ] }",
+ "input_tokens": 1931,
+ "output_tokens": 79,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5716.185083001619,
+ "created_at": "2026-10-08T23:38:07.719452+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The parties to this agreement are CCA Industries, Inc. ('Company') and PARTY_1 ('Contractor').\", \"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"between PARTY_2 (\\\"Company\\\"), and PARTY_1, a Pennsylvania limited liability company (\\\"Contractor\\\").\"}]}",
+ "input_tokens": 1945,
+ "output_tokens": 81,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5714.05108399631,
+ "created_at": "2026-10-08T23:43:19.311448+00:00"
+}

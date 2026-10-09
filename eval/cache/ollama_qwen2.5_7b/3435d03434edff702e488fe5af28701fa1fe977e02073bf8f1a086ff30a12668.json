@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\", \"answer\":\"The excerpts do not contain any explicit non-compete restrictions on either party.\",\"citations\":[]}",
+ "input_tokens": 2055,
+ "output_tokens": 31,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 5349.091999989469,
+ "created_at": "2026-10-08T22:30:18.998845+00:00"
+}

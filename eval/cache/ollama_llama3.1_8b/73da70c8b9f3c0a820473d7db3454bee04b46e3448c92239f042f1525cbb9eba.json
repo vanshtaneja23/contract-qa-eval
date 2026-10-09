@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\"answer\": \"There is no information in the provided excerpts about a party assigning this agreement or the other party's consent being required.\",\"citations\": [] }",
+ "input_tokens": 1852,
+ "output_tokens": 42,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5185.538457997609,
+ "created_at": "2026-10-08T23:28:20.419037+00:00"
+}

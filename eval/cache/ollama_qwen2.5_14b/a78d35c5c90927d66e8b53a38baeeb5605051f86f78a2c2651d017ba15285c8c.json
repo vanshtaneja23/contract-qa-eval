@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer and cited quotes address obligations related to rejected products and breaches, but do not match the reference clause which specifies insurance maintenance obligations for three years after termination or expiration.\" }",
+ "input_tokens": 410,
+ "output_tokens": 50,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3711.718791993917,
+ "created_at": "2026-10-09T00:17:15.152569+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer accurately reflects the reference clause, which states that each party is required to maintain insurance at their own expense.\" }",
+ "input_tokens": 392,
+ "output_tokens": 39,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 3036.536250001518,
+ "created_at": "2026-10-09T00:12:02.710770+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"answered\",\"answer\":\"Yes, PARTY_1 has the right to audit Inktomi's books and records for purposes of auditing and verifying costs and expenses, provided that PARTY_1 shall give Inktomi reasonable notice prior to each requested audit (C2).\",\"citations\":[{\"chunk_id\":\"C2\",\"quote\":\"Inktomi shall permit PARTY_1 to have access to, and to make copies of, all such books and records for purposes of auditing and verifying such costs and expenses,\"}]}",
+ "input_tokens": 2051,
+ "output_tokens": 107,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 8094.510833005188,
+ "created_at": "2026-10-08T23:28:52.182224+00:00"
+}

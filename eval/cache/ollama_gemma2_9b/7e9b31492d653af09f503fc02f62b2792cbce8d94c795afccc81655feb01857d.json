@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"PARTY_1 hereby grants Distributor or Customer a nonexclusive, non-transferable, royalty-free right to use the software provided in connection with the Products only in machine readable form and only in combination with the Products with which such software is provided.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C6\",\n    \"quote\": \"PARTY_1 hereby grants Distributor or Customer a nonexclusive, non-transferable, royalty-free right to use the software provided in connection with the Products only in machine readable form and only in combination with the Products with which such software is provided.\"\n  }\n]\n}",
+ "input_tokens": 2017,
+ "output_tokens": 149,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 13171.410459006438,
+ "created_at": "2026-10-08T23:59:27.936351+00:00"
+}

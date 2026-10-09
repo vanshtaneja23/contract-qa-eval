@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"The Parties shall continue to be responsible for rejected Products in accordance with the terms of this Agreement. Termination or expiration of this Agreement shall not relieve either party of obligations or liability for breaches of this Agreement incurred prior to or in connection with termination or expiration.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C4\",\n    \"quote\": \"Subsequent to the expiration or termination of this Agreement, the Parties shall continue to be responsible for rejected Products in accordance with the terms of this Agreement.\"\n  },\n  {\n    \"chunk_id\": \"C5\",\n    \"quote\": \"Termination or expiration of this Agreement shall not relieve either party of obligations or liability for breaches of this Agreement incurred prior to or in connection with termination or expiration.\"\n  }\n]\n}",
+ "input_tokens": 1933,
+ "output_tokens": 185,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 14855.356250001932,
+ "created_at": "2026-10-09T00:01:00.868776+00:00"
+}

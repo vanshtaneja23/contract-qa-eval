@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"not_found\",\n\"answer\": \"The provided excerpts do not mention anything about revenue or profit sharing.\",\n\"citations\": []\n}",
+ "input_tokens": 1927,
+ "output_tokens": 38,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 8011.298999990686,
+ "created_at": "2026-10-09T00:01:09.107643+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\n  \"status\": \"answered\",\n  \"answer\": \"If Vyera undergoes a Change of Control, it will be subject to Section 2.6. If CytoDyn undergoes a Change of Control, it may assign this Agreement and its rights and obligations hereunder to any Third Party.\",\n  \"citations\": [\n    {\"chunk_id\": \"C4\", \"quote\": \"A Change of Control shall be deemed an assignment for purposes of this Agreement.\"},\n    {\"chunk_id\": \"C5\", \"quote\": \"If Vyera undergoes a Change of Control, it will be subject to Section 2.6.\"}\n  ]\n}",
+ "input_tokens": 2236,
+ "output_tokens": 141,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7811.713207993307,
+ "created_at": "2026-10-08T22:35:55.972974+00:00"
+}

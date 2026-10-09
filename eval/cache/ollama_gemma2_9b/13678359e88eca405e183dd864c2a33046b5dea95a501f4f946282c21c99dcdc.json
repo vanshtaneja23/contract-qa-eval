@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"Yes, the liability of a party to the other for direct damages shall not exceed fifteen million dollars.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C5\",\n    \"quote\": \"EXCEPT FOR CLAIMS UNDER SECTION 9 HEREOF, THE LIABILITY OF A PARTY TO THE OTHER FOR DIRECT DAMAGES SHALL NOT EXCEED FIFTEEN MILLION DOLLARS.\"\n  }\n]\n}",
+ "input_tokens": 2072,
+ "output_tokens": 99,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 10506.81683399307,
+ "created_at": "2026-10-08T23:52:49.949710+00:00"
+}

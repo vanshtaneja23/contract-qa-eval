@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The agreement was made on 1.4.2011.\",\"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"This Turn - Key Manufacturing Agreement (the \\\"Agreement\\\") is effective as of the 1.4.2011 (the \\\"Effective Date\\\")\"}]}",
+ "input_tokens": 1898,
+ "output_tokens": 79,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6455.547707999358,
+ "created_at": "2026-10-08T23:33:36.303233+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\",\"answer\": \"There is no clause in the provided excerpts that addresses the assignment of intellectual property created under this agreement.\",\"citations\": [] }",
+ "input_tokens": 1886,
+ "output_tokens": 39,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5196.214541007066,
+ "created_at": "2026-10-08T23:26:30.055570+00:00"
+}

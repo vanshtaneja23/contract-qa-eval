@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"With respect to any ideas, innovations, Improvements or inventions (whether patentable or non-patentable) developed by Supplier during the Term of this Agreement and [* * *], the Parties agree that, as between Customer and Supplier, Customer shall own all Rights to such Inventions and may obtain patent, copyright, and other proprietary protection respecting such Inventions. Supplier agrees to promptly disclose any Inventions to Customer. Supplier agrees to assign (and cause its employees or permitted subcontractors to assign), and does hereby assign, any and all rights, title and interests of Supplier in, to or under any Inventions to Customer.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C3\",\n    \"quote\": \"With respect to any ideas, innovations, Improvements or inventions (whether patentable or non-patentable) developed by Supplier during the Term of this Agreement and [* * *], the Parties agree that, as between Customer and Supplier, Customer shall own all Rights to such Inventions and may obtain patent, copyright, and other proprietary protection respecting such Inventions. Supplier agrees to promptly disclose any Inventions to Customer. Supplier agrees to assign (and cause its employees or permitted subcontractors to assign), and does hereby assign, any and all rights, title and interests of Supplier in, to or under any Inventions to Customer.\"\n  }\n]\n}",
+ "input_tokens": 2207,
+ "output_tokens": 297,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 18801.956166003947,
+ "created_at": "2026-10-08T23:56:09.038812+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system answer incorrectly states the agreement was made on June 30, 1999, while the reference clause text indicates it was made on June 1, 1999.\" }",
+ "input_tokens": 231,
+ "output_tokens": 55,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2797.1630419924622,
+ "created_at": "2026-10-09T00:12:53.172854+00:00"
+}

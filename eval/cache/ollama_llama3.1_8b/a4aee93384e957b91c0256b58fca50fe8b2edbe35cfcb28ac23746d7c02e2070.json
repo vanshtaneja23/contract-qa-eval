@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"Yes, Section 7.2 of C3 states that Dassault Systemes shall not commercially offer any web service, which is (i) based upon the ACIS-based software transferred to Dassault Systemes in connection with the Purchase Agreement and (ii) similar to the Co-Branded Service, during the two year period following the Effective Date.\",\"citations\": [ { \"chunk_id\": \"C3\", \"quote\": \"7.2 Restrictions on Dassault Systemes. Except as contemplated under this Agreement, during the two year period following the Effective Date, Dassault Systemes shall not commercially offer any web service, which is (i) based upon the ACIS-based software transferred to Dassault Systemes in connection with the Purchase Agreement and (ii) similar to the Co-Branded Service.\" } ] }",
+ "input_tokens": 1968,
+ "output_tokens": 187,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 9405.73429199867,
+ "created_at": "2026-10-08T23:29:25.030304+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"Yes, there is a non-compete restriction on the Developer. The agreement states that the Developer and its affiliates cannot own, operate, control, or have any financial interest in any Competitive Business without the prior written consent of Franchisor.\",\"citations\": [{\"chunk_id\": \"C5\", \"quote\": \"Developer and each officer, director, shareholder, member, manager, partner and other equity owner, as applicable, of Developer, if Developer is an entity, shall neither directly nor indirectly own, operate, control or any financial interest in any other business which would constitute a \" }]}",
+ "input_tokens": 2253,
+ "output_tokens": 134,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7179.0609159943415,
+ "created_at": "2026-10-08T23:44:25.752623+00:00"
+}

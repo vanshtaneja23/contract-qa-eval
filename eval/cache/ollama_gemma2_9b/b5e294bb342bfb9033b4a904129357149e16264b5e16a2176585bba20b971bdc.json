@@ -1,0 +1,9 @@
+{
+ "text": "{\n\"status\": \"answered\",\n\"answer\": \"The parties to this agreement are Bravatek and PARTY_2.\",\n\"citations\": [\n  {\n    \"chunk_id\": \"C1\",\n    \"quote\": \"PARTY_1, a corporation organized under the laws of the State of Colorado, (“Bravatek”), with an address at ADDRESS_1, Unit #240-2835, Austin, Texas 78741 and PARTY_2, a limited liability company organized under the laws of the State of Colorado with an address at ADDRESS_2, Rancho Cordova, CA 95670 (“PARTY_2”).\"\n  }\n]\n}",
+ "input_tokens": 1823,
+ "output_tokens": 154,
+ "model": "ollama:gemma2:9b",
+ "stop_reason": "stop",
+ "latency_ms": 10948.883958000806,
+ "created_at": "2026-10-08T23:46:54.603153+00:00"
+}

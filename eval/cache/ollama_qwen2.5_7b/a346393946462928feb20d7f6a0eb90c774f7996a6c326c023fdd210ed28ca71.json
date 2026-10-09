@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"This Agreement is effective as of the date hereof and shall remain in full force and effect for the period (the \",\"citations\": [ { \"chunk_id\": \"C2\", \"quote\": \"This Agreement is effective as of the date hereof and shall remain in full force and effect for the period (the \" } ] }",
+ "input_tokens": 2022,
+ "output_tokens": 84,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7088.334458007012,
+ "created_at": "2026-10-08T22:29:14.161230+00:00"
+}

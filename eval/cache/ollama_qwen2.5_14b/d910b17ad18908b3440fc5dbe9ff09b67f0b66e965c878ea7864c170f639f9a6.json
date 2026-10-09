@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"correct\", \"reason\": \"The system's answer correctly states that MMI is required to obtain and maintain insurance at its own expense, which directly answers the question about whether either party is required to maintain insurance.\" }",
+ "input_tokens": 270,
+ "output_tokens": 49,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 2707.9463339905487,
+ "created_at": "2026-10-09T00:11:21.126877+00:00"
+}

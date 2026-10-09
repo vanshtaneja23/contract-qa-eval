@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"There is no clause in the provided excerpts that allows a party to terminate the agreement for convenience, without cause.\",\"citations\":[]}",
+ "input_tokens": 1796,
+ "output_tokens": 37,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 4914.361332994304,
+ "created_at": "2026-10-08T23:29:57.421649+00:00"
+}

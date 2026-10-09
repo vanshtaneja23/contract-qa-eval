@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts explicitly address whether intellectual property created under the agreement is assigned to a party. Therefore, based on the given information, the question cannot be answered. \",\n  \"citations\": [] }",
+ "input_tokens": 2077,
+ "output_tokens": 56,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 6645.796541997697,
+ "created_at": "2026-10-08T23:39:29.731198+00:00"
+}

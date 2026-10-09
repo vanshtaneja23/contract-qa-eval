@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\":\"not_found\",\"answer\":\"No information in the provided excerpts indicates that the agreement requires sharing revenue or profits, such as royalties.\",\"citations\":[]}",
+ "input_tokens": 1925,
+ "output_tokens": 35,
+ "model": "ollama:llama3.1:8b",
+ "stop_reason": "stop",
+ "latency_ms": 5097.519167000428,
+ "created_at": "2026-10-08T23:28:25.616193+00:00"
+}

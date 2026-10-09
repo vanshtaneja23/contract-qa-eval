@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"not_found\", \"answer\": \"None of the provided excerpts address what happens if a party undergoes a change of control, merger, or acquisition.\",\"citations\": [] }",
+ "input_tokens": 1912,
+ "output_tokens": 42,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 3952.1686250081984,
+ "created_at": "2026-10-08T23:34:41.094207+00:00"
+}

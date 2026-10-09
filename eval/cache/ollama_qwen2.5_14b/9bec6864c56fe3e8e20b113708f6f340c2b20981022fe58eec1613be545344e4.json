@@ -1,0 +1,9 @@
+{
+ "text": "{ \"verdict\": \"incorrect\", \"reason\": \"The system's answer incorrectly states that the agreement does not require sharing revenue or profits, while the reference clause text clearly indicates that HPS pays SHPS a significant portion of Care Management Revenues and a commission, which constitutes revenue sharing.\" }",
+ "input_tokens": 473,
+ "output_tokens": 61,
+ "model": "ollama:qwen2.5:14b",
+ "stop_reason": "stop",
+ "latency_ms": 4383.267999990494,
+ "created_at": "2026-10-09T00:16:15.762117+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "text": "{ \"status\": \"answered\", \"answer\": \"The agreement remains in full force and effect for the period (the \",\"citations\":[ {\"chunk_id\":\"C2\",\"quote\":\"Covered Period') commencing on the date hereof and ending on the date that is the earliest of: (i) the Company's failure to appoint the ValueAct Designee to the Board following the ValueAct Group's written request to the Company to have the ValueAct Designee appointed to the Board pursuant to Section 1(a) of this Agreement; (ii) the failure of the Company to comply in good faith with Section\"} ] }",
+ "input_tokens": 2081,
+ "output_tokens": 132,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 3462.9895000107354,
+ "created_at": "2026-10-08T23:08:50.515279+00:00"
+}

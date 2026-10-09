@@ -1,0 +1,9 @@
+{
+ "text": "{\"status\": \"answered\", \"answer\": \"The parties to this agreement are CUTANEA and Ferrer. This is stated in C1: 'CUTANEA), and PARTY_3, a Spanish corporation with its principal place of business at Av. Diagonal, 549, 5t h floor, 08029 Barcelona (Spain) (hereinafter indistinctly referred to as \",\"citations\": [{\"chunk_id\": \"C1\", \"quote\": \"CUTANEA), and PARTY_3, a Spanish corporation with its principal place of business at Av. Diagonal, 549, 5t h floor, 08029 Barcelona (Spain) (hereinafter indistinctly referred to as \"}]}",
+ "input_tokens": 1962,
+ "output_tokens": 169,
+ "model": "ollama:qwen2.5:7b",
+ "stop_reason": "stop",
+ "latency_ms": 7859.357374996762,
+ "created_at": "2026-10-08T23:14:19.951854+00:00"
+}
