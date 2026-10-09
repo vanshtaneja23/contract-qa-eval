@@ -1,0 +1,195 @@
+{
+ "date": "2026-10-08",
+ "git_commit": "303ffba-dirty",
+ "judge": "ollama:qwen2.5:14b",
+ "hardware": "Apple M4 Pro, 24 GB unified memory, Ollama 0.40.1; 4-bit weights (llama3.1:8b, qwen2.5:7b, qwen2.5:14b: Q4_K_M; gemma2:9b: Q4_0); one model loaded at a time",
+ "models": {
+  "m5-llama3.1-8b": {
+   "model": "ollama:llama3.1:8b",
+   "date": "2026-10-08",
+   "git_commit": "eb7a612"
+  },
+  "m5-qwen2.5-7b": {
+   "model": "ollama:qwen2.5:7b",
+   "date": "2026-10-08",
+   "git_commit": "eb7a612"
+  },
+  "m5-gemma2-9b": {
+   "model": "ollama:gemma2:9b",
+   "date": "2026-10-08",
+   "git_commit": "eb7a612"
+  }
+ },
+ "metrics": {
+  "m5-llama3.1-8b": {
+   "n": 120,
+   "accuracy": 0.4583333333333333,
+   "accuracy_ci": [
+    0.375,
+    0.55
+   ],
+   "accuracy_answerable": 0.34444444444444444,
+   "abstention_absent": 0.8,
+   "over_abstention_answerable": 0.2222222222222222,
+   "citation_validity": 0.7066666666666667,
+   "confidently_wrong_shown": 0.18333333333333332,
+   "confidently_wrong_model": 0.36666666666666664,
+   "gated": 4,
+   "latency_p50_s": 6.6033757500117645,
+   "latency_p95_s": 10.20210149999184,
+   "mean_input_tokens": 1956.9827586206898,
+   "cost_per_100_usd": 0.0
+  },
+  "m5-qwen2.5-7b": {
+   "n": 120,
+   "accuracy": 0.5416666666666666,
+   "accuracy_ci": [
+    0.45,
+    0.6333333333333333
+   ],
+   "accuracy_answerable": 0.43333333333333335,
+   "abstention_absent": 0.8666666666666667,
+   "over_abstention_answerable": 0.25555555555555554,
+   "citation_validity": 0.8591549295774648,
+   "confidently_wrong_shown": 0.18333333333333332,
+   "confidently_wrong_model": 0.26666666666666666,
+   "gated": 4,
+   "latency_p50_s": 6.714881374995457,
+   "latency_p95_s": 10.940459999997984,
+   "mean_input_tokens": 1989.5172413793102,
+   "cost_per_100_usd": 0.0
+  },
+  "m5-gemma2-9b": {
+   "n": 120,
+   "accuracy": 0.5,
+   "accuracy_ci": [
+    0.4083333333333333,
+    0.5916666666666667
+   ],
+   "accuracy_answerable": 0.4111111111111111,
+   "abstention_absent": 0.7666666666666667,
+   "over_abstention_answerable": 0.17777777777777778,
+   "citation_validity": 0.8024691358024691,
+   "confidently_wrong_shown": 0.23333333333333334,
+   "confidently_wrong_model": 0.36666666666666664,
+   "gated": 4,
+   "latency_p50_s": 11.36950733300182,
+   "latency_p95_s": 17.2346602500038,
+   "mean_input_tokens": 1970.0603448275863,
+   "cost_per_100_usd": 0.0
+  }
+ },
+ "per_category": {
+  "m5-llama3.1-8b": {
+   "Change Of Control": 0.4,
+   "Renewal Term": 0.6666666666666666,
+   "Governing Law": 0.42857142857142855,
+   "Agreement Date": 0.14285714285714285,
+   "Post-Termination Services": 0.14285714285714285,
+   "Exclusivity": 0.3333333333333333,
+   "Parties": 0.2,
+   "Non-Compete": 0.4,
+   "Anti-Assignment": 0.42857142857142855,
+   "Minimum Commitment": 0.6,
+   "Audit Rights": 0.7142857142857143,
+   "Liquidated Damages": 0.4,
+   "Insurance": 0.5714285714285714,
+   "Expiration Date": 0.42857142857142855,
+   "Termination For Convenience": 0.5714285714285714,
+   "Cap On Liability": 0.5714285714285714,
+   "Revenue/Profit Sharing": 0.2,
+   "Notice Period To Terminate Renewal": 0.8,
+   "Ip Ownership Assignment": 0.8,
+   "License Grant": 0.4
+  },
+  "m5-qwen2.5-7b": {
+   "Change Of Control": 0.6,
+   "Renewal Term": 0.6666666666666666,
+   "Governing Law": 0.7142857142857143,
+   "Agreement Date": 0.2857142857142857,
+   "Post-Termination Services": 0.2857142857142857,
+   "Exclusivity": 0.6666666666666666,
+   "Parties": 0.4,
+   "Non-Compete": 0.4,
+   "Anti-Assignment": 0.8571428571428571,
+   "Minimum Commitment": 0.4,
+   "Audit Rights": 0.7142857142857143,
+   "Liquidated Damages": 0.4,
+   "Insurance": 0.5714285714285714,
+   "Expiration Date": 0.14285714285714285,
+   "Termination For Convenience": 0.5714285714285714,
+   "Cap On Liability": 0.5714285714285714,
+   "Revenue/Profit Sharing": 0.4,
+   "Notice Period To Terminate Renewal": 0.6,
+   "Ip Ownership Assignment": 0.8,
+   "License Grant": 0.8
+  },
+  "m5-gemma2-9b": {
+   "Change Of Control": 0.2,
+   "Renewal Term": 0.8333333333333334,
+   "Governing Law": 0.5714285714285714,
+   "Agreement Date": 0.2857142857142857,
+   "Post-Termination Services": 0.2857142857142857,
+   "Exclusivity": 0.5,
+   "Parties": 0.2,
+   "Non-Compete": 0.2,
+   "Anti-Assignment": 0.5714285714285714,
+   "Minimum Commitment": 0.2,
+   "Audit Rights": 0.8571428571428571,
+   "Liquidated Damages": 0.4,
+   "Insurance": 0.42857142857142855,
+   "Expiration Date": 0.42857142857142855,
+   "Termination For Convenience": 0.7142857142857143,
+   "Cap On Liability": 0.7142857142857143,
+   "Revenue/Profit Sharing": 0.2,
+   "Notice Period To Terminate Renewal": 0.8,
+   "Ip Ownership Assignment": 1.0,
+   "License Grant": 0.4
+  }
+ },
+ "judge_agreement": null,
+ "paired": [
+  {
+   "a": "m5-llama3.1-8b",
+   "b": "m5-qwen2.5-7b",
+   "accuracy_diff": [
+    -0.08333333333333333,
+    -0.175,
+    0.008333333333333333
+   ],
+   "shown_wrong_diff": [
+    0.0,
+    -0.075,
+    0.075
+   ]
+  },
+  {
+   "a": "m5-llama3.1-8b",
+   "b": "m5-gemma2-9b",
+   "accuracy_diff": [
+    -0.041666666666666664,
+    -0.125,
+    0.041666666666666664
+   ],
+   "shown_wrong_diff": [
+    -0.05,
+    -0.14166666666666666,
+    0.03333333333333333
+   ]
+  },
+  {
+   "a": "m5-qwen2.5-7b",
+   "b": "m5-gemma2-9b",
+   "accuracy_diff": [
+    0.041666666666666664,
+    -0.041666666666666664,
+    0.13333333333333333
+   ],
+   "shown_wrong_diff": [
+    -0.05,
+    -0.125,
+    0.025
+   ]
+  }
+ ]
+}
