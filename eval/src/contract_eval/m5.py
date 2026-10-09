@@ -24,7 +24,7 @@ from sqlalchemy.orm import Session
 from contract_eval.common import CACHE_DIR, RESULTS_DIR, git_commit, load_subset
 from contract_eval.cuad import REPO_ROOT, GoldSpan
 from contract_eval.judge import JUDGE_SCHEMA, JUDGE_SYSTEM, agreement, judge_prompt
-from contract_eval.retrieval_eval import bootstrap_ci, overlaps
+from contract_eval.retrieval_eval import bootstrap_ci, overlaps, paired_diff_ci
 from contract_qa.db import make_engine
 from contract_qa.llm import CachedClient, make_client
 from contract_qa.models import Chunk
@@ -280,6 +280,7 @@ def cmd_m5_report(args: argparse.Namespace) -> None:
             cid: (s, e) for cid, s, e in session.execute(select(Chunk.id, Chunk.start_char, Chunk.end_char))
         }
     metrics, per_cat, failures, meta = {}, {}, {}, {}
+    per_question: dict[str, dict[str, list[Any]]] = {}
     for label in labels:
         rows = read_jsonl(ANSWERS_DIR / f"{label}.jsonl")
         summary = json.loads((ANSWERS_DIR / f"{label}.summary.json").read_text())
@@ -291,6 +292,12 @@ def cmd_m5_report(args: argparse.Namespace) -> None:
         if missing:
             raise SystemExit(f"{label}: {len(missing)} answered questions not judged; run `cqa-eval judge`")
         metrics[label] = model_metrics(rows, verdicts)
+        scored = [score_row(r, verdicts.get(r["question"]["id"])) for r in rows]
+        per_question[label] = {
+            "ids": [r["question"]["id"] for r in rows],
+            "correct": [float(x["correct"]) for x in scored],
+            "shown_wrong": [float(x["shown_wrong"]) for x in scored],
+        }
         meta[label] = {
             "model": summary["model"],
             "date": summary["date"],
@@ -304,6 +311,23 @@ def cmd_m5_report(args: argparse.Namespace) -> None:
         per_cat[label] = {c: statistics.fmean(v) for c, v in cats.items()}
         failures[label] = _failure_examples(rows, verdicts, reasons, gold, chunk_spans)
 
+    paired = []
+    for i, a in enumerate(labels):
+        for b in labels[i + 1 :]:
+            if per_question[a]["ids"] != per_question[b]["ids"]:
+                raise SystemExit("runs cover different questions; cannot pair them")
+            paired.append(
+                {
+                    "a": a,
+                    "b": b,
+                    "accuracy_diff": list(
+                        paired_diff_ci(per_question[a]["correct"], per_question[b]["correct"])
+                    ),
+                    "shown_wrong_diff": list(
+                        paired_diff_ci(per_question[a]["shown_wrong"], per_question[b]["shown_wrong"])
+                    ),
+                }
+            )
     agreement_data = json.loads(AGREEMENT_PATH.read_text()) if AGREEMENT_PATH.exists() else None
     report = {
         "date": datetime.date.today().isoformat(),
@@ -314,6 +338,7 @@ def cmd_m5_report(args: argparse.Namespace) -> None:
         "metrics": metrics,
         "per_category": per_cat,
         "judge_agreement": agreement_data,
+        "paired": paired,
     }
     (RESULTS_DIR / "report.json").write_text(json.dumps(report, indent=1) + "\n")
     (RESULTS_DIR / "report.md").write_text(render_report(report, failures))
@@ -372,6 +397,21 @@ def render_report(report: dict[str, Any], failures: dict[str, list[str]]) -> str
         out.append(
             f"| {_name(meta, label)} | {pct(x['accuracy_answerable'])} "
             f"| {pct(x['over_abstention_answerable'])} | {x['gated']} |"
+        )
+    out += [
+        "",
+        "Paired differences (same 120 questions, bootstrap 95% CI). An interval that includes 0 means "
+        "the data cannot tell the two models apart.",
+        "",
+        "| comparison | Δ accuracy | Δ confidently wrong (shown) |",
+        "|---|---|---|",
+    ]
+    for d in report["paired"]:
+        acc, cw = d["accuracy_diff"], d["shown_wrong_diff"]
+        out.append(
+            f"| {_name(meta, d['a'])} minus {_name(meta, d['b'])} "
+            f"| {100 * acc[0]:+.1f} pts [{100 * acc[1]:+.1f}, {100 * acc[2]:+.1f}] "
+            f"| {100 * cw[0]:+.1f} pts [{100 * cw[1]:+.1f}, {100 * cw[2]:+.1f}] |"
         )
     agr = report["judge_agreement"]
     out += ["", "## Judge validation", ""]
