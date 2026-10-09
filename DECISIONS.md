@@ -273,3 +273,26 @@ model's context, and keep it only if it measurably helps.
   is expected:** the model sees `PARTY_1` instead of a name and has to rely on the mapping back.
 - **Single-document only:** placeholder numbers are per document, so a multi-document question
   with redaction raises `NotImplementedError` rather than risk mapping a name to the wrong party.
+
+---
+
+## M5: model comparison (2026-10-08)
+
+### D22. Scoring: judge only where judgment is needed
+- **Rules:** absent clause → correct iff the system abstained (`not_found`); answering it is
+  *confidently wrong*. Answerable → a shown answer is graded by the judge; abstaining or being
+  rejected is a miss (wrong, but not confidently wrong).
+- **Two confidently-wrong rates:** *shown* (what a user would see) and *before verifier* (also
+  counting answers the verifier rejected). The gap is what the verifier buys: 27–37% of questions
+  → 18–23% across the three models.
+- **Judge:** `qwen2.5:14b`, larger than and different from the graded models (avoids a model
+  grading itself). It sees the question, CUAD's expert-marked clause text and the system's answer
+  with its quotes. **Validation is pending:** `cqa-eval label` collects 30 blind human labels
+  (10 per model, shuffled, model hidden); `cqa-eval judge-agreement` reports raw agreement and
+  Cohen's kappa. Visible strictness in the failure examples (a correct party list marked wrong
+  over legal-name formatting) suggests judged accuracy is an underestimate.
+- **Statistics:** per-model 95% bootstrap CIs and paired differences on the same questions. No
+  pairwise accuracy difference excludes zero at n=120 (largest: qwen2.5:7b − llama3.1:8b
+  +8.3 pts, [−0.8, +17.5]), so the report does not declare a winner.
+- **Latency:** measured per call on one machine with models run one at a time (no contention).
+  Includes prompt processing of ~2.3k tokens; gemma2:9b is ~1.7× slower at p50.
