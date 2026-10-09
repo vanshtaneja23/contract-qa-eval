@@ -1,0 +1,54 @@
+{
+ "date": "2026-10-08",
+ "command": "uv run cqa-eval answer-eval --model ollama:gemma2:9b --label m5-gemma2-9b",
+ "git_commit": "eb7a612",
+ "label": "m5-gemma2-9b",
+ "model": "ollama:gemma2:9b",
+ "config": {
+  "k": 6,
+  "redact": true,
+  "include_first_chunk": true,
+  "gate": {
+   "signal": "top_ts_rank",
+   "threshold": 0.02507458
+  }
+ },
+ "n": 120,
+ "grounded_accuracy": 0.575,
+ "status": {
+  "rejected": 16,
+  "answered": 65,
+  "not_found": 39
+ },
+ "answerable": {
+  "n": 90,
+  "rejected": 15,
+  "answered": 59,
+  "not_found": 16
+ },
+ "absent": {
+  "n": 30,
+  "not_found": 23,
+  "answered": 6,
+  "rejected": 1
+ },
+ "gated": 4,
+ "citation_validity": 0.8024691358024691,
+ "rejection_reasons": {
+  "quote_not_found": 15,
+  "unknown_chunk": 1
+ },
+ "whitespace_matches": 12,
+ "citations": 68,
+ "tokens": {
+  "input": 228527,
+  "output": 13872
+ },
+ "cost_usd_all_calls": 0.0,
+ "latency_ms": {
+  "p50": 11369.50733300182,
+  "p95": 17234.6602500038,
+  "n": 116
+ },
+ "spent_usd_this_run": 0.0
+}

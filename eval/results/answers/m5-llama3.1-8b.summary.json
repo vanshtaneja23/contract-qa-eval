@@ -1,0 +1,56 @@
+{
+ "date": "2026-10-08",
+ "command": "uv run cqa-eval answer-eval --model ollama:llama3.1:8b --label m5-llama3.1-8b",
+ "git_commit": "eb7a612",
+ "label": "m5-llama3.1-8b",
+ "model": "ollama:llama3.1:8b",
+ "config": {
+  "k": 6,
+  "redact": true,
+  "include_first_chunk": true,
+  "gate": {
+   "signal": "top_ts_rank",
+   "threshold": 0.02507458
+  }
+ },
+ "n": 120,
+ "grounded_accuracy": 0.5166666666666667,
+ "status": {
+  "not_found": 44,
+  "rejected": 23,
+  "answered": 53
+ },
+ "answerable": {
+  "n": 90,
+  "not_found": 20,
+  "rejected": 22,
+  "answered": 48
+ },
+ "absent": {
+  "n": 30,
+  "answered": 5,
+  "rejected": 1,
+  "not_found": 24
+ },
+ "gated": 4,
+ "citation_validity": 0.7066666666666667,
+ "rejection_reasons": {
+  "quote_not_found": 11,
+  "unknown_chunk": 6,
+  "no_citations": 6,
+  "length": 1
+ },
+ "whitespace_matches": 9,
+ "citations": 65,
+ "tokens": {
+  "input": 227010,
+  "output": 11168
+ },
+ "cost_usd_all_calls": 0.0,
+ "latency_ms": {
+  "p50": 6603.3757500117645,
+  "p95": 10202.10149999184,
+  "n": 116
+ },
+ "spent_usd_this_run": 0.0
+}
